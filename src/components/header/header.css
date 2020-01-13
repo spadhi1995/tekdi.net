@@ -1,20 +1,24 @@
 header {
-    background-color: rgba(0, 23, 57, 0.68);
     width: 100%;
     display: inline-block;
+}
+header .header-inner {
+    padding: 0;
+    width: 100%;
+}
+.home header {
+    background-color: rgba(0, 23, 57, 0.68);
     position: fixed;
     top: 0;
     z-index: 9;
 }
-header.header-fix {
+.home header.header-fix {
     background-color: rgba(0, 23, 57, 0.68);
 }
-header .header-inner {
+.home header .header-inner {
     border-bottom: 1px solid #b3b8be;
-    padding: 0;
-    width: 100%;
 }
-header.header-fix .header-inner {
+.home header.header-fix .header-inner {
     border-bottom: none;
 }
 
@@ -31,11 +35,14 @@ nav::after,
 }
 .menu-items li a {
     padding: 5px 2px;
-    color: #fff;
+    color: #000;
     font-size: 15px;
     font-weight: 600;
 }
 .menu-items li a:hover {
     text-decoration: none;
     border-bottom: 1px solid #b3b8be;
+}
+.home .menu-items li a {
+    color: #fff;
 }

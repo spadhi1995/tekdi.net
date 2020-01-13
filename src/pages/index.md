@@ -1,9 +1,6 @@
 ---
 templateKey: index-page
 title: Index Page 
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
 about:
   title: About Us
   description: 
@@ -29,6 +26,11 @@ vision:
   image: /img/coffee.png
   title: Out Vision
   description: If your first love is data-analytics, you thrive on cloud technology and are just a tad competitive then Tekdi is the place for you
----
-
+testimonials:
+  - author: John Blur, Founder, Co-Blue
+    quote: >-
+      We have put more than 20k hours work during 1.5 years to make sure Tekdi is the most unique website ever 
+  - author: John Blur, Founder, Co-Blue
+    quote: >-
+      We have put more than 20k hours work during 1.5 years to make sure Tekdi is the most unique website ever
 ---

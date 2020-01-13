@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 import 'bootstrap/dist/css/bootstrap.css'
 import Footer from '../components/footer/footer'
@@ -11,7 +11,7 @@ import './common.css'
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <Fragment>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -35,11 +35,6 @@ const TemplateWrapper = ({ children }) => {
           sizes="16x16"
         />
 
-        {/* <link
-          rel="mask-icon"
-          href={`${withPrefix('/')}images/safari-pinned-tab.svg`}
-          color="#ff4400"
-        /> */}
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -53,7 +48,7 @@ const TemplateWrapper = ({ children }) => {
       <Header />
       <div>{children}</div>
       <Footer />
-    </div>
+    </Fragment>
   )
 }
 

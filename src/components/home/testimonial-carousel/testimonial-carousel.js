@@ -3,6 +3,43 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './testimonial-carousel.css';
+import PropTypes from 'prop-types'
+import {v4} from 'uuid';
+
+const Testimonials = ({ testimonials }) => {
+  return(
+  <div>
+    {testimonials.map(testimonial => (
+      <div key={v4()}>
+        <div className="container testimonial-carousel">
+          <div className="col-md-6 offset-md-3">
+            <h2 className="com-heading text-center text-black mb-3">Trusted by Global Brands</h2>
+              <OwlCarousel
+              className="owl-theme"
+              items={1}
+              loop={true}
+              dots={true}
+              >
+                  {testimonial.quote}
+                  <br/>
+                  – {testimonial.author}
+              </OwlCarousel>
+            </div>
+          </div>
+        </div>
+    ))}
+  </div>
+  )
+}
+
+Testimonials.propTypes = {
+  testimonials: PropTypes.arrayOf(
+    PropTypes.shape({
+      quote: PropTypes.string,
+      author: PropTypes.string,
+    })
+  ),
+}
 
 const TestimonialCarousel = () => {
   return (
@@ -49,4 +86,4 @@ const TestimonialCarousel = () => {
   )
 }
 
-export default TestimonialCarousel;
+export default Testimonials;
