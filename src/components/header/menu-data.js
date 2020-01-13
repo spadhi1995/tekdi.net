@@ -1,0 +1,30 @@
+export const menuData = [
+    {
+        label:'Company',
+        url:'/company'
+    },
+    {
+        label:'Industries',
+        url:'/industries'
+    },
+    {
+        label:'Digital Evolution',
+        url:'/digital-evolution'
+    },
+    {
+        label:'Products',
+        url:'/products'
+    },
+    {
+        label:'Carrers',
+        url:'/carrers'
+    },
+    {
+        label:'Blog',
+        url:'/blog'
+    },
+    {
+        label:'Contact',
+        url:'/contact'
+    }
+];

@@ -1,0 +1,10 @@
+.client-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.client-wrap > div {
+    min-width: 130px;
+    margin: 10px;
+    text-align: center;
+    background: #ddd;
+}

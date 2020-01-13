@@ -1,0 +1,36 @@
+footer{
+    background-color:#09225a;
+    color:#fff;
+    font-size: 15px;
+    font-weight:500;
+}
+a.fa-icon {
+    font-size: 20px;
+    color:#759ee0;
+}
+a.fa-twitter:hover,
+a.fa-twitter:focus {
+    color:#1da1f2;
+}
+a.fa-facebook:hover,
+a.fa-facebook:focus {
+    color:#3b5da0;
+}
+a.fa-pinterest:hover,
+a.fa-pinterest:focus {
+    color:#e83e24;
+}
+.copytight {
+    color:#426c95;
+    border-top:1px solid #838fad;
+}
+.footer-menu-items li a {
+    color:#fff;
+    font-size: 15px;
+}
+footer h4.section-title {
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}

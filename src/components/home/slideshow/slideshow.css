@@ -1,0 +1,36 @@
+.carousel .slide {
+    position: relative;
+    text-align: left;
+    height: 100vh;
+    color: #fff;
+    background-image:url(./images/slideshow-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.carousel-items {
+    margin:15% auto;
+}
+
+h3.carousel-desc {
+    color: #fff;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 600;
+    margin: 10% auto;
+}
+.carousel-img {
+    position: absolute;
+    top: 150px;
+    right:0;
+}
+.carousel .control-dots {
+    bottom: 10px;
+}
+.carousel .control-dots .dot {
+    width:10px;
+    height: 10px;
+    margin: 0 5px;
+}
+.carousel .control-dots .dot:focus {
+    outline: 0;
+}
