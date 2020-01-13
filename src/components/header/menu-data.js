@@ -16,8 +16,8 @@ export const menuData = [
         url:'/products'
     },
     {
-        label:'Carrers',
-        url:'/carrers'
+        label:'Careers',
+        url:'/careers'
     },
     {
         label:'Blog',

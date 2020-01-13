@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import {v4} from 'uuid';
 
-import Layout from '../components/Layout';
+import Layout from '../components/home-layout';
 import Slideshow from '../components/home/slideshow/slideshow';
 import IndustriesCarousel from '../components/home/industries-carousel/industries-carousel';
 import ProductsPlatformsGrid from '../components/home/products-platforms-grid/products-platforms-grid';
-import TestimonialCarousel from '../components/home/testimonial-carousel/testimonial-carousel';
+// import Testimonials from '../components/home/testimonial-carousel/testimonial-carousel';
 import Clients from '../components/home/clients/clients';
 
 export const AboutUs = ({about}) => {
@@ -19,6 +23,19 @@ export const AboutUs = ({about}) => {
           </div>
         </div>
       </div>
+  )
+}
+
+export const DigitalEvolution = ({heading, subheading}) => {
+  return (
+    <div className="container">
+        <div className="com-cover">
+          <div className="mb-5">
+            <h2 className="com-heading text-black">{heading}</h2>
+            <p>{subheading}</p>
+          </div>
+        </div>
+    </div>
   )
 }
 
@@ -107,12 +124,47 @@ export const CultureVision = ({culture, vision}) => {
   )
 }
 
+const Testimonials = ({ testimonials }) => {
+  return(
+  <div>
+    
+        <div className="container testimonial-carousel">
+          <div className="col-md-6 offset-md-3">
+            <h2 className="com-heading text-center text-black mb-3">Trusted by Global Brands</h2>
+              <OwlCarousel
+              className="owl-theme"
+              items={1}
+              loop={true}
+              dots={true}
+              >
+                {testimonials.map(testimonial => (
+                  <div key={v4()}>
+                    <div className="item">
+                      <div className="tsml-img float-left">
+                        <img src={require("../images/join-us.jpg")} alt="Join Us" />
+                      </div>
+                      <div className="tsml-info float-left">
+                        <p>{testimonial.quote} </p>
+                        <p className="tsml-author">{testimonial.author}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </OwlCarousel>
+          </div>
+        </div>
+    
+  </div>
+  )
+}
+
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (
     <Layout>
       <Slideshow />
       <AboutUs about={frontmatter.about} />
+      <DigitalEvolution heading={frontmatter.heading} />
       <div className="bg">
         <Industries industries={frontmatter.industries} />
         <ProductsPlatforms productsplatfroms={frontmatter.productsplatfroms} />
@@ -124,7 +176,8 @@ const IndexPage = ({ data }) => {
           />
         </div>
       </div>
-      <TestimonialCarousel />
+      {/* <TestimonialCarousel /> */}
+      <Testimonials testimonials={frontmatter.testimonials} />
       <Clients />
     </Layout>
   )
@@ -142,9 +195,11 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: { title: { eq: "Index Page" } }) {
       frontmatter {
         title
+        heading
+        subheading
         about {
           title
           description
@@ -170,6 +225,10 @@ export const pageQuery = graphql`
         vision {
           title
           description
+        }
+        testimonials {
+          author
+          quote
         }
       }
     }

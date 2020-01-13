@@ -22,7 +22,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   return graphql(`
-    {
+  query {
       allMarkdownRemark(limit: 1000) {
         edges {
           node {
@@ -36,7 +36,7 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
-    }
+  }
   `).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()))
@@ -49,7 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id
       createPage({
         path: edge.node.fields.slug,
-        // tags: edge.node.frontmatter.tags,
+        tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
