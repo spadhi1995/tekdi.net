@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/content'
+import BlogCatList from '../components/blogcatlist';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const BlogPostTemplate = ({
@@ -34,7 +35,7 @@ export const BlogPostTemplate = ({
         />
       </div> */}
       <div className="container">
-        <div className="blog-detail py-5">
+        <div className="blog-detail">
           <div className="">
             <h1 className="title text-black">
               {title}
@@ -84,27 +85,36 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
+       <div className="container py-5">
+        <div className="row">
+          <div className="col-md-9">
+            <BlogPostTemplate
+              content={post.html}
+              contentComponent={HTMLContent}
+              description={post.frontmatter.description}
+              helmet={
+                <Helmet titleTemplate="%s | Blog">
+                  <title>{`${post.frontmatter.title}`}</title>
+                  <meta
+                    name="description"
+                    content={`${post.frontmatter.description}`}
+                  />
+                </Helmet>
+              }
+              tags={post.frontmatter.tags}
+              title={post.frontmatter.title}
+              image={post.frontmatter.featuredimage}
+              author={post.frontmatter.author}
+              category={post.frontmatter.category}
+              date={post.frontmatter.date}
+              catslug={post.fields.slug}
             />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        image={post.frontmatter.featuredimage}
-        author={post.frontmatter.author}
-        category={post.frontmatter.category}
-        date={post.frontmatter.date}
-        catslug={post.fields.slug}
-      />
+          </div>
+            <div className="col-md-3">
+              <BlogCatList />
+            </div>
+        </div>
+       </div>
     </Layout>
   )
 }
