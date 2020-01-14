@@ -38,6 +38,12 @@ ul.unstyled {
 .text-black {
     color: #000;
 }
+.bg-lightgrey {
+    background-color: #f2f2f2;
+}
+.bg-white {
+    background-color: #fff;
+}
 .text-white {
     color: #fff;
 }
@@ -59,6 +65,12 @@ h3.com-heading {
     line-height: 32px;
     font-weight: 700;
     margin-bottom: 15px;
+}
+h3.mod-title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
 }
 /* Owl Carousel */
 .owl-nav .owl-prev:hover,
@@ -160,6 +172,19 @@ h3.blog-title a {
 }
 .blog-detail li {
     display:inline-block;
+}
+.blog-cat-list li {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    border-bottom:1px solid #f2f2f2;
+    padding:0 0 10px 0;
+    margin:0 0 10px 0;
+}
+.blog-cat-list li:last-child {
+    border-bottom: none;
+    padding:0;
+    margin:0;
 }
 @media (min-width: 576px) {
     h2.com-heading {
