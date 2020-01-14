@@ -8,7 +8,7 @@ class BlogCatList extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div class="bg-white p-4">
+      <div className="bg-white p-4">
         <h3 className="text-black mod-title mb-3 pb-3">Categories</h3>
         <ul className="blog-cat-list unstyled">
           {posts &&
