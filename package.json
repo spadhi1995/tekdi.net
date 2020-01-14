@@ -28,6 +28,7 @@
     "owl.carousel": "^2.3.4",
     "prop-types": "^15.6.0",
     "react": "^16.8.4",
+    "react-accessible-accordion": "^3.0.1",
     "react-dom": "^16.8.4",
     "react-fontawesome": "^1.7.1",
     "react-helmet": "^5.2.0",

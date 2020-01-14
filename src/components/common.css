@@ -128,14 +128,15 @@ h3.mod-title {
 /*Banner*/
 .banner {
     background-image:url('../images/banner.jpg');
-    padding: 8% 0;
+    padding: 10% 0;
 }
 .banner-text p {
     font-size: 15px;
-    margin:0;
+    margin:5px;
 }
 .banner-text h1 {
-    font-size: 36px;
+    font-size: 42px;
+    line-height: 48px;
     font-weight: 700;
 }
 

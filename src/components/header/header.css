@@ -39,10 +39,14 @@ nav::after,
     font-size: 15px;
     font-weight: 600;
 }
-.menu-items li a:hover {
-    text-decoration: none;
-    border-bottom: 1px solid #b3b8be;
-}
 .home .menu-items li a {
     color: #fff;
 }
+.menu-items li a[aria-current="page"]{
+    color: #00d0d2;   
+}
+.menu-items li a:hover {
+    text-decoration: none;
+    color: #00d0d2;
+}
+
