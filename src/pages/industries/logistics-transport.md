@@ -1,5 +1,5 @@
 ---
-templateKey: index-page
+templateKey: industries-page
 title: Logistics & Transport
 image: /img/digital/transport.jpg
 heading: Logistics & Transport

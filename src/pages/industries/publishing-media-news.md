@@ -1,5 +1,5 @@
 ---
-templateKey: index-page
+templateKey: industries-page
 title: Publishing, Media and News
 image: /img/industries/publishing-media-news.jpg
 heading: Publishing, Media and News

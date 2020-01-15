@@ -1,5 +1,5 @@
 ---
-templateKey: index-page
+templateKey: industries-page
 title: Government / Public Sector
 image: /img/industries/government-public-sector.jpg
 heading: Government / Public Sector
