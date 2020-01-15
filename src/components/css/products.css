@@ -1,0 +1,19 @@
+.product-info a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+.product-info .description-cover {
+    padding: 15% 0 0;
+}
+.product-info .description {
+    z-index: 2;
+    top:0;
+}
+.product-info .description p {
+    background: linear-gradient(to bottom right, #1471bb, #41c6e7);
+    font-size: 15px;
+}
+.product-info .description-cover img {
+    width: 100%;
+}
