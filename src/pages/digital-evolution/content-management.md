@@ -1,7 +1,9 @@
 ---
-templateKey: index-page
+templateKey: digital-evolution
 title: Content Management & Digital Publishing
+featured: false
 image: /img/digital/content-management.jpg
+bgimage: /images/digital/digital-evolution1.jpg
 heading: Content Management & Digital Publishing
 subheading: Create ambitious digital experiences to reach your audience across devices and channels via efficient and effective content management and delivery solutions.
 ---
