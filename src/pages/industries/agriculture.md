@@ -1,5 +1,5 @@
 ---
-templateKey: index-page
+templateKey: industries-page
 title: Agriculture
 image: /img/industries/agriculture.jpg
 heading: Agriculture
