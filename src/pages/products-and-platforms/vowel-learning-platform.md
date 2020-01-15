@@ -1,5 +1,6 @@
 ---
-templateKey: index-page
+templateKey: products-platforms
+date: 2017-01-04T15:04:10.000Z
 title: Vowel Learning Platform
 image: /img/products-platforms/vowel.jpg
 heading: Vowel Learning Platform

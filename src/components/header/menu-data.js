@@ -13,7 +13,7 @@ export const menuData = [
     },
     {
         label:'Products',
-        url:'/products'
+        url:'/products-and-platforms'
     },
     {
         label:'Careers',
