@@ -1,7 +1,9 @@
 ---
-templateKey: index-page
+templateKey: digital-evolution
 title: E-commerce and Marketplaces
+featured: false
 image: /img/digital/ecommerce.jpg
+bgimage: /images/digital/digital-evolution1.jpg
 heading: E-commerce and Marketplaces
 subheading: We provide a scalable & robust framework for your bespoke ecommerce marketplace
 ---

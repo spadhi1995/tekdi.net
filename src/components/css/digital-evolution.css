@@ -1,0 +1,35 @@
+.digital-evolution .info-img img {
+    width: 100%;
+}
+.digital-evolution .info {
+    padding:5% 15px;
+}
+.digital-evolution .box .bg-image img {
+    width:100%;
+}
+.digital-evolution .box h4 {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    z-index:3;
+}
+.digital-evolution .box h4 a {
+    color:#fff;
+}
+.digital-evolution .box h4 a {
+    color:#fff;
+}
+.digital-evolution .box:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: #000;
+    opacity: 0.7;
+    z-index:2;
+}
