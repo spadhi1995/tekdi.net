@@ -4,6 +4,7 @@ import {Link} from "gatsby";
 import Navbar from "./navbar";
 // import "../../layout/common.css";
 import "./header.css";
+import { withPrefix } from 'gatsby'
 
 const Header = () => {
     useEffect(() => {
@@ -24,7 +25,7 @@ const Header = () => {
                     <div className="col-xs-12 header-inner">
                         <div className="logo float-left">
                             <Link to="/">
-                                <img src={require('../../images/tekdi-logo.png')} alt='logo'/>
+                                <img src={`${withPrefix('/')}img/tekdi-logo.png`} alt="logo" />
                             </Link>
                         </div>
                         <Navbar />

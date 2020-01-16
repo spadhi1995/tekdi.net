@@ -3,7 +3,7 @@ templateKey: digital-evolution
 title: Transportation
 featured: false
 image: /img/digital/transport.jpg
-bgimage: /images/digital/digital-evolution1.jpg
+bgimage: /img/digital-evolutionl/digital-evolution1.jpg
 heading: Transportation
 subheading: Technology can do a lot for your transportation services by mobilising vehicle fleets that makes anything from booking taxis to tracking large shipments convenient.
 ---

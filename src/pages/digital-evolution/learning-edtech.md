@@ -3,7 +3,7 @@ templateKey: digital-evolution
 title: Learning and Education technology
 featured: true
 image: /img/digital/learning-edtech.jpg
-bgimage: /images/digital/digital-evolution1.jpg
+bgimage: /img/digital-evolution/digital-evolution1.jpg
 heading: Learning and Education technology
 subheading: Curated technology solutions to manage, deliver, track, socialize and monetize learning and training for Businesses, Universities, Schools, Training companies & Content creators. 
 ---
