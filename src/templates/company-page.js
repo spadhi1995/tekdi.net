@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 const CompanyPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  // const { frontmatter } = data.markdownRemark
   return (
     <Layout></Layout>
   )

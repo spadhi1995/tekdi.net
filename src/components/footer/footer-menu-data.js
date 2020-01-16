@@ -1,61 +1,61 @@
 const comapanyMenuData = [
     {
         label:'Team',
-        url:'/carrers'
+        url:'/#'
     },
     {
         label:'Vision',
-        url:'/blog'
+        url:'/#'
     },
     {
-        label:'Carrers',
-        url:'/contact'
+        label:'Careers',
+        url:'/careers'
     },
     {
         label:'Contact',
-        url:'/blog'
+        url:'/contact'
     },
     {
         label:'Blog',
-        url:'/contact'
+        url:'/blog'
     }
 ];
 
 const technologyMenuData = [
     {
         label:'Joomla',
-        url:'/carrers'
+        url:'/#'
     },
     {
         label:'Angular',
-        url:'/blog'
+        url:'/#'
     },
     {
         label:'PHP & Frameworks',
-        url:'/contact'
+        url:'/#'
     }
 ];
 
 const servicesMenuData = [
     {
         label:'Product Development',
-        url:'/carrers'
+        url:'/#'
     },
     {
-        label:'SaaS',
-        url:'/blog'
+        label:'SaSS',
+        url:'/#'
     },
     {
         label:'Web Development',
-        url:'/contact'
+        url:'/#'
     },
     {
         label:'Mobility',
-        url:'/blog'
+        url:'/#'
     },
     {
         label:'UI/UX',
-        url:'/contact'
+        url:'/#'
     }
 ];
 

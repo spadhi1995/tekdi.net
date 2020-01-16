@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import PreviewCompatibleImage from './preview-compatible-image'
 
 class BlogList extends React.Component {
   render() {
@@ -96,7 +96,7 @@ export default () => (
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 200, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
