@@ -17,15 +17,15 @@ joinus:
    title: Join Us
    description: If your first love is data-analytics, you thrive on cloud technology and are just a tad competitive then Tekdi is the place for you
    linktext: View Openings
-   linkurl: /
+   linkurl: /careers
 culture:
   image: /img/coffee.png
   title: Team Culture
   description: If your first love is data-analytics, you thrive on cloud technology and are just a tad competitive then Tekdi is the place for you
 vision:
   image: /img/coffee.png
-  title: Out Vision
-  description: If your first love is data-analytics, you thrive on cloud technology and are just a tad competitive then Tekdi is the place for you
+  title: Our Vision
+  description: By 2021 have a team of 200+ catalysts to make India proud by serving 10,000+ clients across the world.
 testimonials:
   - author: John Blur, Founder, Co-Blue
     quote: >-
