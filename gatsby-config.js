@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Tekdi Website',
+    title: 'Tekdi Technologies pvt. ltd.',
     description:
-      'This repo contains an example business website that is built with Gatsby.',
+      '',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/img`,
+        path: `${__dirname}/src/images`,
         name: 'images',
       },
     },

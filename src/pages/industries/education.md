@@ -1,5 +1,5 @@
 ---
-templateKey: index-page
+templateKey: industries-page
 title: Education
 image: /img/industries/education.jpg
 heading: Education

@@ -46,7 +46,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Header />
-      <div className="bg-lightgrey">
+      <div>
         {children}
       </div>
       <Footer />
