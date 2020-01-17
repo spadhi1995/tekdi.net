@@ -39,7 +39,7 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         {/* Hamburger menu */}
-        <div
+        <a href="javascript.void();"
           className={`navbar-burger burger ${this.state.navBarActiveClass}`}
           data-target="navMenu"
           onClick={() => this.toggleHamburger()}
@@ -47,7 +47,7 @@ const Navbar = class extends React.Component {
           <span />
           <span />
           <span />
-      </div>
+      </a>
         <div
           id="navMenu"
           className={`navbar-menu ${this.state.navBarActiveClass}`}

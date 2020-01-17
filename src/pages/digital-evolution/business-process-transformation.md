@@ -3,7 +3,7 @@ templateKey: digital-evolution
 title: Business Process Transformation
 featured: false
 image: /img/digital/business-process-transformation.jpg
-bgimage: /images/digital/digital-evolution1.jpg
+bgimage: /img/digital-evolution/digital-evolution1.jpg
 heading: Business Process Transformation
 subheading: Take your business to the next level by modernizing existing processes that improve business productivity and organizational efficiency. 
 ---

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import '../components/css/products.css';
-import PreviewCompatibleImage from './PreviewCompatibleImage';
+// import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 class ProductList extends React.Component {
   render() {

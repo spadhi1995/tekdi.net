@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-// import PreviewCompatibleImage from './PreviewCompatibleImage'
+import PropTypes from 'prop-types';
+import { Link, graphql, StaticQuery } from 'gatsby';
+import PreviewCompatibleImage from '../../preview-compatible-image';
 
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -53,12 +53,21 @@ class IndustriesCarousel extends React.Component {
                         posts.map(({ node: post }) => (
                         <div className="item" key={post.id}>
                             <div className="item-inner blue-bg">
-                                <h3 className="section-title mt-4 mb-2">{post.frontmatter.title}</h3>
-                                <p>{post.excerpt}
+                              <div className="icon">
+                                <PreviewCompatibleImage
+                                  imageInfo={{
+                                    image: post.frontmatter.icon,
+                                    alt: `icon for ${post.frontmatter.title}`,
+                                  }}
+                                />
+                              </div>
+                              <h3 className="section-title mt-4 mb-2">{post.frontmatter.title}</h3>
+                              <p>
+                                {post.frontmatter.subheading}
                                 <br/>
                                 <br/>
                                 <Link to={post.fields.slug} >View More </Link>
-                                </p>
+                              </p>
                             </div>
                         </div>
                     ))}
@@ -95,6 +104,13 @@ export default () => (
                   title
                   heading
                   subheading
+                  icon {
+                    childImageSharp {
+                      fluid(maxWidth: 60, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
                 }
               }
             }

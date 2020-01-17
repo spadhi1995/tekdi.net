@@ -2,7 +2,7 @@
 	font-family: 'Conv_overpass-bold';
 	src: url('./fonts/overpass-bold.eot');
 	src: local('☺'), url('./fonts/overpass-bold.woff') format('woff'), url('./fonts/overpass-bold.ttf') format('truetype'), url('./fonts/overpass-bold.svg') format('svg');
-	font-weight: normal;
+	font-weight: bolder;
 	font-style: normal;
 } 
 
@@ -10,7 +10,7 @@
 	font-family: 'Conv_overpass-extrabold';
 	src: url('./fonts/overpass-extrabold.eot');
 	src: local('☺'), url('./fonts/overpass-extrabold.woff') format('woff'), url('./fonts/overpass-extrabold.ttf') format('truetype'), url('./fonts/overpass-extrabold.svg') format('svg');
-	font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
 }
 
@@ -30,6 +30,17 @@ body {
     color: #65737f;
     font-weight: 600;
 }
+
+/*For Sharp image style*/
+.gatsby-image-wrapper>div {
+    padding-bottom:0 !important;
+}
+picture img {
+    position: static !important;
+    width: auto !important;
+    height:auto !important;
+}
+
 ul.unstyled {
     list-style: none;
     padding: 0;
@@ -82,6 +93,7 @@ h3.mod-title {
 }
 .owl-carousel .owl-item img {
     width: auto !important;
+    height: auto !important;
 }
 .owl-carousel .owl-dots button {
     outline: none;
@@ -112,9 +124,9 @@ h3.mod-title {
     width: 150px;
     margin-right:20px;
 }
-.tsml-img img {
-    width: 100%;
-    height: 150px;
+.testimonial-carousel .tsml-img img {
+    width: 150px !important;
+    height: 150px !important;
     border-radius: 50%;
 }
 .tsml-info {

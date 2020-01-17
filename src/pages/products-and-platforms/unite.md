@@ -1,10 +1,10 @@
 ---
 templateKey: products-platforms
 date: 2017-01-04T15:04:10.000Z
-title: Vowel Learning Platform
-icon: /img/products-platforms/elearning-icon.png
+title: Unite
+icon: /img/products-platforms/unite-icon.png
 image: /img/products-platforms/vowel.jpg
-heading: Vowel Learning Platform
+heading: Unite
 subheading: The quality of training determines the success of any corporate, small enterprise or individual. Vowel LMS is an intuitive interface that helps you deploy different types of offline and online content while tracking training outcomes.
 ---
 

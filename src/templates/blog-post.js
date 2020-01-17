@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/content'
 import BlogCatList from '../components/blogcatlist';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+// import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const BlogPostTemplate = ({
   content,

@@ -20,18 +20,18 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${withPrefix('/')}images/favicon/apple-touch-icon.png`}
+          href={`${withPrefix('/')}img/favicon/apple-touch-icon.png`}
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}images/favicon/favicon-32x32.png`}
+          href={`${withPrefix('/')}img/favicon/favicon-32x32.png`}
           sizes="32x32"
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}images/favicon/favicon-16x16.png`}
+          href={`${withPrefix('/')}img/favicon/favicon-16x16.png`}
           sizes="16x16"
         />
 
@@ -42,7 +42,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix('/')}images/og-image.jpg`}
+          content={`${withPrefix('/')}img/tekdi-logo.png`}
         />
       </Helmet>
       <Header />

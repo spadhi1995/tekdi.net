@@ -4,7 +4,7 @@
     background-position: center;
     background-attachment: fixed;
 }
-.industries-carousel .owl-stage-outer {
+.owl-carousel .owl-stage-outer {
     padding: 0 0 120px 0;
 }
 .industries-carousel .owl-carousel {
