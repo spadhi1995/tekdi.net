@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from '../../preview-compatible-image';
 
-import OwlCarousel from 'react-owl-carousel';
+
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import '../industries-carousel/industries-carousel.css';
@@ -18,12 +18,7 @@ class TestimonialCarousel extends React.Component {
       <div className="com-cover">
         <div className="col-md-6 offset-md-3 mb-5">
         <h2 className="com-heading text-center text-black mb-3">Trusted by Global Brands</h2>
-          <OwlCarousel
-              className="owl-theme"
-              items={1}
-              loop={true}
-              dots={true}
-          >
+          <div>
             {posts &&
               posts.map(({ node: post }) => (
           
@@ -44,7 +39,7 @@ class TestimonialCarousel extends React.Component {
                 </div>
               </div>
             ))}
-          </OwlCarousel>  
+          </div>  
        </div>
       </div>
     </div> 

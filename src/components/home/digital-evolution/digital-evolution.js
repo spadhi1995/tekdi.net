@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from '../../preview-compatible-image';
-import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './digital-evolution.css'
@@ -41,14 +40,7 @@ class DigitalEvolution extends React.Component {
       return ( 
           <div className="container"> 
             <div className="digital-evolution">
-                <OwlCarousel
-                    className="owl-theme text-white"
-                    items={column}
-                    loop={loop}
-                    nav={nav}
-                    dots={false}
-                    responsive={this.state.responsive}
-                >
+                <div>
               {posts &&
               posts.map(({ node: post }) => (
                 <div key={post.id} className="">
@@ -69,7 +61,7 @@ class DigitalEvolution extends React.Component {
                     </div>
                 </div>
               ))}
-              </OwlCarousel>
+              </div>
           </div>
         </div>
     )
