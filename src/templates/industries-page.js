@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 
-const CompanyPage = ({ data }) => {
+const IndustriesPage = ({ data }) => {
   // const { frontmatter } = data.markdownRemark
   return (
     <Layout></Layout>
@@ -12,7 +12,7 @@ const CompanyPage = ({ data }) => {
   }
 
 
-CompanyPage.propTypes = {
+  IndustriesPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -20,11 +20,11 @@ CompanyPage.propTypes = {
   }),
 }
 
-export default CompanyPage;
+export default IndustriesPage;
 
 export const pageQuery = graphql`
-  query CompanyPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "company-page" } }) {
+  query IndustriesPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "industries-page" } }) {
       frontmatter {
         title
       }

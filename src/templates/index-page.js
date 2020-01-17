@@ -8,23 +8,24 @@ import {v4} from 'uuid';
 
 import Layout from '../components/home-layout';
 import Slideshow from '../components/home/slideshow/slideshow';
+import AboutUs from '../components/home/about-us/about-us';
 import IndustriesCarousel from '../components/home/industries-carousel/industries-carousel';
 import ProductsPlatformsGrid from '../components/home/products-platforms-grid/products-platforms-grid';
 // import Testimonials from '../components/home/testimonial-carousel/testimonial-carousel';
 import Clients from '../components/home/clients/clients';
 
-export const AboutUs = ({about}) => {
-  return (
-      <div className="container">
-        <div className="com-cover">
-          <div className="text-center col-md-6 offset-md-3 mb-5">
-            <h2 className="com-heading text-black">{about.title}</h2>
-            <p>{about.description}</p>
-          </div>
-        </div>
-      </div>
-  )
-}
+// export const AboutUs = ({about}) => {
+//   return (
+//       <div className="container">
+//         <div className="com-cover">
+//           <div className="text-center col-md-6 offset-md-3 mb-5">
+//             <h2 className="com-heading text-black">{about.title}</h2>
+//             <p>{about.description}</p>
+//           </div>
+//         </div>
+//       </div>
+//   )
+// }
 
 export const DigitalEvolution = ({heading, subheading}) => {
   return (
@@ -163,7 +164,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Slideshow />
-      <AboutUs about={frontmatter.about} />
+      <AboutUs />
       <DigitalEvolution heading={frontmatter.heading} />
       <div className="bg">
         <Industries industries={frontmatter.industries} />
@@ -200,10 +201,6 @@ export const pageQuery = graphql`
         title
         heading
         subheading
-        about {
-          title
-          description
-        }
         industries {
           title
           description

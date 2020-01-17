@@ -1,56 +1,87 @@
 import React from "react";
+import PropTypes from 'prop-types';
+import { Link, graphql, StaticQuery } from 'gatsby';
+import PreviewCompatibleImage from '../../preview-compatible-image';
 import "./product-platform-grid.css"
 
-const ProductsPlatformsGrid = () => {
-    return (
-        <div className="row">
-            <div className="col-md-3">
-                <div className="prod-item px-3 py-4">
-                    <img className="mb-4" src={require("./images/products-icon1.png")} alt="Produts Icon"/>
-                    <h3 className="section-title text-black mb-4">
-                        Enterprise Application Development Platform
-                    </h3>
-                    <p className="font-weight-normal">
-                        We use a wide range of technology stacks with Joomla like Angular, PHP, Node, JS with both traditional and NoSQL databases
-                    </p>
-                </div>
-            </div>
-            <div className="col-md-3">
-                <div className="prod-item px-3 py-4">
-                    <img className="mb-4" src={require("./images/products-icon2.png")} alt="Produts Icon"/>
-                    <h3 className="section-title text-black mb-4">
-                        Non Profit Management
-                    </h3>
-                    <p className="font-weight-normal">
-                        We use a wide range of technology stacks with Joomla like Angular, PHP, Node, JS with both traditional and NoSQL databases
-                    </p>
-                </div>
-            </div>
-            <div className="col-md-3">
-                <div className="prod-item px-3 py-4">
-                    <img className="mb-4" src={require("./images/products-icon3.png")} alt="Produts Icon"/>
-                    <h3 className="section-title text-black mb-4">
-                        e-Learning Platform
-                    </h3>
-                    <p className="font-weight-normal">
-                        We use a wide range of technology stacks with Joomla like Angular, PHP, Node, JS with both traditional and NoSQL databases
-                    </p>
-                </div>
-            </div>
-            <div className="col-md-3">
-                <div className="prod-item px-3 py-4">
-                    <img className="mb-4" src={require("./images/products-icon4.png")} alt="Produts Icon"/>
-                    <h3 className="section-title text-black mb-4">
-                        Unite
-                    </h3>
-                    <p className="font-weight-normal">
-                        We use a wide range of technology stacks with Joomla like Angular, PHP, Node, JS with both traditional and NoSQL databases
-                    </p>
-                </div>
-            </div>
-        </div>
+class ProductsPlatformsGrid extends React.Component {
+    render() {
 
-    )
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
+  
+        return (
+            <div className="row">
+                {posts &&
+                posts.map(({ node: post }) => (
+                    <div className="col-md-3" key={post.id}>
+                        <div className="prod-item px-3 py-4">
+                          <div className="icon mb-3">
+                              <PreviewCompatibleImage
+                                imageInfo={{
+                                  image: post.frontmatter.icon,
+                                  alt: `icon for ${post.frontmatter.title}`,
+                                }}
+                              />
+                            </div>
+                          <h3 className="section-title text-black mb-4">
+                              {post.frontmatter.heading}
+                          </h3>
+                          <p className="mb-0">
+                            {post.excerpt}
+                            <br/>
+                            <br/>
+                            <Link to={post.fields.slug}>View More</Link>
+                          </p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        )
+    }
 }
 
-export default ProductsPlatformsGrid;
+ProductsPlatformsGrid.propTypes = {
+    data: PropTypes.shape({
+      allMarkdownRemark: PropTypes.shape({
+        edges: PropTypes.array,
+      }),
+    }),
+  }
+  
+  export default () => (
+    <StaticQuery
+      query={graphql`
+        query ProductsPlatformsGridQuery {
+          allMarkdownRemark(
+            filter: { frontmatter: { templateKey: { eq: "products-platforms" } } }
+          ) {
+            edges {
+              node {
+                excerpt(pruneLength: 150)
+                id
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                  templateKey
+                  heading
+                  subheading
+                  icon {
+                    childImageSharp {
+                      fluid(maxWidth: 60, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={(data, count) => <ProductsPlatformsGrid data={data} count={count} />}
+    />
+  )
+  

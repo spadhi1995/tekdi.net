@@ -5,7 +5,7 @@ const Copyright = () => {
         <div className="copytight py-3">
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-6">2018 Copyrights Tekdi</div>
+                    <div className="col-sm-6">2020 Copyrights Tekdi</div>
                     <div className="col-sm-6 text-right">a multia design</div>
                 </div>
             </div>

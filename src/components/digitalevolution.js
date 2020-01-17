@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import '../components/css/digital-evolution.css';
-import PreviewCompatibleImage from './PreviewCompatibleImage';
+import PreviewCompatibleImage from './preview-compatible-image';
 
 class DigitalEvolutionList extends React.Component {
   render() {
