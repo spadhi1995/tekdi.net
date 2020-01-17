@@ -12,7 +12,7 @@ class AboutUs extends React.Component {
       <div className="container"> 
         {posts &&
             posts.map(({ node: post }) => (
-              <div className="com-cover">
+              <div className="com-cover" key={post.id}>
                 <div className="text-center col-md-6 offset-md-3 mb-5">
                 <h2 className="com-heading text-black">
                   {post.frontmatter.heading}

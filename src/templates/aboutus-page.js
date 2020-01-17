@@ -54,7 +54,7 @@ AboutUsTemplate.propTypes = {
 export default AboutUsPage;
 
 export const pageQuery = graphql`
-query DAboutUsByID($id: String!) {
+query AboutUsByID($id: String!) {
   markdownRemark(id: { eq: $id }) {
     id
     html
