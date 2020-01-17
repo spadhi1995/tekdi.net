@@ -35,9 +35,10 @@
     "react-fontawesome": "^1.7.1",
     "react-gmaps": "^1.9.0",
     "react-helmet": "^5.2.0",
-    "react-owl-carousel": "^2.3.1",
+    "react-id-swiper": "^2.4.0",
     "react-responsive-carousel": "^3.1.51",
     "reactstrap": "^8.2.0",
+    "swiper": "^5.3.0",
     "uuid": "^3.2.1"
   },
   "keywords": [
