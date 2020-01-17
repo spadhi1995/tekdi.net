@@ -63,7 +63,7 @@ class IndustriesCarousel extends React.Component {
                               </div>
                               <h3 className="section-title mt-4 mb-2">{post.frontmatter.title}</h3>
                               <p>
-                                {post.frontmatter.subheading}
+                                {post.excerpt}
                                 <br/>
                                 <br/>
                                 <Link to={post.fields.slug} >View More </Link>

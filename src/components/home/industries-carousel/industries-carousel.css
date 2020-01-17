@@ -62,3 +62,9 @@
 .industries-carousel .owl-item .item:hover p { 
     display: block;
 }
+.industries-carousel .icon .gatsby-image-wrapper img {
+    opacity: 0 !important;
+}
+.industries-carousel .icon .gatsby-image-wrapper picture img {
+    opacity: 1 !important;
+}

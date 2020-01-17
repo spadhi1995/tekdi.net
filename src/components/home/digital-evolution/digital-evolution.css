@@ -1,0 +1,6 @@
+.digital-evolution .gatsby-image-wrapper img {
+    opacity: 0 !important;
+}
+.digital-evolution .gatsby-image-wrapper picture img {
+    opacity: 1 !important;
+}
