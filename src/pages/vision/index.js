@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
 
-const TeamPage = ({ data }) => {
+const VisionPage = ({ data }) => {
   // const { frontmatter } = data.markdownRemark
   return (
     <Layout></Layout>
@@ -12,7 +12,7 @@ const TeamPage = ({ data }) => {
   }
 
 
-  TeamPage.propTypes = {
+  VisionPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -20,11 +20,11 @@ const TeamPage = ({ data }) => {
   }),
 }
 
-export default TeamPage;
+export default VisionPage;
 
 export const pageQuery = graphql`
-  query TeamPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "team-page" } }) {
+  query VisionPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "vision-page" } }) {
       frontmatter {
         title
         heading
