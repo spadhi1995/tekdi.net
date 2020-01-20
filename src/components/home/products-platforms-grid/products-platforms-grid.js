@@ -14,7 +14,7 @@ class ProductsPlatformsGrid extends React.Component {
             <div className="row">
                 {posts &&
                 posts.map(({ node: post }) => (
-                    <div className="col-md-3" key={post.id}>
+                    <div className="col-md-3 col-sm-6 col-xs-12 pl-1 pr-1" key={post.id}>
                         <div className="prod-item px-3 py-4">
                           <div className="icon mb-3">
                               <PreviewCompatibleImage
@@ -27,7 +27,7 @@ class ProductsPlatformsGrid extends React.Component {
                           <h3 className="section-title text-black mb-4">
                               {post.frontmatter.heading}
                           </h3>
-                          <p className="mb-0">
+                          <p className="mb-0 font-weight-normal">
                             {post.excerpt}
                             <br/>
                             <br/>

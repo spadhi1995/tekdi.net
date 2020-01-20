@@ -1,5 +1,4 @@
 .prod-item {
-    border: 1px solid #f2f2f2;
     height: 100%;
 }
 .prod-item:hover {
@@ -9,4 +8,11 @@
 }
 .prod-item .icon {
     width:100%;
+}
+.prod-item a {
+    display: none;
+    color: #00d0d2;
+}
+.prod-item:hover  a {
+    display: block;
 }
