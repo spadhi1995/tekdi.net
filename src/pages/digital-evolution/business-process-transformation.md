@@ -1,6 +1,7 @@
 ---
 templateKey: digital-evolution
 title: Business Process Transformation
+bannerSubTitle: Digital Transformation
 featured: false
 image: /img/digital/business-process-transformation.jpg
 bgimage: /img/digital-evolution/digital-evolution1.jpg

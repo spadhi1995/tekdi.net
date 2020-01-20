@@ -5,21 +5,11 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/content'
+import Banner from "../components/banner/banner"
 // import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import DigitalEvolutionList from '../components/digitalevolution'
 
-export const Banner = ({title}) => {
-  return(
-    <div className="banner">
-      <div className="container">
-        <div className="banner-text">
-          <p className="text-white font-weight-normal">Digital Transformation</p>
-            <h1 className="text-white">{title}</h1>
-        </div>
-      </div>
-    </div>
-  )
-}
+
 export const DigitalEvolutionTemplate = ({
   content,
   contentComponent,
@@ -64,8 +54,10 @@ const DigitalEvolution = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
+    
     <Layout>
-      <Banner title={post.frontmatter.title}/>
+     <Banner bannerTitle= {post.frontmatter.title} bannerSubTitle = {post.frontmatter.bannerSubTitle}/>
+     
        <div className="container py-5">
         <div className="row">
           <div className="col-md-12">
@@ -112,6 +104,7 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM YYYY")
         heading
         subheading
+        bannerSubTitle
       }
     }
   }
