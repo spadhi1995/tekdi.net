@@ -19,9 +19,10 @@ class DigitalEvolution extends React.Component {
           clickable: true,
           bullets: true
         },
+        slidesPerColumn: 2,
         breakpoints: {
           1024: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 0
           },
           768: {

@@ -69,7 +69,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Slideshow />
       <AboutUs />
-      {/* <DigitalEvolution /> */}
+      <DigitalEvolution />
       <div className="bg">
         <Industries industries={frontmatter.industries} />
         <ProductsPlatforms productsplatfroms={frontmatter.productsplatfroms} />

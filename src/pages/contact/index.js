@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
-import Layout from '../components/layout';
-import Map from "../components/map/map"
-import ContactUs from "../components/contact/contact"
+import Layout from '../../components/layout';
+import Map from "../../components/map/map"
+import ContactUs from "../../components/contact/contact"
 export const Banner = ({title}) => {
     return(
       <div className="banner">
