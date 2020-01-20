@@ -71,9 +71,6 @@ export const pageQuery = graphql`
         title
         address 
         address_title
-        phone_title
-        phone_number1
-        phone_number2
         email_title
         email_address
       }
