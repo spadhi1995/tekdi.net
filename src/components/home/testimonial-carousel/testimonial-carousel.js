@@ -2,27 +2,36 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from '../../preview-compatible-image';
-
-
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import '../industries-carousel/industries-carousel.css';
+import Swiper from 'react-id-swiper';
+import 'swiper/css/swiper.css';
+import './testimonial-carousel.css';
 
 class TestimonialCarousel extends React.Component {
   render(){
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
+    const params = {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        bullets: true
+      },
+      loop: true,
+      loopFillGroupWithBlank: true,
+      effect: 'flip',
+      grabCursor: true
+    };
     return (
     <div className="container"> 
       <div className="com-cover">
-        <div className="col-md-6 offset-md-3 mb-5">
+        <div className="col-md-6 offset-md-3 testimonial-carousel">
         <h2 className="com-heading text-center text-black mb-3">Trusted by Global Brands</h2>
-          <div>
+          <Swiper {...params}>
             {posts &&
               posts.map(({ node: post }) => (
           
-              <div className="item testimonial-carousel" key={post.id}>
+              <div className="item" key={post.id}>
                 <div className="tsml-img float-left">
                   <PreviewCompatibleImage
                     imageInfo={{
@@ -37,9 +46,10 @@ class TestimonialCarousel extends React.Component {
                     {post.frontmatter.heading}
                   </p>
                 </div>
+                <div className="clearfix"></div>
               </div>
             ))}
-          </div>  
+          </Swiper>  
        </div>
       </div>
     </div> 
