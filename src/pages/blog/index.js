@@ -3,19 +3,16 @@ import React from 'react'
 import Layout from '../../components/layout';
 import BlogList from '../../components/bloglist'; 
 import BlogCatList from '../../components/blogcatlist';
+import Banner from "../../components/banner/banner"
 
 export default class BlogIndexPage extends React.Component {
+   
   render() {
+    const StaticPage = this.props.data.markdownRemark.frontmatter
     return (
       <Layout>
-        <div className="banner">
-          <div className="container">
-            <div className="banner-text">
-              <p className="text-white font-weight-normal">Latest Reads</p>
-              <h1 className="text-white">Blog</h1>
-            </div>
-          </div>
-        </div>
+        <Banner bannerTitle= {StaticPage.bannerTitle} bannerSubTitle = {StaticPage.bannerSubTitle}/>
+        
         <div className="container py-5">
           <div className="row">
             <div className="col-md-9">
@@ -30,3 +27,14 @@ export default class BlogIndexPage extends React.Component {
     )
   }
 }
+
+export const pageQuery = graphql`
+  query blogBanner {
+    markdownRemark(frontmatter: { templateKey: { eq: "blog-banner" } }) {
+      frontmatter {
+        bannerTitle
+        bannerSubTitle
+      }
+    }
+  }
+`

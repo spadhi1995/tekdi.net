@@ -1,20 +1,14 @@
 import React from 'react'
-
 import Layout from '../../components/layout';
 import ProductList from '../../components/productlist'; 
+import Banner from "../../components/banner/banner"
 
 export default class ProductsIndexPage extends React.Component {
   render() {
+    const Banners = this.props.data.markdownRemark.frontmatter
     return (
       <Layout>
-        <div className="banner">
-          <div className="container">
-            <div className="banner-text">
-              <p className="text-white font-weight-normal">Products & Platforms</p>
-              <h1 className="text-white">E-Learning</h1>
-            </div>
-          </div>
-        </div>
+        <Banner bannerTitle= {Banners.bannerTitle} bannerSubTitle = {Banners.bannerSubTitle}/>
         <div className="container py-5">
           <ProductList />
         </div>
@@ -22,3 +16,14 @@ export default class ProductsIndexPage extends React.Component {
     )
   }
 }
+
+export const pageQuery = graphql`
+  query productsPage {
+    markdownRemark(frontmatter: { templateKey: { eq: "products-banner" }}) {
+      frontmatter {
+        bannerTitle
+        bannerSubTitle
+      }
+    }
+  }
+`

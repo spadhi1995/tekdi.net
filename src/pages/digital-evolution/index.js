@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 
 import Layout from '../../components/layout';
 import DigitalEvolutionList from '../../components/digitalevolution'; 
+import Banner from "../../components/banner/banner"
 
 export const Custom = () => {
   return (
@@ -45,15 +46,10 @@ export const Custom = () => {
 
 export default class DigitalEvolutionIndexPage extends React.Component {
   render() {
+    const Banners = this.props.data.markdownRemark.frontmatter
     return (
       <Layout>
-        <div className="banner">
-          <div className="container">
-            <div className="banner-text">
-              <h1 className="text-white">Digital Transformation</h1>
-            </div>
-          </div>
-        </div>
+         <Banner bannerTitle= {Banners.bannerTitle} />
         <div className="pt-5 digital-evolution">
           <Custom />
           <DigitalEvolutionList />
@@ -62,3 +58,14 @@ export default class DigitalEvolutionIndexPage extends React.Component {
     )
   }
 }
+
+export const pageQuery = graphql`
+  query digitalEvolutionBanner {
+    markdownRemark(frontmatter: { templateKey: { eq: "digital-evolution-banner" }}) {
+      frontmatter {
+        bannerTitle
+        bannerSubTitle
+      }
+    }
+  }
+`
