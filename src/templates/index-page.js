@@ -5,13 +5,13 @@ import { Link,graphql } from 'gatsby';
 import Layout from '../components/home-layout';
 import Slideshow from '../components/home/slideshow/slideshow';
 import AboutUs from '../components/home/about-us/about-us';
-//import IndustriesCarousel from '../components/home/industries-carousel/industries-carousel';
+import IndustriesCarousel from '../components/home/industries-carousel/industries-carousel';
 import ProductsPlatformsGrid from '../components/home/products-platforms-grid/products-platforms-grid';
-//import TestimonialCarousel from '../components/home/testimonial-carousel/testimonial-carousel';
 import Clients from '../components/home/clients/clients';
-//import DigitalEvolution from '../components/home/digital-evolution/digital-evolution';
+import DigitalEvolution from '../components/home/digital-evolution/digital-evolution';
 import TeamCulture from '../components/home/team-cuture/team-culture';
 import Vision from '../components/home/vision/vision';
+import TestimonialCarousel from '../components/home/testimonial-carousel/testimonial-carousel';
 
 export const Industries = ({industries}) => {
   return (
@@ -21,7 +21,7 @@ export const Industries = ({industries}) => {
             <h2 className="com-heading text-black">{industries.title}</h2>
             <p>{industries.description}</p>
           </div>
-          {/* <IndustriesCarousel /> */}
+          <IndustriesCarousel />
         </div>
       </div>
   )
@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
-      {/* <TestimonialCarousel /> */}
+      <TestimonialCarousel />
       <Clients />
     </Layout>
   )

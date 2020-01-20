@@ -17,6 +17,7 @@ export default function HTML(props) {
           crossOrigin="anonymous"
         />
         {props.headComponents}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css"/>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

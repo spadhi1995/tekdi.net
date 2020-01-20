@@ -1,3 +1,6 @@
+.testimonial-carousel .swiper-container {
+    padding: 0 0 30px 0;
+}
 .testimonial-carousel p {
     color: #32c6f4;
 }
