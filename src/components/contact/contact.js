@@ -35,7 +35,7 @@ export class contactUs extends React.Component {
     let formIsValid = true;
 
     //Name
-    if (this.state.name == ""){
+    if (this.state.name === ""){
        formIsValid = false;
        errors["name"] = "Enter an Name";
     }
@@ -48,7 +48,7 @@ export class contactUs extends React.Component {
     }
 
     //Email
-    if (this.state.email == ""){
+    if (this.state.email === ""){
        formIsValid = false;
        errors["email"] = "Enter an Email";
     }
@@ -62,12 +62,12 @@ export class contactUs extends React.Component {
           errors["email"] = "Email is not valid";
         }
     } 
-    if (this.state.message == ""){
+    if (this.state.message === ""){
       formIsValid = false;
       errors["message"] = "Enter an Message";
     } 
 
-    if (this.state.phone == ""){
+    if (this.state.phone === ""){
     formIsValid = false;
     errors["phone"] = "Enter an Phone";
     }

@@ -40,9 +40,6 @@ const ContactPage = ({ data }) => {
                     <h4 className="font-weight-bold  text-black">{frontmatter.title}</h4>
                     <h6 className="font-weight-bold text-black">{frontmatter.address_title}</h6>
                    <div>{frontmatter.address} </div> 
-                   <h6 className="font-weight-bold mt-2 text-black">{frontmatter.phone_title}</h6>
-                   <div>{frontmatter.phone_number1} </div> 
-                   <div>{frontmatter.phone_number2} </div> 
                    <h6 className="font-weight-bold mt-2 text-black">{frontmatter.email_title}</h6>
                    <div>{frontmatter.email_address} </div> 
                  </div>  
