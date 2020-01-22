@@ -1,36 +1,78 @@
-.carousel .slide {
+.slideshow {
     position: relative;
     text-align: left;
-    height: 100vh;
+    height: 630px;
     color: #fff;
     background-image:url(./images/slideshow-bg.jpg);
     background-size: cover;
     background-position: center;
 }
-.carousel-items {
-    margin:15% auto;
-}
 
-h3.carousel-desc {
+.carousel-items {
+    margin:15% auto 5% auto;
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet {
+    background:transparent;
+    width: auto;
+    opacity: 0.5;
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet-active {
+    margin: 0 50px 0 0;
+    position: relative;
+    opacity: 1;
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet:focus {
+    outline: none;
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet:before{
+    cursor: pointer;
+    margin: 0 8px 0 0;
+    display: inline-block;
+    width:20px;
+    font-size: 14px;
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet-active:after {
+    content:'';
+    border-bottom: 1px solid #fff;
+    width: 50px;
+    position: absolute;
+    left: 25px;
+    top: 11px;
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet-active:last-child {
+    margin: 0 8px 0 0;
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet-active:last-child:after {
+    display: none;
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet:first-child:before{
+    content: '01';
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet:nth-child(2):before{
+    content: '02';
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet:nth-child(3):before{
+    content: '03';
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet:nth-child(4):before{
+    content: '04';
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet:nth-child(5):before{
+    content: '05';
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet:nth-child(6):before{
+    content: '06';
+}
+.slideshow .swiper-pagination .swiper-pagination-bullet:nth-child(7):before{
+    content: '07';
+}
+.slideshow .swiper-container img {
+    width: 100%;
+}
+.slideshow h3.carousel-desc {
     color: #fff;
     font-size: 36px;
     line-height: 48px;
     font-weight: 600;
     margin: 10% auto;
-}
-.carousel-img {
-    position: absolute;
-    top: 150px;
-    right:0;
-}
-.carousel .control-dots {
-    bottom: 10px;
-}
-.carousel .control-dots .dot {
-    width:10px;
-    height: 10px;
-    margin: 0 5px;
-}
-.carousel .control-dots .dot:focus {
-    outline: 0;
 }
