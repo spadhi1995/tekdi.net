@@ -5,18 +5,30 @@ import '../components/css/digital-evolution.css';
 import PreviewCompatibleImage from './preview-compatible-image';
 
 class DigitalEvolutionList extends React.Component {
+  constructor(props) {
+    
+    super(props)
+    var url =  typeof window !== 'undefined' ? window.location.href : '';
+    if(url)
+     {
+        this.boxId = url.match(/\/([^\/]+)\/?$/)[1];
+     }
+     else
+     {
+        this.boxId = "";
+     }  
+  }
+  
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-
+    const { edges: posts } = data.allMarkdownRemark 
     return (
-      
-        
         <div className="container-fluid">
           <div className="row">
             {posts &&
-            posts.map(({ node: post }) => (
-              <div key={post.id} className="col-md-2 p-0">
+            posts.map(({ node: post }) => (  
+              this.boxId !== post.fields.slug.match(/\/([^\/]+)\/?$/)[1] ? (
+              <div key={post.id} className="col-md-2 p-0"> 
                 <div className="box">
                   {post.frontmatter.bgimage ? (
                       <div className="bg-image">
@@ -27,16 +39,16 @@ class DigitalEvolutionList extends React.Component {
                           }}
                         />
                       </div>
-                    ) : null}
+                    ) : null}  
                     <h4 className="position-absolute">
                       <Link to={post.fields.slug} className="text-decoration-none">{post.frontmatter.heading}</Link>
                     </h4>
                   </div>
               </div>
+                ) : null 
             ))}
           </div>
-        </div>
-     
+       </div>     
     )
   }
 }
@@ -55,7 +67,8 @@ export default () => (
       query DigitalEvolutionListQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "digital-evolution" } } }
+          filter: { frontmatter: { templateKey: { eq: "digital-evolution" } },
+        }
         ) {
           edges {
             node {
@@ -84,6 +97,9 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <DigitalEvolutionList data={data} count={count} />}
+    render={(data, count) => <DigitalEvolutionList data={data} count={count} divId/>}
   />
 )
+
+
+
