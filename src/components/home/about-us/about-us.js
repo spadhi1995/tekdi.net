@@ -21,7 +21,9 @@ class AboutUs extends React.Component {
                   {post.frontmatter.subheading}
                   <br/>
                   <br/>
-                  <Link to={post.fields.slug} >Read More </Link>
+                  <Link to={post.fields.slug} >
+                    <img src={require('../../../../static/img/readmore.png')} alt="read more"/>
+                  </Link>
                 </p>
               </div>
             </div>
