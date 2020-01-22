@@ -2,6 +2,7 @@
 templateKey: digital-evolution
 title: Learning and Education technology
 featured: true
+bannerSubTitle: Digital Transformation
 image: /img/digital/learning-edtech.jpg
 bgimage: /img/digital-evolution/digital-evolution1.jpg
 heading: Learning and Education technology

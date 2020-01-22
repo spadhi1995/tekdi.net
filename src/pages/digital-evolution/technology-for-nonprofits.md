@@ -2,6 +2,7 @@
 templateKey: digital-evolution
 title: Technology enablement of Nonprofits
 featured: true
+bannerSubTitle: Digital Transformation
 image: /img/digital/nonprofits.jpg
 bgimage: /img/digital-evolution/digital-evolution1.jpg
 heading: Technology enablement of Nonprofits

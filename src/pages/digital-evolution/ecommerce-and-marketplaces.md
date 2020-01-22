@@ -2,6 +2,7 @@
 templateKey: digital-evolution
 title: E-commerce and Marketplaces
 featured: false
+bannerSubTitle: Digital Transformation
 image: /img/digital/ecommerce.jpg
 bgimage: /img/digital-evolution/digital-evolution1.jpg
 heading: E-commerce and Marketplaces

@@ -2,6 +2,7 @@
 templateKey: digital-evolution
 title: Content Management & Digital Publishing
 featured: false
+bannerSubTitle: Digital Transformation
 image: /img/digital/content-management.jpg
 bgimage: /img/digital-evolution/digital-evolution1.jpg
 heading: Content Management & Digital Publishing

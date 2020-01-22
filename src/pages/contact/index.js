@@ -5,25 +5,14 @@ import { graphql } from 'gatsby';
 import Layout from '../../components/layout';
 import Map from "../../components/map/map"
 import ContactUs from "../../components/contact/contact"
-export const Banner = ({title}) => {
-    return(
-      <div className="banner">
-        <div className="container">
-          <div className="banner-text">
-            <p className="text-white font-weight-normal">Reach us</p>
-              <h1 className="text-white">{title}</h1>
-          </div>
-        </div>
-      </div>
-    )
-  }
+import Banner from "../../components/banner/banner"
+
 
 const ContactPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (
     <Layout>
-        <Banner title={frontmatter.title}/>
-        
+        <Banner bannerTitle= {frontmatter.title} bannerSubTitle = { frontmatter.banner_sub_title}/>
         <div className="container py-5 careers">
         <div className="row">
           <div className="col-md-8 col-xs-12 offset-md-2">
@@ -73,6 +62,7 @@ export const pageQuery = graphql`
         address_title
         email_title
         email_address
+        banner_sub_title
       }
     }
   }
