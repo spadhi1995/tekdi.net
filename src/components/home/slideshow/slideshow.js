@@ -1,61 +1,11 @@
 import React from "react"
 import { graphql, StaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
 import PreviewCompatibleImage from '../../preview-compatible-image';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 import "./slideshow.css";
 
-
-// class Slideshow extends React.Component {
-//     render () {
-//         const params = {
-//             pagination: {
-//               el: '.swiper-pagination',
-//               clickable: true,
-//               bullets: true,
-//             },
-//             grabCursor: true,
-//             loop:true
-//           }
-      
-//         return (
-//             <div className="slideshow">
-//                 <div className="container">
-//                     <Swiper {...params}> 
-                        
-//                         <div className="carousel-items">
-//                             <div className="row mb-3">
-//                             <h3 className="col-sm-7 col-xs-12 carousel-desc">Digital Solution and Data Analytics for an Efficient Framework and Better Customer Experience</h3>
-//                             <div className="col-sm-5 col-xs-12">
-//                                 <img src={require('./images/slideshow.png')} alt="slideshow" className="img-responsive"/>
-//                             </div>
-//                             </div>
-//                         </div>
-                    
-//                         <div className="carousel-items">
-//                             <div className="row">
-//                             <h3 className="col-sm-7 col-xs-12 carousel-desc">Digital Solution and Data Analytics for an Efficient Framework and Better Customer Experience</h3>
-//                             <div className="col-sm-5 col-xs-12">
-//                                 <img src={require('./images/slideshow.png')} alt="slideshow" className="img-responsive"/>
-//                             </div>
-//                             </div>
-//                         </div>
-                        
-//                         <div className="carousel-items">
-//                             <div className="row">
-//                             <h3 className="col-sm-7 col-xs-12 carousel-desc">Digital Solution and Data Analytics for an Efficient Framework and Better Customer Experience</h3>
-//                             <div className="col-sm-5 col-xs-12">
-//                                 <img src={require('./images/slideshow.png')} alt="slideshow" className="img-responsive"/>
-//                             </div>
-//                             </div>
-//                         </div>
-                        
-//                     </Swiper>
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
 class Slideshow extends React.Component {
 
     render(){
@@ -101,6 +51,14 @@ class Slideshow extends React.Component {
     }
 };
 
+Slideshow.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
+
 export default () => (
     <StaticQuery
       query={graphql`
@@ -110,6 +68,7 @@ export default () => (
           ) {
             edges {
               node {
+                id
                 frontmatter {
                   heading
                   alt
