@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link,graphql } from 'gatsby';
 
-import Layout from '../components/home-layout';
+import Layout from '../components/layout';
 import Slideshow from '../components/home/slideshow/slideshow';
 import AboutUs from '../components/home/about-us/about-us';
 import IndustriesCarousel from '../components/home/industries-carousel/industries-carousel';

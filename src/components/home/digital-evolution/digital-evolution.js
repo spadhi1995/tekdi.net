@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from '../../preview-compatible-image';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
@@ -19,23 +19,23 @@ class DigitalEvolution extends React.Component {
           clickable: true,
           bullets: true
         },
-        slidesPerColumn: 2,
+        //slidesPerColumn: 2,
         breakpoints: {
           1024: {
             slidesPerView: 3,
-            spaceBetween: 0
+            spaceBetween: 30
           },
           768: {
             slidesPerView: 2,
-            spaceBetween: 0
+            spaceBetween: 30
           },
           640: {
             slidesPerView: 2,
-            spaceBetween: 0
+            spaceBetween: 30
           },
           320: {
             slidesPerView: 1,
-            spaceBetween: 0
+            spaceBetween: 30
           }
         }
       };

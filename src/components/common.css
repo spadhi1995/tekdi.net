@@ -108,6 +108,9 @@ h3.mod-title {
     padding: 10%;
     height: 100%;
 }
+.joinus-img img {
+    width: 100%;
+}
 .culture {
     background: #17b1cf;
     padding: 10%;
@@ -140,7 +143,7 @@ h3.mod-title {
 /*Banner*/
 .banner {
     background-image:url('../images/banner.jpg');
-    padding: 10% 0;
+    padding: 15% 0 10% 0;
 }
 .banner-text p {
     font-size: 15px;
