@@ -29,7 +29,7 @@ class Slideshow extends React.Component {
                         {posts &&
                         posts.map(({ node: post }) => (
                         <div className="carousel-items" key={post.id}>
-                            <div className="row mb-3">
+                            <div className="row mb-5">
                                 <h3 className="col-sm-7 col-xs-12 carousel-desc">
                                     {post.frontmatter.heading}
                                 </h3>

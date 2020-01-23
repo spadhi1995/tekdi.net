@@ -22,7 +22,6 @@
     position: relative;
 }
 .industries-carousel .item .item-inner {
-    /* position: absolute; */
     left: 30px;
     right:30px;
     z-index: 9;
@@ -47,6 +46,18 @@
 }
 .industries-carousel .item:hover p { 
     display: block;
+}
+.industries-carousel .item:hover h3 {
+    position: relative;
+}
+.industries-carousel .item:hover h3:after {
+    content: '';
+    background-color: #fff;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    bottom: 11px;
+    margin-left: 10px;
 }
 .industries-carousel .icon .gatsby-image-wrapper img {
     opacity: 0 !important;

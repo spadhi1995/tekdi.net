@@ -25,7 +25,7 @@ class TestimonialCarousel extends React.Component {
     return (
     <div className="container"> 
       <div className="com-cover">
-        <div className="col-md-6 offset-md-3 testimonial-carousel">
+        <div className="col-lg-6 offset-lg-3 col-md-8 offset-md-2 testimonial-carousel">
         <h2 className="com-heading text-center text-black mb-3">Trusted by Global Brands</h2>
           <Swiper {...params}>
             {posts &&

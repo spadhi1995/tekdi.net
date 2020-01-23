@@ -19,8 +19,8 @@ class IndustriesCarousel extends React.Component {
             bullets: true
           },
           autoplay: {
-            delay: 2500,
-            disableOnInteraction: true
+            delay: 4000,
+            disableOnInteraction:true
           },
           loop: true,
           breakpoints: {

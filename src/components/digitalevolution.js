@@ -4,21 +4,7 @@ import { Link, graphql, StaticQuery } from 'gatsby';
 import '../components/css/digital-evolution.css';
 import PreviewCompatibleImage from './preview-compatible-image';
 
-class DigitalEvolutionList extends React.Component {
-  constructor(props) {
-    
-    super(props)
-    var url =  typeof window !== 'undefined' ? window.location.href : '';
-    if(url)
-     {
-        this.boxId = url.match(/\/([^\/]+)\/?$/)[1];
-     }
-     else
-     {
-        this.boxId = "";
-     }  
-  }
-  
+class DigitalEvolutionList extends React.Component {  
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark 
@@ -27,7 +13,7 @@ class DigitalEvolutionList extends React.Component {
           <div className="row">
             {posts &&
             posts.map(({ node: post }) => (  
-              this.boxId !== post.fields.slug.match(/\/([^\/]+)\/?$/)[1] ? (
+              
               <div key={post.id} className="col-md-2 p-0"> 
                 <div className="box">
                   {post.frontmatter.bgimage ? (
@@ -45,7 +31,6 @@ class DigitalEvolutionList extends React.Component {
                     </h4>
                   </div>
               </div>
-                ) : null 
             ))}
           </div>
        </div>     
