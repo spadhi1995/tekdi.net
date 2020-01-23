@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from '../../preview-compatible-image';
+import Swiper from 'react-id-swiper';
+import 'swiper/css/swiper.css';
 import "./product-platform-grid.css"
 
 class ProductsPlatformsGrid extends React.Component {
@@ -9,12 +11,34 @@ class ProductsPlatformsGrid extends React.Component {
 
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-  
+    
+    const params = {
+      loop: true,
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 0
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 0
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 0
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0
+        }
+      }
+    }
         return (
-            <div className="row">
+            <div className="products-carousel">
+              <Swiper {...params}>
                 {posts &&
                 posts.map(({ node: post }) => (
-                    <div className="col-md-3 col-sm-6 col-xs-12 pl-1 pr-1" key={post.id}>
+                    <div className="p-1" key={post.id}>
                         <div className="prod-item px-3 py-4">
                           <div className="icon mb-3">
                               <PreviewCompatibleImage
@@ -36,6 +60,7 @@ class ProductsPlatformsGrid extends React.Component {
                         </div>
                     </div>
                 ))}
+                </Swiper>
             </div>
         )
     }

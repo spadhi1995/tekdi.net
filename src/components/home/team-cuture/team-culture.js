@@ -16,12 +16,12 @@ class TeamCulture extends React.Component {
             <div className="col-md-6 col-xs-12 text-white culture-cover" key={post.id}>
               <div className="culture">
                 <div className="row">
-                  <div className="col-md-8">
+                  <div className="col-lg-7 col-xs-12">
                     <h3 className="com-heading">{post.frontmatter.heading}</h3>
                     <p className="font-weight-normal">{post.frontmatter.subheading}</p>
                     {/* <Link to={post.fields.slug} >Read More </Link> */}
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-lg-5 col-xs-12">
                     <PreviewCompatibleImage
                       imageInfo={{
                         image: post.frontmatter.img,
@@ -55,7 +55,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 120)
+              excerpt(pruneLength: 130)
               id
               fields {
                 slug
@@ -65,7 +65,7 @@ export default () => (
                 subheading
                 img {
                   childImageSharp {
-                    fluid(maxWidth: 130, quality: 100) {
+                    fluid(quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

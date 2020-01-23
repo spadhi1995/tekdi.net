@@ -16,3 +16,9 @@
 .prod-item:hover  a {
     display: block;
 }
+.products-carousel .gatsby-image-wrapper img {
+    opacity: 0 !important;
+}
+.products-carousel .gatsby-image-wrapper picture img {
+    opacity: 1 !important;
+}
