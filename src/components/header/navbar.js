@@ -39,15 +39,15 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         {/* Hamburger menu */}
-        <a href="javascript.void();"
+        <button
           className={`navbar-burger burger ${this.state.navBarActiveClass}`}
           data-target="navMenu"
           onClick={() => this.toggleHamburger()}
         >
-          <span />
-          <span />
-          <span />
-      </a>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div
           id="navMenu"
           className={`navbar-menu ${this.state.navBarActiveClass}`}
@@ -55,7 +55,7 @@ const Navbar = class extends React.Component {
           { menuData.length && (      
               <ul className="menu-items unstyled">
                   { menuData.map (item =>
-                      <li key = {item.label} className="float-left">
+                      <li key = {item.label}>
                           <Link to={item.url}> {item.label} </Link>
                       </li>
                   ) }

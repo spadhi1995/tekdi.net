@@ -46,7 +46,7 @@ export default () => (
     query={graphql`
       query AboutUsQuery {
         allMarkdownRemark(
-          filter: { frontmatter: { templateKey: { eq: "company-page" } } }
+          filter: { frontmatter: { templateKey: { eq: "aboutus-page" } } }
         ) {
           edges {
             node {

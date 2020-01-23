@@ -54,11 +54,12 @@ const DigitalEvolution = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    
     <Layout>
-     <Banner bannerTitle= {post.frontmatter.title} bannerSubTitle = {post.frontmatter.bannerSubTitle}/>
-     
-       <div className="container py-5">
+      <Banner 
+        bannerTitle= {post.frontmatter.title} 
+        bannerSubTitle = {post.frontmatter.bannerSubTitle}
+      />
+      <div className="container py-5">
         <div className="row">
           <div className="col-md-12">
             <DigitalEvolutionTemplate
@@ -78,10 +79,10 @@ const DigitalEvolution = ({ data }) => {
             />
           </div>
         </div>
-       </div>
-       <div className="digital-evolution">
-         <DigitalEvolutionList />
-       </div>
+      </div>
+      <div className="digital-evolution">
+        <DigitalEvolutionList />
+      </div>
     </Layout>
   )
 }
