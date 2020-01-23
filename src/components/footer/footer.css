@@ -7,17 +7,18 @@ footer{
 a.fa-icon {
     font-size: 20px;
     color:#759ee0;
+    margin: 0 30px 0 0;
 }
-a.fa-twitter:hover,
-a.fa-twitter:focus {
+a .fa-twitter:hover,
+a .fa-twitter:focus {
     color:#1da1f2;
 }
-a.fa-facebook:hover,
-a.fa-facebook:focus {
+a .fa-facebook:hover,
+a .fa-facebook:focus {
     color:#3b5da0;
 }
-a.fa-pinterest:hover,
-a.fa-pinterest:focus {
+a .fa-pinterest:hover,
+a .fa-pinterest:focus {
     color:#e83e24;
 }
 .copytight {
@@ -32,5 +33,34 @@ footer h4.section-title {
     font-size: 15px;
     line-height: 22px;
     font-weight: 700;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+}
+/*Footer Menu*/
+.footer-menu {
+    margin-bottom: 20px;
+}
+.footer-menu-items li {
+    float: left;
+    margin-right: 35px;
+}
+@media (min-width: 576px) {
+    footer h4.section-title {
+        margin-bottom: 10px;
+    }
+    .footer-menu-items li {
+        float: none;
+        margin-right: 0;
+    }
+}
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+    footer h4.section-title {
+        margin-bottom: 15px;
+    }
+    a.fa-icon {
+        margin: 0 40px 0 0;
+    }
 }

@@ -70,7 +70,15 @@
 .slideshow .swiper-container img {
     width: 100%;
 }
-.slideshow h3.carousel-desc {
+.slideshow .gatsby-image-wrapper img {
+    opacity: 0 !important;
+}
+.slideshow .gatsby-image-wrapper picture img {
+    opacity: 1 !important;
+    position: static !important;
+    width: 100% !important;
+}
+.slideshow h3.carousel-desc { 
     color: #fff;
     font-size: 22px;
     line-height: 30px;
