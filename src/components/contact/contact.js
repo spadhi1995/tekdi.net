@@ -60,7 +60,7 @@ export class contactUs extends React.Component {
        let lastAtPos = fields["email"].lastIndexOf('@');
        let lastDotPos = fields["email"].lastIndexOf('.');
 
-       if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') == -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
+       if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') === -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
           formIsValid = false;
           errors["email"] = "Email is not valid";
         }
@@ -91,7 +91,7 @@ export class contactUs extends React.Component {
     const target = event.target
     const value = target.value
     const name = target.name
-    const message = target.message
+    //const message = target.message
     this.setState({
       [name]: value,
     })

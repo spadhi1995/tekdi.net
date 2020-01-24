@@ -19,25 +19,10 @@ class IndustriesCarousel extends React.Component {
             bullets: true
           },
           autoplay: {
-            delay: 2500,
-            disableOnInteraction: false
+            delay: 4000,
+            disableOnInteraction:true
           },
-          // navigation: {
-          //   nextEl: '.swiper-button-next',
-          //   prevEl: '.swiper-button-prev'
-          // },
-          slidesPerView: 'auto',
           loop: true,
-          loopFillGroupWithBlank: true,
-          // effect: 'coverflow',
-          // grabcursor: true,
-          // coverflowEffect: {
-          //   rotate: 50,
-          //   stretch: 0,
-          //   depth: 100,
-          //   modifier: 1,
-          //   slideShadows: true
-          // },
           breakpoints: {
             1024: {
               slidesPerView: 4,

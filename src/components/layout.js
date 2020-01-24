@@ -46,7 +46,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Header />
-      <div>
+      <div className="mainbody">
         {children}
       </div>
       <Footer />
