@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import Content, { HTMLContent } from '../components/content';
+import Layout from '../components/layout/baselayout';
+import Content, { HTMLContent } from '../components/common/content';
 
 export const OpeningsTemplate = ({
   content,

@@ -23,7 +23,7 @@
     "gatsby-transformer-sharp": "^2.1.9",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.4",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "owl.carousel": "^2.3.4",
     "prop-types": "^15.6.0",
     "query-string": "^6.10.1",

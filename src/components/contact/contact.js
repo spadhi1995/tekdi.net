@@ -1,5 +1,5 @@
 import React from "react"
-import '../css/contact.css'
+import './contact.scss'
 const axios = require(`axios`);
 const queryString = require('query-string');
 

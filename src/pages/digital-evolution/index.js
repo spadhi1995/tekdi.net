@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 
-import Layout from '../../components/layout';
-import DigitalEvolutionList from '../../components/digitalevolution'; 
-import Banner from "../../components/banner/banner"
+import Layout from '../../components/layout/baselayout';
+import DigitalEvolutionList from '../../components/digital-evolution/digitalevolution'; 
+import Banner from "../../components/common/banner/banner"
 
 export const Custom = () => {
   return (
@@ -10,7 +10,7 @@ export const Custom = () => {
     <div className="container">
       <div className="row my-5">
         <div className="col-sm-5 col-xs-12 info-img">
-          <img src={require("../../images/join-us.jpg")} alt="Join Us" />
+          {/* <img src={require("../../../img/join-us.jpg")} alt="Join Us" /> */}
         </div>
         <div className="col-sm-7 col-xs-12 info">
           <h4 className="text-black">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
@@ -28,7 +28,7 @@ export const Custom = () => {
             </p>
           </div>
           <div className="col-sm-5 col-xs-12 info-img">
-            <img src={require("../../images/join-us.jpg")} alt="Join Us" />
+            {/* <img src={require("../../../img/join-us.jpg")} alt="Join Us" /> */}
           </div>
         </div>
       </div>

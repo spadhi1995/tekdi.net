@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 // import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Content, { HTMLContent } from '../components/content'
-import Banner from "../components/banner/banner"
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout/baselayout';
+import Content, { HTMLContent } from '../components/common/content';
+import Banner from "../components/common/banner/banner";
 // import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import DigitalEvolutionList from '../components/digitalevolution'
+import DigitalEvolutionList from '../components/digital-evolution/digitalevolution';
 
 
 export const DigitalEvolutionTemplate = ({
