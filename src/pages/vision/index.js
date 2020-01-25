@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
-import Layout from '../../components/layout';
+import Layout from '../../components/layout/baselayout';
 
 const VisionPage = ({ data }) => {
   // const { frontmatter } = data.markdownRemark

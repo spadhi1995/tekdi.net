@@ -1,8 +1,7 @@
 import React from 'react'
-import Layout from '../../components/layout';
-import Openingslist from '../../components/careers-accordian'; 
-import '../../components/css/careers.css';
-import Banner from '../../components/banner/banner';
+import Layout from '../../components/layout/baselayout';
+import Openingslist from '../../components/careers/careers-accordian'; 
+import Banner from '../../components/common/banner/banner';
 
 export default class CareersIndexPage extends React.Component {
   render() {

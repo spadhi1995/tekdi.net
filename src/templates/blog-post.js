@@ -1,11 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
-import Content, { HTMLContent } from '../components/content'
-import BlogCatList from '../components/blogcatlist';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { kebabCase } from 'lodash';
+import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import Layout from '../components/layout/baselayout';
+import Content, { HTMLContent } from '../components/common/content';
+import BlogCatList from '../components/blog/blogcatlist';
+import './blog.scss';
 // import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const BlogPostTemplate = ({

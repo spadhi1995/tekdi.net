@@ -1,0 +1,16 @@
+.blog-cat-list {
+    li {
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+        border-bottom:1px solid #f2f2f2;
+        padding:0 0 10px 0;
+        margin:0 0 10px 0;
+
+        &:last-child {
+            border-bottom: none;
+            padding:0;
+            margin:0;
+        }
+    }
+}

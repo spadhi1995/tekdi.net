@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
-import Layout from '../../components/layout';
-import Map from "../../components/map/map"
-import ContactUs from "../../components/contact/contact"
-import Banner from "../../components/banner/banner"
+import Layout from '../../components/layout/baselayout';
+import Map from '../../components/contact/map';
+import ContactUs from '../../components/contact/contact';
+import Banner from '../../components/common/banner/banner';
 
 
 const ContactPage = ({ data }) => {

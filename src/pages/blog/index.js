@@ -1,10 +1,9 @@
 import React from 'react'
 
-import Layout from '../../components/layout';
-import BlogList from '../../components/bloglist'; 
-import BlogCatList from '../../components/blogcatlist';
-import Banner from "../../components/banner/banner"
-import ContactUs from "../../components/footer-contact/contact"
+import Layout from '../../components/layout/baselayout';
+import BlogList from '../../components/blog/bloglist'; 
+import BlogCatList from '../../components/blog/blogcatlist';
+import Banner from "../../components/common/banner/banner";
 
 export default class BlogIndexPage extends React.Component {
    
@@ -24,7 +23,6 @@ export default class BlogIndexPage extends React.Component {
             </div>
           </div>
         </div>
-        <ContactUs/>
       </Layout>
     )
   }

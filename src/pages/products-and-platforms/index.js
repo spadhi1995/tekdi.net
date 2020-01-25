@@ -1,7 +1,7 @@
 import React from 'react'
-import Layout from '../../components/layout';
-import ProductList from '../../components/productlist'; 
-import Banner from "../../components/banner/banner"
+import Layout from '../../components/layout/baselayout';
+import ProductList from '../../components/products-platforms/productlist'; 
+import Banner from "../../components/common/banner/banner"
 
 export default class ProductsIndexPage extends React.Component {
   render() {

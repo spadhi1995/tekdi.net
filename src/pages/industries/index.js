@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../../components/layout';
-import IndustriesList from '../../components/industrieslist'; 
-import Banner from "../../components/banner/banner"
+import Layout from '../../components/layout/baselayout';
+import IndustriesList from '../../components/industries/industrieslist'; 
+import Banner from "../../components/common/banner/banner"
 
 export default class IndustriesIndexPage extends React.Component {
   render() {

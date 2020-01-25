@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import Content, { HTMLContent } from '../../components/content';
-import Banner from '../../components/banner/banner';
-import Layout from '../../components/layout';
+import Content, { HTMLContent } from '../../components/common/content';
+import Banner from '../../components/common/banner/banner';
+import Layout from '../../components/layout/baselayout';
 
 export const AboutUsTemplate = ({
   content,
