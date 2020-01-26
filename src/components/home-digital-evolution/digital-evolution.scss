@@ -1,16 +1,5 @@
 .digital-evolution {
-    .swiper-container {
-        padding: 0 0 50px 0;
-    }
-    .gatsby-image-wrapper {
-        img {
-            opacity: 0 !important;
-        }
-        picture img {
-            opacity: 1 !important;
-        }
-    }
-    .swiper-pagination {
-        bottom: 0;
+    a {
+        color: #00d0d2;
     }
 }

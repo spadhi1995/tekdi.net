@@ -5,7 +5,7 @@
     background-position: center;
 
     form {
-        padding: 30px 0 0 0;
+        padding: 15px 0 0 0;
     }
     .form-control {
         background: rgba(79, 79, 79, 0.55);
@@ -15,7 +15,7 @@
         padding: 25px;
     }
     .btn-submit {
-        font-size: 18px;
+        font-size: 16px;
         background: none;
         color: #fff;
         outline: none;
@@ -30,5 +30,22 @@
         font-size: 14px;
         color: #ff0000;
         font-weight: 400;
+    }
+}
+@media (min-width: 768px) {
+    .contact-form {
+        form {
+            padding: 20px 0 0 0;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .contact-form {
+        form {
+            padding: 30px 0 0 0;
+        }
+        .btn-submit {
+            font-size: 18px;
+        }
     }
 }

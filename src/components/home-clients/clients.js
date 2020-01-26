@@ -1,26 +1,98 @@
 import React from 'react';
-import './clients.css';
+import PropTypes from 'prop-types';
+import { graphql, StaticQuery } from 'gatsby';
+import PreviewCompatibleImage from '../common/preview-compatible-image';
+import Swiper from 'react-id-swiper';
+import 'swiper/css/swiper.css';
 
-const Clients = () => {
-    return (
-        <div className="container client-wrap">
-            <div>
-                <img src={require("./images/client-1.png")} alt="client name" />
-            </div>
-            <div>
-                <img src={require("./images/client-2.png")} alt="client name" />
-            </div>
-            <div>
-                <img src={require("./images/client-3.png")} alt="client name" />
-            </div>
-            <div>
-                <img src={require("./images/client-4.png")} alt="client name" />
-            </div>
-            <div>
-                <img src={require("./images/client-5.png")} alt="client name" />
-            </div>
+class Clients extends React.Component {
+  
+    
+    render() {
+      const { data } = this.props
+      const { edges: posts } = data.allMarkdownRemark
+
+      const params = {
+        breakpoints: {
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 30
+          },
+          768: {
+            loop:true,
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: true
+          },
+          640: {
+            loop:true,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: true
+          },
+          360: {
+            loop:true,
+            slidesPerView: 2,
+            spaceBetween: 30,
+            centeredSlides: true
+          },
+          320: {
+            loop:true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true
+          }
+        }
+      };
+      return ( 
+          <div className="container client-wrap">
+            <Swiper {...params}>
+                {posts &&
+                posts.map(({ node: post }) => (
+                    <div className="text-center" key={post.id}>
+                        <PreviewCompatibleImage
+                            imageInfo={{
+                            image: post.frontmatter.img,
+                            alt: `image for ${post.frontmatter.alt}`,
+                            }}
+                        />
+                    </div>
+                ))}
+            </Swiper>
         </div>
     )
+  }
 }
 
-export default Clients;
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query ClientsQuery {
+        allMarkdownRemark(
+          filter: { frontmatter: { templateKey: { eq: "clients-page" } } }
+        ) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                img {
+                    childImageSharp {
+                        fluid(quality: 100) {
+                        ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                alt
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={(data, count) => <Clients data={data} count={count} />}
+  />
+)

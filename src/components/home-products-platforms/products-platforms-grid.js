@@ -13,23 +13,28 @@ class ProductsPlatformsGrid extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     
     const params = {
-      loop: true,
       breakpoints: {
         1024: {
           slidesPerView: 4,
           spaceBetween: 0
         },
         992: {
+          loop: true,
           slidesPerView: 3,
-          spaceBetween: 0
+          spaceBetween: 0,
+          centeredSlides: true
         },
         640: {
+          loop: true,
           slidesPerView: 2,
-          spaceBetween: 0
+          spaceBetween: 0,
+          centeredSlides: true
         },
         320: {
+          loop: true,
           slidesPerView: 1,
-          spaceBetween: 0
+          spaceBetween: 0,
+          centeredSlides: true
         }
       }
     }
