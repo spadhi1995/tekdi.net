@@ -32,13 +32,20 @@ body {
 }
 
 /*For Sharp image style*/
-.gatsby-image-wrapper>div {
-    padding-bottom:0 !important;
-}
-picture img {
-    position: static !important;
-    width: auto !important;
-    height:auto !important;
+.gatsby-image-wrapper {
+    >div {
+        padding-bottom:0 !important;
+    }
+    img {
+        opacity: 0 !important;
+    }
+    picture img {
+        opacity: 1 !important;
+        position: static !important;
+        width: auto !important;
+        height:auto !important;
+        max-width: 100%;
+    }
 }
 
 ul.unstyled {

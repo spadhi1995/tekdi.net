@@ -7,7 +7,7 @@ import Layout from '../components/layout/baselayout';
 import Content, { HTMLContent } from '../components/common/content';
 import Banner from "../components/common/banner/banner";
 // import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
-import DigitalEvolutionList from '../components/digital-evolution/digitalevolution';
+import DigitalEvolutionList from '../components/digital-evolution/digital-evolution';
 
 
 export const DigitalEvolutionTemplate = ({

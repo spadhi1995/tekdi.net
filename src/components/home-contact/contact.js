@@ -60,7 +60,7 @@ export class ContactUs extends React.Component {
        let lastAtPos = fields["email"].lastIndexOf('@');
        let lastDotPos = fields["email"].lastIndexOf('.');
 
-       if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') == -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
+       if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') === -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
           formIsValid = false;
           errors["email"] = "Email is not valid";
         }
@@ -100,15 +100,15 @@ export class ContactUs extends React.Component {
               </h2>
               <form  onSubmit={this.handleSubmit}>  
                 <div className="row">
-                  <div className="col-sm-4 col-xs-12 form-group">
+                  <div className="col-md-4 col-xs-12 form-group">
                     <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
                     <span className="error">{this.state.errors["name"]}</span>
                   </div>
-                  <div className="col-sm-4 col-xs-12 form-group">
+                  <div className="col-md-4 col-xs-12 form-group">
                       <input type="text" name="phone" id="phone" value={this.state.phone} onChange={this.handleInputChange} className="form-control" placeholder="Phone"  />
                       <span className="error">{this.state.errors["phone"]}</span>
                   </div>
-                  <div className="col-sm-4 col-xs-12 form-group">
+                  <div className="col-md-4 col-xs-12 form-group">
                       <input type="email" name="email" id="email" value={this.state.email} onChange={this.handleInputChange} className="form-control" placeholder="Email"  />
                       <span className="error">{this.state.errors["email"]}</span>
                   </div> 

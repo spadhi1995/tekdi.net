@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, StaticQuery } from 'gatsby';
-import PreviewCompatibleImage from '../common/preview-compatible-image';
-import Swiper from 'react-id-swiper';
-import 'swiper/css/swiper.css';
+import { Link, graphql, StaticQuery } from 'gatsby';
+import DigitalEvolutionCarousel from './digital-evolution-carousel';
 import './digital-evolution.scss'
 
 class DigitalEvolution extends React.Component {
@@ -13,63 +11,28 @@ class DigitalEvolution extends React.Component {
       const { data } = this.props
       const { edges: posts } = data.allMarkdownRemark
 
-      const params = {
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-          bullets: true
-        },
-        //slidesPerColumn: 2,
-        breakpoints: {
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 30
-          },
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 30
-          }
-        }
-      };
       return ( 
-          <div className="container-fluid bg-lightgrey"> 
-            <div className="digital-evolution com-cover">
-              <Swiper {...params}>
+        <div className="bg-lightgrey container-fluid"> 
+          <div className="com-cover">
+            <div className="container">
               {posts &&
               posts.map(({ node: post }) => (
-                <div key={post.id} className="row">
-                  <div className="col-md-5">
-                    {post.frontmatter.bgimage ? (
-                      <div className="">
-                        <PreviewCompatibleImage
-                          imageInfo={{
-                            image: post.frontmatter.bgimage,
-                            alt: `image thumbnail for post ${post.frontmatter.title}`,
-                          }}
-                        />
-                      </div>
-                    ) : null}
-                  </div>
-                  <div className="col-md-7">
-                    <h3 className="text-black font-weight-bold">{post.frontmatter.heading}</h3>
-                    <p className="font-weight-normal">
-                      {post.excerpt}
+                <div key={post.id} className="row mb-5 digital-evolution">
+                  <div className="col-md-4 offset-md-1">
+                    <h2 className="com-heading text-black">
+                      {post.frontmatter.heading}
+                    </h2>
+                    <p>
+                      {post.frontmatter.subheading}
                       <br/>
                       <br/>
-                      {/* <Link to={post.fields.slug} className="text-decoration-none">{post.frontmatter.heading}</Link> */}
+                    <Link to='/digital-evolution' className="text-decoration-none">View More</Link>
                     </p>
                   </div>
                 </div>
               ))}
-              </Swiper>
+              </div>
+              <DigitalEvolutionCarousel /> 
           </div>
         </div>
     )
@@ -89,8 +52,7 @@ export default () => (
     query={graphql`
       query DigitalEvolutionQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "digital-evolution" } } }
+          filter: { frontmatter: { templateKey: { eq: "home-digital-evolution" } } }
         ) {
           edges {
             node {
@@ -100,19 +62,8 @@ export default () => (
                 slug
               }
               frontmatter {
-                title
-                featured
-                templateKey
-                date(formatString: "DD MMMM YYYY")
                 heading
                 subheading
-                bgimage {
-                  childImageSharp {
-                    fluid(maxWidth: 250, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
               }
             }
           }

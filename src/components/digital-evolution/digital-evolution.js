@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import './digital-evolution.scss';
 import PreviewCompatibleImage from '../common/preview-compatible-image';
+
 class DigitalEvolutionList extends React.Component {
   constructor(props) {
     super(props)

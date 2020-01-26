@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 import Layout from '../../components/layout/baselayout';
-import DigitalEvolutionList from '../../components/digital-evolution/digitalevolution'; 
+import DigitalEvolutionList from '../../components/digital-evolution/digital-evolution'; 
 import Banner from "../../components/common/banner/banner"
 
 export const Custom = () => {

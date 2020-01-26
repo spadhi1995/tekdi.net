@@ -1,0 +1,26 @@
+.digital-evolution-carousel {
+    .swiper-container {
+        padding: 0 0 50px 0;
+    }
+    .swiper-pagination {
+        bottom: 0;
+    }
+    h3.section-title {
+        position: relative;
+        margin-right: 30px;
+        font-size: 20px;
+    }
+    h3.section-title:after {
+        content: '';
+        background: rgb(9,9,121);
+        background: linear-gradient(90deg, rgba(8,154,221,0.6) 0%, rgba(9,9,121,1) 100%);
+        width: 30px;
+        height: 3px;
+        position: absolute;
+        bottom: 11px;
+        margin-left: 10px;
+    }
+    a {
+        color: #00d0d2;
+    }
+}
