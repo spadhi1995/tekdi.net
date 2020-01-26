@@ -1,13 +1,45 @@
 .banner {
     background-image:url('./images/banner.jpg');
-    padding: 15% 0 10% 0;
+    padding: 130px 0 70px 0;
 }
-.banner-text p {
-    font-size: 15px;
-    margin:5px;
+.banner-text {
+    h1 {
+        font-size: 30px;
+        line-height: 38px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 15px;
+        margin:5px;
+    }
 }
-.banner-text h1 {
-    font-size: 42px;
-    line-height: 48px;
-    font-weight: 700;
+@media (min-width: 576px) {
+    .banner {
+        padding: 20% 0 10% 0;
+    }
+    .banner-text {
+        h1 {
+            font-size: 34px;
+            line-height: 40px;
+        }
+    }
+}
+@media (min-width: 768px) {
+    .banner {
+        padding: 15% 0 10% 0;
+    }
+    .banner-text {
+        h1 {
+            font-size: 38px;
+            line-height: 44px;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .banner-text {
+        h1 {
+            font-size: 42px;
+            line-height: 48px;
+        }
+    }
 }

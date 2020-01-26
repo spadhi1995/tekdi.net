@@ -4,7 +4,7 @@ title: Technology enablement of Nonprofits
 featured: true
 bannerSubTitle: Digital Transformation
 image: /img/digital/nonprofits.jpg
-bgimage: /img/digital-evolution/digital-evolution1.jpg
+bgimage: /img/digital-evolution/digital-evolution2.jpg
 heading: Technology enablement of Nonprofits
 subheading: Engage donors and micro-investors better and maximise contribution. Be it raising funds for a charity you support or building the next Kickstarter. 
 

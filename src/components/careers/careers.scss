@@ -1,26 +1,22 @@
-.careers h1 {
-    font-size: 36px;
-    line-height: 42px;
-    font-weight: 700;
-}
 .accordion {
     border: none;
     border-bottom: 1px solid #ccc;
-}
-.accordion:last-child {
-    border-bottom: none;
+    &:last-child {
+        border-bottom: none;
+    }
 }
 .accordion__button,
 .accordion__button:hover,
 .accordion__button:focus {
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     outline: none;
 }
 .accordion__item h3 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 24px;
     font-weight: 700;
+    margin-right: 30px;
 }
 .accordion__button:before{
     float: right;
@@ -29,14 +25,14 @@
     -webkit-transform: inherit;
     transform: inherit;
     margin: 0;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-color: #52d1d2;
     border-radius: 50%;
     padding: 2px;
     text-align: center;
-    font-size: 25px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 22px;
     color: #fff;
 }
 .accordion__button[aria-expanded='true']::before, 
@@ -45,9 +41,56 @@
     content: '-';
 }
 .accordion__panel {
-    padding: 0 20px 15px 20px;
+    padding: 0 10px 15px 10px;
     background: #fff;
+    font-size: 14px;
+
+    ul li {
+        display: inline-block;
+    }
 }
-.accordion__panel ul li {
-    display: inline-block;
+@media (min-width: 576px) {
+    .accordion__item h3 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .accordion__panel {
+        font-size: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .accordion__item h3 {
+        font-size: 22px;
+        line-height: 28px;
+        margin-right: 35px;
+    }
+    .accordion__button,
+    .accordion__button:hover,
+    .accordion__button:focus {
+        padding: 15px;
+    }
+    .accordion__panel {
+        padding: 0 15px 15px 15px;
+        font-size: 16px;
+    }
+}
+@media (min-width: 992px) {
+    .accordion__item h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .accordion__button,
+    .accordion__button:hover,
+    .accordion__button:focus {
+        padding: 20px;
+    }
+    .accordion__panel {
+        padding: 0 20px 15px 12px;
+    }
+    .accordion__button:before {
+        width: 30px;
+        height: 30px;
+        line-height: 26px;
+        font-size: 25px;
+    }
 }
