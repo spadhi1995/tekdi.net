@@ -13,10 +13,8 @@ export default class CareersIndexPage extends React.Component {
           bannerSubTitle = {Banners.bannerSubTitle}
         />
         <div className="container py-5">
-          <div class="row">
-            <div className="col-md-8 col-xs-12 offset-md-2">
-              <Openingslist />
-            </div>
+          <div className="col-lg-8 col-md-10 offset-lg-2 offset-md-1 col-xs-12">
+            <Openingslist />
           </div>
         </div>
       </Layout>

@@ -4,7 +4,7 @@ title: E-commerce and Marketplaces
 featured: false
 bannerSubTitle: Digital Transformation
 image: /img/digital/ecommerce.jpg
-bgimage: /img/digital-evolution/digital-evolution1.jpg
+bgimage: /img/digital-evolution/digital-evolution3.jpg
 heading: E-commerce and Marketplaces
 subheading: We provide a scalable & robust framework for your bespoke ecommerce marketplace
 ---

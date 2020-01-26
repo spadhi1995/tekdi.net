@@ -4,7 +4,7 @@ title: Business Process Transformation
 bannerSubTitle: Digital Transformation
 featured: false
 image: /img/digital/business-process-transformation.jpg
-bgimage: /img/digital-evolution/digital-evolution1.jpg
+bgimage: /img/digital-evolution/digital-evolution2.jpg
 heading: Business Process Transformation
 subheading: Take your business to the next level by modernizing existing processes that improve business productivity and organizational efficiency. 
 ---
