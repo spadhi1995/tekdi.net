@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-md-3 col-sm-6 col-xs-12 mb-4">
                             <a className="fa-icon" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                            <i className="fa fa-twitter" aria-hidden="true"></i>
+                                <i className="fa fa-twitter" aria-hidden="true"></i>
                             </a>
                             <a className="fa-icon" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-facebook" aria-hidden="true"></i>

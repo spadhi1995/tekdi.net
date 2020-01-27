@@ -1,5 +1,6 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import Layout from '../components/layout/baselayout';
 import Slideshow from '../components/slideshow/slideshow';
 import AboutUs from '../components/home-about-us/about-us';
@@ -14,8 +15,16 @@ import Clients from '../components/home-clients/clients';
 import ContactUs from '../components/home-contact/contact';
 
 const IndexPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
   return (
     <Layout>
+       <Helmet>
+          <title>{frontmatter.title}</title>
+          <meta
+            name="description"
+            content={`${frontmatter.description}`}
+          />
+      </Helmet>
       <Slideshow />
       <AboutUs />
       <DigitalEvolution />
@@ -38,5 +47,23 @@ const IndexPage = ({ data }) => {
     </Layout>
   )
 }
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
+}
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query IndexPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        title
+        description
+      }
+    }
+  }
+`

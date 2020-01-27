@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
+import './about-us.scss';
 
 class AboutUs extends React.Component {
 
@@ -9,7 +10,7 @@ class AboutUs extends React.Component {
       const { edges: posts } = data.allMarkdownRemark
 
       return (
-      <div className="container"> 
+      <div className="container about-us-section"> 
         {posts &&
             posts.map(({ node: post }) => (
               <div className="com-cover" key={post.id}>
