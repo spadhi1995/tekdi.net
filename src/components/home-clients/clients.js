@@ -4,6 +4,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from '../common/preview-compatible-image';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
+import './clients.scss';
 
 class Clients extends React.Component {
   
@@ -15,7 +16,7 @@ class Clients extends React.Component {
       const params = {
         breakpoints: {
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 6,
             spaceBetween: 30
           },
           768: {
@@ -45,7 +46,7 @@ class Clients extends React.Component {
         }
       };
       return ( 
-          <div className="container client-wrap">
+          <div className="container client-wrap mb-5">
             <Swiper {...params}>
                 {posts &&
                 posts.map(({ node: post }) => (
