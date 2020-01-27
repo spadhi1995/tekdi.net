@@ -32,7 +32,7 @@ class map extends React.Component {
   render() {
     return (
       <Gmaps
-        width={'800px'}
+        width={'100%'}
         height={'350px'}
         lat={coords.lat}
         lng={coords.lng}
