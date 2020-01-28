@@ -1,51 +1,58 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
-import './products.scss';
-// import PreviewCompatibleImage from './PreviewCompatibleImage';
+import './productlist.scss';
+import PreviewCompatibleImage from '../common/preview-compatible-image';
 
 class ProductList extends React.Component {
+  constructor(props) {
+    super(props)
+    var url =  typeof window !== 'undefined' ? window.location.href : '';
+    if(url)
+     {
+        this.boxId = url.match(/\/([^\/]+)\/?$/)[1];
+     }
+     else
+     {
+        this.boxId = "";
+     }
+  }
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-        <Fragment>
+      <div className="container-fluid">
+      <div className="row productlist">
         {posts &&
-          posts.map(({ node: post }) => (
-            <div className="product-info" key={post.id}>
-              <div className="row">
-                  <div className="col-md-6 offset-md-4 mb-5">
-                    <h4 className="introtext text-black mb-4">
-                      {post.excerpt}
-                    </h4>
-                    <h4>
-                      <Link to={post.fields.slug}>
-                        Take to me Vowel 
-                      </Link>
-                    </h4>
+        posts.map(({ node: post }) => (
+          this.boxId !== post.fields.slug.match(/\/([^\/]+)\/?$/)[1] ? (
+          <div key={post.id} className="col p-0">
+            <div className="box">
+              {post.frontmatter.bgimage ? (
+                  <div className="bg-image">
+                    <PreviewCompatibleImage
+                      imageInfo={{
+                        image: post.frontmatter.bgimage,
+                        alt: `image thumbnail for post ${post.frontmatter.heading}`,
+                      }}
+                    />
                   </div>
-              </div>
-              <div className="position-relative description-cover">
-                <div className="row position-absolute description">
-                  <div className="col-md-5 pt-5">
-                    <p className="text-white p-5">
-                      {post.frontmatter.subheading}
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="row">
-                  <div className="col-md-10 offset-md-2">
-                    <img src={require("./images/banner.jpg")} alt="Join Us" />
-                  </div>
+                ) : null}
+                <div className="text position-absolute">
+                  <h4 className="mb-4">
+                    {post.frontmatter.heading}
+                  </h4>
+                  <Link to={post.fields.slug} className="text-decoration-none">
+                    <img src={require('./images/readmore-white.png')} alt="read more"/>
+                  </Link>
                 </div>
               </div>
-              
-              
-            </div>
-          ))}
-     </Fragment>
+          </div>
+            ) : null
+        ))}
+      </div>
+   </div>
     )
   }
 }
@@ -74,12 +81,14 @@ export default () => (
                 slug
               }
               frontmatter {
-                title
-                templateKey
-                date(formatString: "DD MMMM YYYY")
                 heading
-                subheading
-                
+                bgimage {
+                  childImageSharp {
+                    fluid(maxWidth: 250, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
