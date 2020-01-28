@@ -23,6 +23,7 @@ const CareersIndexPage =  ({data}) => {
         />
         <div className="container py-5">
           <div className="col-lg-8 col-md-10 offset-lg-2 offset-md-1 col-xs-12">
+            <h3 className="com-heading text-black text-center mb-5">{frontmatter.heading}</h3>
             <Openingslist />
           </div>
         </div>
@@ -39,6 +40,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        heading
         bannerTitle
         bannerSubTitle
       }
