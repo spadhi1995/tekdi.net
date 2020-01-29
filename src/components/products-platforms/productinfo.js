@@ -1,4 +1,5 @@
 import React from 'react';
+import CaseStudiesList from '../common/case-studies/case-studies-list';
 import './products.scss';
 
 const Products = props => {
@@ -6,10 +7,14 @@ const Products = props => {
     <div className="container pb-4">
       <div className="product-info">
         <div className="row section1">
+          <div className="col-lg-2"></div>
           <div className="col-lg-6 col-md-7 mb-5">
             <h4 className="introtext text-black mb-4">
               {props.introtext}
             </h4>
+          </div>
+          <div className="mb-5 col-lg-4 col-md-5">
+            <CaseStudiesList />
           </div>
         </div>
         
