@@ -14,7 +14,7 @@ class JoinUs extends React.Component {
       <div className="container join-us"> 
           {posts &&
               posts.map(({ node: post }) => (
-              <div className="row">
+              <div className="row" key={post.id}>
                 <div className="col-md-6 col-xs-12 joinus-img">
                   <PreviewCompatibleImage
                     imageInfo={{

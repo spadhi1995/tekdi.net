@@ -6,6 +6,7 @@ import Layout from '../components/layout/baselayout';
 import Banner from "../components/common/banner/banner";
 import Products from '../components/products-platforms/productinfo';
 import ProductList from '../components/products-platforms/productlist';
+import FeaturesInfo from '../components/products-platforms/features-info';
 
 const ProductsPlatforms = ({ data }) => {
   const { markdownRemark: post } = data
@@ -31,6 +32,9 @@ const ProductsPlatforms = ({ data }) => {
           content={post.frontmatter.content}
           excerpt={post.excerpt}
         />
+         <FeaturesInfo 
+          featuresubheading={post.frontmatter.featuresubheading}
+         />
         <ProductList />
       </div>
     </Layout>
@@ -41,9 +45,11 @@ ProductsPlatforms.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
+  featuresubheading: PropTypes.string,
+  features: PropTypes.object,
 }
 
-export default ProductsPlatforms
+export default ProductsPlatforms;
 
 export const pageQuery = graphql`
   query ProductsPlatformsByID($id: String!) {
@@ -63,6 +69,7 @@ export const pageQuery = graphql`
         content
         bannerTitle
         bannerSubTitle
+        featuresubheading
       }
     }
   }
