@@ -14,7 +14,7 @@ class Industries extends React.Component {
           <div className="com-cover"> 
             {posts &&
                 posts.map(({ node: post }) => (
-                <div className="text-center col-md-6 offset-md-3 mb-5">
+                <div className="text-center col-md-6 offset-md-3 mb-5" key={post.id}>
                   <h2 className="com-heading text-black">{post.frontmatter.heading}</h2>
                   <p>{post.frontmatter.subheading}</p>
                 </div>

@@ -83,6 +83,9 @@ header {
                     text-decoration: none;
                 }
             }
+            a[aria-current="page"]{
+                color: #00d0d2;   
+            }
         }
     }
 }
@@ -195,9 +198,11 @@ header {
         .menu-items {
             li {
                 a {
-                    color: #000;
-                    
+                    color: #000; 
                 } 
+                a[aria-current="page"]{
+                    color: #00d0d2;   
+                }
             }
         }
     }

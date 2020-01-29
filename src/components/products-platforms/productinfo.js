@@ -4,7 +4,7 @@ import './products.scss';
 
 const Products = props => {
   return(
-    <div className="container pb-4">
+    <div className="container">
       <div className="product-info">
         <div className="row section1">
           <div className="col-lg-2"></div>
