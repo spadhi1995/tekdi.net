@@ -2,6 +2,7 @@
 templateKey: industries-page
 title: Not for Profit Organisations
 icon: /img/industries/education-icon.png
+hovericon: /img/industries/education-icon-white.png
 image: /img/digital/not-for-profit-organisations.jpg
 heading: Not for profits have a huge role in social change and transformation. Technology is helping them transform how they work, increase access to resources and increase their impact many fold.
 ---

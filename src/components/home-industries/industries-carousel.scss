@@ -30,6 +30,10 @@
     right:0;
     bottom:0;
     padding: 70px 30px 20px 30px;
+
+    .hover-icon {
+        display: none;
+    }
     
 }
 .industries-carousel .item .item-inner:hover {
@@ -37,6 +41,13 @@
     transition: height 2s;
     height:500px;
     background: linear-gradient(to right bottom, #1272bc, #0088cb, #009dd6, #00b2df, #24c7e6);
+    
+    .icon {
+        display: none;
+    }
+    .hover-icon {
+        display: block;
+    }
 }
 .industries-carousel .item p {
     display:  none;

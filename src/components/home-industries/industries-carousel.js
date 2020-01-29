@@ -18,10 +18,10 @@ class IndustriesCarousel extends React.Component {
             clickable: true,
             bullets: true
           },
-          autoplay: {
-            delay: 4000,
-            disableOnInteraction:true
-          },
+          // autoplay: {
+          //   delay: 4000,
+          //   disableOnInteraction:true
+          // },
           loop: true,
           breakpoints: {
             1024: {
@@ -55,6 +55,14 @@ class IndustriesCarousel extends React.Component {
                                 <PreviewCompatibleImage
                                   imageInfo={{
                                     image: post.frontmatter.icon,
+                                    alt: `icon for ${post.frontmatter.title}`,
+                                  }}
+                                />
+                              </div>
+                              <div className="hover-icon">
+                                <PreviewCompatibleImage
+                                  imageInfo={{
+                                    image: post.frontmatter.hovericon,
                                     alt: `icon for ${post.frontmatter.title}`,
                                   }}
                                 />
@@ -103,6 +111,13 @@ export default () => (
                   heading
                   subheading
                   icon {
+                    childImageSharp {
+                      fluid(maxWidth: 60, quality: 100) {
+                        ...GatsbyImageSharpFluid
+                      }
+                    }
+                  }
+                  hovericon {
                     childImageSharp {
                       fluid(maxWidth: 60, quality: 100) {
                         ...GatsbyImageSharpFluid

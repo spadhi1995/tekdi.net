@@ -3,7 +3,7 @@ import {useEffect} from 'react';
 import {Link} from "gatsby";
 import Navbar from "./navbar";
 // import "../../layout/common.css";
-import "./header.css";
+import "./header.scss";
 import { withPrefix } from 'gatsby'
 
 const Header = () => {

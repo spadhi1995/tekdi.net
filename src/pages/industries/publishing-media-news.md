@@ -1,7 +1,8 @@
 ---
 templateKey: industries-page
 title: Publishing, Media and News
-icon: /img/industries/education-icon.png
+icon: /img/industries/news-icon.png
+hovericon: /img/industries/news-icon-white.png
 image: /img/industries/education.jpg
 heading: Publishing, Media and News
 subheading: Digital publishing has vastly increased the choice and access to content for readers. For businesses, digital publishing has made it simple to connect with their customers.
