@@ -34,6 +34,7 @@ const ProductsPlatforms = ({ data }) => {
         />
          <FeaturesInfo 
           featuresubheading={post.frontmatter.featuresubheading}
+          features={post.frontmatter.features}
          />
         <ProductList />
       </div>
@@ -68,6 +69,10 @@ export const pageQuery = graphql`
         bannerTitle
         bannerSubTitle
         featuresubheading
+        features {
+            title
+            description   
+        }
       }
     }
   }

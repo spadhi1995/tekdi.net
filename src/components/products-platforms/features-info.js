@@ -1,7 +1,10 @@
 import React from "react";
 import FeaturesList from './features-list';
 
-const FeaturesInfo = props => {
+const FeaturesInfo = ({
+  featuresubheading,
+  features
+}) => {
   return (
     <div className="container">
       <div className="com-cover">
@@ -9,9 +12,11 @@ const FeaturesInfo = props => {
           <h2 className="com-heading text-black">
             Features
           </h2>
-          <p>{props.featuresubheading}</p>
+          <p>{featuresubheading}</p>
         </div>
-        <FeaturesList />
+        <FeaturesList 
+          featureItems={features}
+        />
     </div>
   </div>
   ); 
