@@ -44,9 +44,7 @@ const ProductsPlatforms = ({ data }) => {
 ProductsPlatforms.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
-  }),
-  featuresubheading: PropTypes.string,
-  features: PropTypes.object,
+  })
 }
 
 export default ProductsPlatforms;

@@ -5,6 +5,9 @@
 .products-platforms .banner {
     background-image:url('./images/product-banner.jpg');
 }
+.digital-evolution .banner {
+    background-image:url('./images/digital-banner.jpg');
+}
 .banner-text {
     h1 {
         font-size: 30px;
@@ -40,6 +43,7 @@
 }
 @media (min-width: 992px) {
     .banner-text {
+        width: 50%;
         h1 {
             font-size: 42px;
             line-height: 48px;

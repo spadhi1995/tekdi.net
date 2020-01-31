@@ -96,7 +96,7 @@ const BlogPost = ({ data }) => {
               helmet={
                 <Helmet titleTemplate="%s | Blog">
                   <title>{`${post.frontmatter.title}`}</title>
-                  <meta
+                  <metaBlogPostTemplate
                     name="description"
                     content={`${post.frontmatter.description}`}
                   />
