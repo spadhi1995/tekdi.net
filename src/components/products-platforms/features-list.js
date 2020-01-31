@@ -1,5 +1,4 @@
-import React, { Fragment } from "react";
-import { graphql, StaticQuery } from 'gatsby';
+import React from "react";
 import Swiper from 'react-id-swiper';
 import PropTypes from 'prop-types';
 import 'swiper/css/swiper.css';

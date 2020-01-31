@@ -3,7 +3,10 @@ templateKey: industries-page
 title: Logistics & Transport
 icon: /img/industries/transportation-icon.png
 hovericon: /img/industries/transportation-icon-white.png
+bannerSubTitle: Industries
+bannerTitle: Logistics & Transport
 image: /img/digital/transport.jpg
+bgimage: /img/digital-evolution/digital-evolution1.jpg
 heading: Logistics & Transport
 subheading: Logistics and transportation is the lifeline of the industry and economy. Use of IOT and software is modernising this age old business at a never before pace. You dont want to be left out !
 ---
