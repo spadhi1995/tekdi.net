@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
-import './digital-evolution.scss';
 import PreviewCompatibleImage from '../common/preview-compatible-image';
+import './digital-evolution-list.scss';
 
 class DigitalEvolutionList extends React.Component {
   constructor(props) {
@@ -22,28 +22,33 @@ class DigitalEvolutionList extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     return (
         <div className="container-fluid">
-          <div className="row">
+          <div className="row digital-evolution-list">
             {posts &&
             posts.map(({ node: post }) => (
               this.boxId !== post.fields.slug.match(/\/([^\/]+)\/?$/)[1] ? (
-              <div key={post.id} className="col-md-2 p-0">
-                <div className="box">
+              <div key={post.id} className="col p-0">
+                <div className="box position-relative">
                   {post.frontmatter.bgimage ? (
                       <div className="bg-image">
                         <PreviewCompatibleImage
                           imageInfo={{
                             image: post.frontmatter.bgimage,
-                            alt: `image thumbnail for post ${post.frontmatter.title}`,
+                            alt: `image thumbnail for post ${post.frontmatter.heading}`,
                           }}
                         />
                       </div>
-                    ) : null}
-                    <h4 className="position-absolute">
-                      <Link to={post.fields.slug} className="text-decoration-none">{post.frontmatter.heading}</Link>
+                  ) : null}
+                  <div className="text position-absolute">
+                    <h4 className="mb-2">
+                      {post.frontmatter.heading}
                     </h4>
+                    <Link to={post.fields.slug} className="text-decoration-none">
+                      <img src={require('./images/readmore-white.png')} alt="read more"/>
+                    </Link>
                   </div>
+                </div>
               </div>
-                ) : null
+              ) : null
             ))}
           </div>
        </div>
@@ -74,15 +79,10 @@ export default () => (
                 slug
               }
               frontmatter {
-                title
-                featured
-                templateKey
-                date(formatString: "DD MMMM YYYY")
                 heading
-                subheading
                 bgimage {
                   childImageSharp {
-                    fluid(maxWidth: 250, quality: 100) {
+                    fluid(maxWidth: 250, maxHeight: 200, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
