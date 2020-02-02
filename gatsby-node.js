@@ -23,7 +23,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
   query {
-      allMarkdownRemark(limit: 1000, filter: {frontmatter: {templateKey: { in: ["digital-evolution", "industries-page","products-platforms", "blog-post"]}}}) {
+      allMarkdownRemark(limit: 1000, filter: {frontmatter: {templateKey: { in: ["digital-evolution", "industries-page", "products-platforms", "blog-post", "case-study", "company-page", "technology-page", "services-page"]}}}) {
         edges {
           node {
             id
