@@ -1,5 +1,4 @@
 import React from 'react';
-import PreviewCompatibleImage from '../common/preview-compatible-image';
 import CaseStudiesList from '../common/case-studies/case-studies-list';
 import Content from '../common/content';
 import './industries-info.scss';

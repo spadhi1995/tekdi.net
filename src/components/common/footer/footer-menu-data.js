@@ -1,11 +1,11 @@
 const comapanyMenuData = [
     {
         label:'Team',
-        url:'/#'
+        url:'/company#team'
     },
     {
         label:'Vision',
-        url:'/#'
+        url:'/company#vision'
     },
     {
         label:'Careers',
@@ -24,38 +24,38 @@ const comapanyMenuData = [
 const technologyMenuData = [
     {
         label:'Joomla',
-        url:'/#'
+        url:'/technology#joomla'
     },
     {
         label:'Angular',
-        url:'/#'
+        url:'/technology#angular'
     },
     {
         label:'PHP & Frameworks',
-        url:'/#'
+        url:'/technology#php-frameworks'
     }
 ];
 
 const servicesMenuData = [
     {
         label:'Product Development',
-        url:'/#'
+        url:'/services#product-development'
     },
     {
         label:'SaSS',
-        url:'/#'
+        url:'/services#sass'
     },
     {
         label:'Web Development',
-        url:'/#'
+        url:'/services#web-development'
     },
     {
         label:'Mobility',
-        url:'/#'
+        url:'/services#mobility'
     },
     {
         label:'UI/UX',
-        url:'/#'
+        url:'/services#ui-ux'
     }
 ];
 
