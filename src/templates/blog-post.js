@@ -106,7 +106,7 @@ const BlogPost = ({ data }) => {
               title={post.frontmatter.title}
               image={post.frontmatter.featuredimage}
               author={post.frontmatter.author}
-              category={post.frontmatter.category}
+              category={post.frontmatter.category.join()}
               date={post.frontmatter.date}
               catslug={post.fields.slug}
             />
