@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/content'
-import BlogCatList from '../components/blogcatlist';
+import BlogCatList from '../components/blog/blogcatlist';
 // import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const BlogPostTemplate = ({
@@ -105,7 +105,7 @@ const BlogPost = ({ data }) => {
               title={post.frontmatter.title}
               image={post.frontmatter.featuredimage}
               author={post.frontmatter.author}
-              category={post.frontmatter.category}
+              category={post.frontmatter.category.join()}
               date={post.frontmatter.date}
               catslug={post.fields.slug}
             />
