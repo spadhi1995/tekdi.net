@@ -1,0 +1,44 @@
+.error {
+    font-size: 14px;
+    color: #ff0000;
+    font-weight: 400;
+}
+.contact-us {
+    h5 {
+        font-size: 16px;
+    }
+    .form-group {
+        input,
+        textarea {
+            background-color: #e6e6e6;
+            border: none;
+            border-radius: 0;
+            color: #637484;
+            font-weight: 600;
+            &:focus {
+                box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+            }
+        }
+    }
+    .btn-submit {
+        border: none;
+        background-color: transparent;
+        color: #00d0d2;
+        font-weight: 600;
+        padding: 0;
+        margin: 10px 0 0 0;
+        outline: none;
+
+        &:hover,
+        &:focus {
+            outline: none;
+        }
+    }
+}
+@media (min-width:992px) {
+    .contact-us {
+        h5 {
+            font-size: 18px;
+        }
+    }
+}

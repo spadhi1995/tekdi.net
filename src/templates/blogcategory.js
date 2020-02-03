@@ -1,12 +1,10 @@
 
-import Layout from '../components/layout'
+import Layout from '../components/layout/baselayout';
 import BlogPagination from '../components/blog/pagination';
 import renderList from '../components/blog/renderlist';
 import { Link, graphql } from 'gatsby'
-import PreviewCompatibleImage from '../components/preview-compatible-image'
 import BlogCatList from '../components/blog/blogcatlist';
-import Banner from "../components/banner/banner"
-import ContactUs from "../components/footer-contact/contact"
+import Banner from "../components/common/banner/banner"
 import React, { Fragment } from 'react'
 import lodash from "lodash"
 
@@ -39,7 +37,6 @@ class BlogCategoryPage extends React.Component {
             </div>
           </div>
         </div>
-        <ContactUs/>
       </Layout>
     )
   }

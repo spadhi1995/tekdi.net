@@ -1,7 +1,10 @@
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import lodash from "lodash"
+import './blogcatlist.scss';
+
 
 class BlogCatList extends React.Component {
   
@@ -22,19 +25,19 @@ class BlogCatList extends React.Component {
           </li>
         ))}
         </ul>
-    </div>
+      </div>
      <div className="bg-white p-4">
      <h3 className="text-black mod-title mb-3 pb-3">Tags</h3>
      <ul className="blog-cat-list unstyled">  
      {tagsGroup.group.map(tag => (
-        <li key={tag.fieldValue}>
-          <Link to = {"blog/tags/" + lodash.kebabCase(tag.fieldValue)}>
-            {tag.fieldValue} ({tag.totalCount})
-          </Link>
-        </li>
+          <li key={tag.fieldValue}>
+            <Link to = {"blog/tags/" + lodash.kebabCase(tag.fieldValue)}>
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
+          </li>
         ))}
      </ul>
-    </div>
+   </div>
   </div>
 )
     

@@ -1,11 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/layout'
-import Content, { HTMLContent } from '../components/content'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { kebabCase } from 'lodash';
+import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import Layout from '../components/layout/baselayout';
+import Content, { HTMLContent } from '../components/common/content';
 import BlogCatList from '../components/blog/blogcatlist';
+import './blog.scss';
 // import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export const BlogPostTemplate = ({
@@ -95,7 +96,7 @@ const BlogPost = ({ data }) => {
               helmet={
                 <Helmet titleTemplate="%s | Blog">
                   <title>{`${post.frontmatter.title}`}</title>
-                  <meta
+                  <metaBlogPostTemplate
                     name="description"
                     content={`${post.frontmatter.description}`}
                   />

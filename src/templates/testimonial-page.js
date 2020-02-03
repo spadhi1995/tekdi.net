@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import PreviewCompatibleImage from '../components/preview-compatible-image';
-import Layout from '../components/layout';
+import PreviewCompatibleImage from '../components/common/preview-compatible-image';
+import Layout from '../components/layout/baselayout';
 
 export const TestimonialTemplate = ({
   heading,

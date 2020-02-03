@@ -1,7 +1,8 @@
 import React from "react"
 import lodash from "lodash"
 import { Link } from "gatsby"
-import PreviewCompatibleImage from '../preview-compatible-image'
+import PreviewCompatibleImage from '../common/preview-compatible-image'
+import './bloglist.scss';
 const renderList = ({ node }) => {
   return (
 <div> 

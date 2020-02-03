@@ -1,5 +1,5 @@
 import React from "react"
-import '../css/contact.css'
+import './contact.scss'
 const axios = require(`axios`);
 const queryString = require('query-string');
 
@@ -106,22 +106,24 @@ export class contactUs extends React.Component {
               <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
               <span className="error">{this.state.errors["name"]}</span>
             </div>
-            </div>
-            <div className="row">
-            <div className="col form-group">
+          </div>
+          <div className="row">
+            <div className="col-lg-6 col-md-12 col-sm-6 col-xs-12 form-group">
                  <input type="text" name="phone" id="phone" value={this.state.phone} onChange={this.handleInputChange} className="form-control" placeholder="Phone"  />
                  <span className="error">{this.state.errors["phone"]}</span>
               </div>
-              <div className="col form-group">
+              <div className="col-lg-6 col-md-12 col-sm-6 col-xs-12 form-group">
                  <input type="email" name="email" id="email" value={this.state.email} onChange={this.handleInputChange} className="form-control" placeholder="Email"  />
                  <span className="error">{this.state.errors["email"]}</span>
               </div> 
-            </div>
-            <div className="form-group form-group">
+          </div>
+          <div className="row">
+            <div className="col form-group">
              <textarea className="form-control" name="message" id="message" value={this.state.massage} onChange={this.handleInputChange} rows="3" placeholder="Message" ></textarea>
              <span className="error">{this.state.errors["message"]}</span>
             </div> 
-          <button type="submit">Submit Now</button>
+          </div>
+          <button type="submit" className="btn-submit">Submit Now</button>
         </form>
     );
   }
