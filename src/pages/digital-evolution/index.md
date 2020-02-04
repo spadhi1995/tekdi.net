@@ -12,6 +12,7 @@ mainpitch:
   title: We are in the middle of a digital revolution
   description: >
     Content is digital by default today not as a after thought. In a digital environment content is created in a variety of formats - multiple types of content - blogs, videos, documents need to be manage  In addition, flexible review and approval workflows are commonly used. 
+caseStudyTag: ontent Management & Digital Publishing
 ---
 
 Content is being consumed on a variety of devices - desktops, smartphones, TVs and even wearables. There is a need to adapt the content to these changing consumption patterns to be able to reach your audience. On the web, SEO, microdata and other paradigms are evolving to make content more discoverable.

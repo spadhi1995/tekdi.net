@@ -12,6 +12,7 @@ mainpitch:
   title: 
   description: >
     We provide a scalable & robust framework for your bespoke ecommerce marketplace
+caseStudyTag: E-commerce and Marketplaces
 ---
 
 Technology has completely tranformed in the last decade. Just as mature markets accepted this as a norm, emerging markets from India, China and Africa have rewritten the rules of the game with record breaking transactions. 

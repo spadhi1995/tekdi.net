@@ -30,6 +30,7 @@ const DigitalEvolution = ({ data }) => {
           mainpitch={post.frontmatter.mainpitch}
           content={post.html}
           contentComponent={HTMLContent}
+          caseStudyTag={post.frontmatter.caseStudyTag}
         />
         <DigitalEvolutionList />
       </div>
@@ -59,6 +60,7 @@ export const pageQuery = graphql`
         bannerTitle
         bannerSubTitle
         subheading
+        caseStudyTag
         mainpitch {
           title
           description

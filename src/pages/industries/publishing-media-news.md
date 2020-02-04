@@ -9,6 +9,7 @@ image: /img/industries/education.jpg
 bgimage: /img/digital-evolution/digital-evolution1.jpg
 heading: Publishing, Media and News
 subheading: Digital publishing has vastly increased the choice and access to content for readers. For businesses, digital publishing has made it simple to connect with their customers.
+caseStudyTag: Publishing, Media and News
 ---
 
 The way we move around has changed radically over the years. Technology now plays a major role in mobilising vehicle fleets. From letting customers book taxis to tracking large logistics fleet there is a lot that technology can do for your transportation services.

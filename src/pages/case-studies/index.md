@@ -3,6 +3,12 @@ templateKey: case-study
 title: Case Study 1
 heading: Case Study 1
 bannerSubTitle: Case Studies
+tags: 
+  - agriculture
+  - science
+  - E-Learning Platform
+  - Enterprise Application Development Platform
+  - Content Management & Digital Publishing
 bannerTitle: Case Study 1
 ---
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 

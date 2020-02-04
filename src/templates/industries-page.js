@@ -11,9 +11,9 @@ import { HTMLContent } from '../components/common/content';
 const IndustriesPage = ({ data }) => {
   const { markdownRemark: post } = data
   return (
-    <Layout>
+    <Layout> 
       <Helmet>
-        <title>{post.frontmatter.title}</title>
+  <title>{post.frontmatter.title}</title>
         <meta
           name="description"
           content={`${post.frontmatter.subheading}`}
@@ -28,8 +28,10 @@ const IndustriesPage = ({ data }) => {
           subheading={post.frontmatter.subheading}
           content={post.html}
           contentComponent={HTMLContent}
+          caseStudyTag={post.frontmatter.caseStudyTag}
         />
         <IndustriesList />
+     
       </div>
     </Layout>
   )
@@ -60,8 +62,7 @@ export const pageQuery = graphql`
         bannerTitle
         bannerSubTitle
         subheading
-       
-        
+        caseStudyTag    
       }
     }
   }

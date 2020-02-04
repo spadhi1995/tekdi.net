@@ -31,6 +31,7 @@ const ProductsPlatforms = ({ data }) => {
           description={post.frontmatter.description}
           content={post.frontmatter.content}
           excerpt={post.excerpt}
+          caseStudyTag={post.frontmatter.caseStudyTag}
         />
          <FeaturesInfo 
           featuresubheading={post.frontmatter.featuresubheading}
@@ -69,6 +70,7 @@ export const pageQuery = graphql`
         bannerTitle
         bannerSubTitle
         featuresubheading
+        caseStudyTag
         features {
             title
             description   

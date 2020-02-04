@@ -8,10 +8,10 @@ const IndustriesInfo = ({
   content,
   contentComponent,
   subheading,
+  caseStudyTag
 }) => {
 
   const PostContent = contentComponent || Content
-
   return(
     <div className="industries-info mb-4">
       <div className="container">
@@ -24,7 +24,8 @@ const IndustriesInfo = ({
             </div>
           </div>
           <div className="mb-5 col-lg-4 col-md-5">
-            <CaseStudiesList />
+            <CaseStudiesList caseStudyTag = {caseStudyTag} />
+  
           </div>
         </div>          
       
