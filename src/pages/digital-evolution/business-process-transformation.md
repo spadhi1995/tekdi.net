@@ -8,6 +8,7 @@ bgimage: /img/digital-evolution/digital-evolution2.jpg
 heading: Business Process Transformation
 subheading: Take your business to the next level by modernizing existing processes that improve business productivity and organizational efficiency. 
 img: /img/digital-evolution/content-management.jpg
+featuresubheading: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
 mainpitch:
   title: 
   description: >

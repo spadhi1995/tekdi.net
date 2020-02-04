@@ -6,6 +6,7 @@ import renderList from '../components/blog/renderlist';
 import { Link, graphql } from 'gatsby'
 import BlogCatList from '../components/blog/blogcatlist';
 import Banner from "../components/common/banner/banner"
+import ContactUs from '../components/common/contact/contact';
 import React, { Fragment } from 'react'
 
  class BlogIndexPage extends React.Component {
@@ -30,6 +31,7 @@ import React, { Fragment } from 'react'
             </div>
           </div>
         </div>
+        <ContactUs />
       </Layout>
     )
   }

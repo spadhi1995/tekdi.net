@@ -7,6 +7,7 @@ import Banner from '../components/common/banner/banner';
 import IndustriesInfo from '../components/industries/industries-info';
 import  IndustriesList from '../components/industries/industries-list';
 import { HTMLContent } from '../components/common/content';
+import FeaturesInfo from '../components/common/features/features-info';
 
 const IndustriesPage = ({ data }) => {
   const { markdownRemark: post } = data
@@ -29,6 +30,10 @@ const IndustriesPage = ({ data }) => {
           content={post.html}
           contentComponent={HTMLContent}
           caseStudyTag={post.frontmatter.caseStudyTag}
+        />
+        <FeaturesInfo 
+        featuresubheading={post.frontmatter.featuresubheading}
+        features={post.frontmatter.features}
         />
         <IndustriesList />
      
@@ -63,6 +68,11 @@ export const pageQuery = graphql`
         bannerSubTitle
         subheading
         caseStudyTag    
+        featuresubheading
+        features {
+            title
+            description   
+        }        
       }
     }
   }

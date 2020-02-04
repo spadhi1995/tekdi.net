@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql} from 'gatsby';
-import { HTMLContent } from '../components/common/content';
-import Layout from '../components/layout/baselayout';
-import Banner from '../components/common/banner/banner';
-import ServicesInfo from '../components/services/services-info';
+import { HTMLContent } from '../../components/common/content';
+import Layout from '../../components/layout/baselayout';
+import Banner from '../../components/common/banner/banner';
+import ServicesInfo from '../../components/services/services-info';
 
-const servicesTemplate = ({ data }) => {
+const ServicesTemplate = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
@@ -66,21 +66,17 @@ const servicesTemplate = ({ data }) => {
   )
 }
 
-servicesTemplate.propTypes = {
+ServicesTemplate.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   })
 }
 
-export default servicesTemplate;
+export default ServicesTemplate;
 
 export const pageQuery = graphql`
-  query servicesTemplateByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      fields {
-        slug
-      }
+  query ServicesTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "services-page" } }) {
       html
       frontmatter {
         title

@@ -6,7 +6,7 @@ import Layout from '../components/layout/baselayout';
 import Banner from "../components/common/banner/banner";
 import Products from '../components/products-platforms/productinfo';
 import ProductList from '../components/products-platforms/productlist';
-import FeaturesInfo from '../components/products-platforms/features-info';
+import FeaturesInfo from '../components/common/features/features-info';
 
 const ProductsPlatforms = ({ data }) => {
   const { markdownRemark: post } = data
@@ -33,10 +33,10 @@ const ProductsPlatforms = ({ data }) => {
           excerpt={post.excerpt}
           caseStudyTag={post.frontmatter.caseStudyTag}
         />
-         <FeaturesInfo 
-          featuresubheading={post.frontmatter.featuresubheading}
-          features={post.frontmatter.features}
-         />
+        <FeaturesInfo 
+        featuresubheading={post.frontmatter.featuresubheading}
+        features={post.frontmatter.features}
+        />
         <ProductList />
       </div>
     </Layout>

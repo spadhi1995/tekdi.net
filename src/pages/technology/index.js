@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql} from 'gatsby';
-import { HTMLContent } from '../components/common/content';
-import Layout from '../components/layout/baselayout';
-import Banner from '../components/common/banner/banner';
-import TechnologyInfo from '../components/technology/technology-info';
+import { HTMLContent } from '../../components/common/content';
+import Layout from '../../components/layout/baselayout';
+import Banner from '../../components/common/banner/banner';
+import TechnologyInfo from '../../components/technology/technology-info';
 
 const TechnologyTemplate = ({ data }) => {
   const { markdownRemark: post } = data
@@ -61,12 +61,8 @@ TechnologyTemplate.propTypes = {
 export default TechnologyTemplate;
 
 export const pageQuery = graphql`
-  query TechnologyTemplateByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      fields {
-        slug
-      }
+  query TechnologyTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "technology-page" } }) {
       html
       frontmatter {
         title

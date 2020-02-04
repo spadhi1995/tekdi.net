@@ -6,6 +6,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/baselayout';
 import Content, { HTMLContent } from '../components/common/content';
 import BlogCatList from '../components/blog/blogcatlist';
+import ContactUs from '../components/common/contact/contact';
 import './blog.scss';
 // import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
@@ -116,6 +117,7 @@ const BlogPost = ({ data }) => {
             </div>
         </div>
        </div>
+       <ContactUs />
     </Layout>
   )
 }

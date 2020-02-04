@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql} from 'gatsby';
-import { HTMLContent } from '../components/common/content';
-import Layout from '../components/layout/baselayout';
-import Banner from '../components/common/banner/banner';
-import CompanyInfo from '../components/company/company-info';
+import { HTMLContent } from '../../components/common/content';
+import Layout from '../../components/layout/baselayout';
+import Banner from '../../components/common/banner/banner';
+import CompanyInfo from '../../components/company/company-info';
 
 const CompanyTemplate = ({ data }) => {
   const { markdownRemark: post } = data
@@ -16,7 +16,7 @@ const CompanyTemplate = ({ data }) => {
         <title>{post.frontmatter.title}</title>
         {/* <meta
           name="description"
-          content={`${post.frontmatter.subheading}`}
+          content={`${frontmatter.subheading}`}
         /> */}
       </Helmet>
       <Banner 
@@ -24,7 +24,7 @@ const CompanyTemplate = ({ data }) => {
           bannerSubTitle = {post.frontmatter.bannerSubTitle}
       />
       <CompanyInfo 
-        content={post.html}
+       content={post.html}
         contentComponent={HTMLContent}
       />
       <div id="team">
@@ -54,12 +54,8 @@ CompanyTemplate.propTypes = {
 export default CompanyTemplate;
 
 export const pageQuery = graphql`
-  query CompanyTemplateByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      fields {
-        slug
-      }
+  query CompanyTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "company-page" } }) {
       html
       frontmatter {
         title
