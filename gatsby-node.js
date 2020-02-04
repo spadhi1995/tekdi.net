@@ -18,51 +18,6 @@ const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
-
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
-
-  return graphql(`
-  query {
-      allMarkdownRemark(limit: 1000, filter: {frontmatter: {templateKey: { in: ["digital-evolution", "industries-page", "products-platforms", "blog-post", "case-study", "company-page", "technology-page", "services-page"]}}}) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              templateKey
-            }
-          }
-        }
-      }
-  }
-  `).then(result => {
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
-    }
-    const posts = result.data.allMarkdownRemark.edges  
-    posts.forEach(({edge,postsPerPage,numPages }) => {
-    const id = edge.node.id
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-      })
-    
-    })    
-  })
-}
-  
-
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   fmImagesToRelative(node) // convert image paths for gatsby images
@@ -86,7 +41,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(`
   query {
-      allMarkdownRemark(limit: 1000, filter: {frontmatter: {templateKey: { in: ["blog-post"]}}}) {
+      blog:allMarkdownRemark(limit: 1000, filter: {frontmatter: {templateKey: { in: ["blog-post"]}}}) {
         edges {
           node {
             id
@@ -101,16 +56,29 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      pages:allMarkdownRemark(limit: 1000, filter: {frontmatter: {templateKey: { in: ["digital-evolution", "industries-page","products-platforms", "blog-post"]}}}) {
+          edges {
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                templateKey
+              }
+            }
+          }
+        }
   }
   `).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
-    const posts = result.data.allMarkdownRemark.edges  
+    const  blog = result.data. blog.edges  
     const postsPerPage = 1
-    const numPages = Math.ceil(posts.length / postsPerPage)
-    posts.forEach(edge => {
+    const numPages = Math.ceil(blog.length / postsPerPage)
+    blog.forEach(edge => {
     edge.node.frontmatter.category.forEach(cat => categories.push(cat))
     edge.node.frontmatter.tags.forEach(tag => tags.push(tag))
     const id = edge.node.id
@@ -179,6 +147,7 @@ exports.createPages = ({ actions, graphql }) => {
   const allTags = Object.keys(countTags)
   allTags.forEach((tag, i) => {
     const tagLink = `/blog/tags/${_.kebabCase(tag)}`
+    console.log(tagLink, "this is the tag link")
     Array.from({
       length: Math.ceil(countTags[tag] / postsPerPage),
     }).forEach((_, i) => {
@@ -197,6 +166,22 @@ exports.createPages = ({ actions, graphql }) => {
     })
   })
 
+  //for the all pages
+    const pages = result.data.pages.edges  
+    pages.forEach(edge => {
+    const id = edge.node.id
+    createPage({
+      path: edge.node.fields.slug,
+      tags: edge.node.frontmatter.tags,
+      component: path.resolve(
+        `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+      ),
+      // additional data can be passed via context
+      context: {
+        id,
+      },
+    })
+  })    
 
   })
 }
