@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import Layout from '../../components/layout/baselayout';
 import Openingslist from '../../components/careers/careers-accordian'; 
 import Banner from '../../components/common/banner/banner';
+import ContactUs from '../../components/common/contact/contact';
 
 const CareersIndexPage =  ({data}) => {
   
@@ -27,6 +28,7 @@ const CareersIndexPage =  ({data}) => {
             <Openingslist />
           </div>
         </div>
+        <ContactUs />
       </Layout>
     )
 

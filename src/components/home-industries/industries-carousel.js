@@ -13,15 +13,9 @@ class IndustriesCarousel extends React.Component {
         const { edges: posts } = data.allMarkdownRemark
 
         const params = {
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-            bullets: true
+          navigation: {
+            nextEl: '.swiper-button-next',
           },
-          // autoplay: {
-          //   delay: 4000,
-          //   disableOnInteraction:true
-          // },
           loop: true,
           breakpoints: {
             1024: {

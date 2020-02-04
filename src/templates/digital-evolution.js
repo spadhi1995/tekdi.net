@@ -7,6 +7,7 @@ import Banner from '../components/common/banner/banner';
 import DigitalEvolutionInfo from '../components/digital-evolution/digital-evolution-info';
 import DigitalEvolutionList from '../components/digital-evolution/digital-evolution-list';
 import { HTMLContent } from '../components/common/content';
+import FeaturesInfo from '../components/common/features/features-info';
 
 const DigitalEvolution = ({ data }) => {
   const { markdownRemark: post } = data
@@ -30,6 +31,10 @@ const DigitalEvolution = ({ data }) => {
           mainpitch={post.frontmatter.mainpitch}
           content={post.html}
           contentComponent={HTMLContent}
+        />
+        <FeaturesInfo 
+        featuresubheading={post.frontmatter.featuresubheading}
+        features={post.frontmatter.features}
         />
         <DigitalEvolutionList />
       </div>
@@ -69,6 +74,11 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        featuresubheading
+        features {
+            title
+            description   
         }
       }
     }

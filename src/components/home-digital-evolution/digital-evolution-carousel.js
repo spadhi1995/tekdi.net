@@ -14,10 +14,8 @@ class DigitalEvolutionCarousel extends React.Component {
       const { edges: posts } = data.allMarkdownRemark
 
       const params = {
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-          bullets: true
+        navigation: {
+          nextEl: '.swiper-button-next',
         },
         loop:true,
         //slidesPerColumn: 2,
