@@ -12,7 +12,7 @@ import TeamCulture from '../components/home-team-culture/team-culture';
 import Vision from '../components/home-vision/vision';
 import TestimonialCarousel from '../components/home-testimonial-carousel/testimonial-carousel';
 import Clients from '../components/home-clients/clients';
-import ContactUs from '../components/home-contact/contact';
+import ContactUs from '../components/common/contact/contact';
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark

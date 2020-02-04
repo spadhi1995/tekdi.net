@@ -22,7 +22,7 @@ class IndustriesList extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     return (
         <div className="container-fluid">
-          <div className="row digital-evolution-list">
+          <div className="row industries-list">
             {posts &&
             posts.map(({ node: post }) => (
               this.boxId !== post.fields.slug.match(/\/([^\/]+)\/?$/)[1] ? (

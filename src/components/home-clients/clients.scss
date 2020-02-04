@@ -9,6 +9,21 @@
             transform: translate(0, -50%);
             left: 0px;
             width: 100%;
+
+            img {
+               -webkit-filter: grayscale(100%);
+               -moz-filter: grayscale(100%);
+               -ms-filter: grayscale(100%);
+               filter: grayscale(100%);
+               filter: #ccc; 
+
+               &:hover {
+                    -webkit-filter: none;
+                    -moz-filter: none;
+                    -ms-filter: none;
+                    filter: none;
+                }
+            }
         }
     }
 }

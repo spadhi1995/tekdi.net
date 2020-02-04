@@ -102,6 +102,34 @@ h3.section-title {
 .swiper-pagination-bullet-active {
     background: #09225a !important;
 }
+.swiper-button-next {
+    top: 10px !important;
+    background-image: none !important;
+
+    &:before {
+        content: '';
+        background-color: #09225a;
+        width: 85px;
+        height: 1px;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        margin-left: 10px;
+    }
+
+    &:after {
+        content: 'scroll' !important;
+        color: #09225a;
+        font-family: inherit !important;
+        font-size: 16px !important;
+        position: absolute;
+        right: 100px;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
 
 @media (min-width: 768px) {
     h2.com-heading {
