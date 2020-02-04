@@ -12,6 +12,8 @@ featuresubheading: Lorem Ipsum is simply dummy text of the printing and typesett
 mainpitch:
   title: 
   description: >
+    Engage donors and micro-investors better and maximise contribution. Be it raising funds for a charity you support or building the next Kickstarter.
+caseStudyTag: Technology enablement of Nonprofits
     Engage donors and micro-investors better and maximise contribution. Be it raising funds for a charity you support or building the next Kickstarter. 
 features:
     - title: Feature 1

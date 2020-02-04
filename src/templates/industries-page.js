@@ -12,9 +12,9 @@ import FeaturesInfo from '../components/common/features/features-info';
 const IndustriesPage = ({ data }) => {
   const { markdownRemark: post } = data
   return (
-    <Layout>
+    <Layout> 
       <Helmet>
-        <title>{post.frontmatter.title}</title>
+  <title>{post.frontmatter.title}</title>
         <meta
           name="description"
           content={`${post.frontmatter.subheading}`}
@@ -29,12 +29,14 @@ const IndustriesPage = ({ data }) => {
           subheading={post.frontmatter.subheading}
           content={post.html}
           contentComponent={HTMLContent}
+          caseStudyTag={post.frontmatter.caseStudyTag}
         />
         <FeaturesInfo 
         featuresubheading={post.frontmatter.featuresubheading}
         features={post.frontmatter.features}
         />
         <IndustriesList />
+     
       </div>
     </Layout>
   )
@@ -65,6 +67,7 @@ export const pageQuery = graphql`
         bannerTitle
         bannerSubTitle
         subheading
+        caseStudyTag    
         featuresubheading
         features {
             title

@@ -2,7 +2,7 @@
 templateKey: case-study
 title: Case Study 2
 heading: Case Study 2
-tags: ["vowel", "unite"]
+tags: ["Logistics & Transport", "Publishing, Media and News", "Not for Profit Organisation","agriculture", "Transportation", "unite", E-Learning Platform]
 bannerSubTitle: Case Studies
 bannerTitle: Case Study 2
 ---

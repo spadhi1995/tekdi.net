@@ -26,6 +26,7 @@ features:
     - title: Feature 4
       description: >
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+caseStudyTag: E-commerce and Marketplaces
 ---
 
 Technology has completely tranformed in the last decade. Just as mature markets accepted this as a norm, emerging markets from India, China and Africa have rewritten the rules of the game with record breaking transactions. 

@@ -13,6 +13,7 @@ mainpitch:
   title: 
   description: >
     Technology can do a lot for your transportation services by mobilising vehicle fleets that makes anything from booking taxis to tracking large shipments convenient. 
+caseStudyTag: Transportation
 features:
     - title: Feature 1
       description: >

@@ -24,6 +24,7 @@ features:
     - title: Feature 4
       description: >
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+caseStudyTag:  E-Learning Platform
 --- 
 
 Other platform features include an e-commerce feature allowing paid courses, certificates and user engagement tools.

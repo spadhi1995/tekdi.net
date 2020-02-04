@@ -9,6 +9,7 @@ image: /img/industries/agriculture.jpg
 bgimage: /img/digital-evolution/digital-evolution1.jpg
 heading: Agriculture
 subheading: Digital can bring about revolutionary benefits to this trillion dollar industry worldwide. From IoT and digital platforms to the humble Whatsapp, the agriculture sector can benefit significantly from digital transformation.
+caseStudyTag: agriculture
 featuresubheading: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
 features:
     - title: Feature 1

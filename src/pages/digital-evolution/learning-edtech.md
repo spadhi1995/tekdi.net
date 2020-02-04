@@ -13,6 +13,7 @@ mainpitch:
   title: Technology has transformed the learning landscape
   description: >
     Moving over typical classroom training, learning is now anytime, anywhere and also unstructured at times. We help organisations deploy, track and measure learning outcomes and make learning a strategic initiative. 
+caseStudyTag: Learning and Education technology
 features:
     - title: Feature 1
       description: >

@@ -13,6 +13,7 @@ mainpitch:
   title: We are in the middle of a digital revolution
   description: >
     Content is digital by default today not as a after thought. In a digital environment content is created in a variety of formats - multiple types of content - blogs, videos, documents need to be manage  In addition, flexible review and approval workflows are commonly used. 
+caseStudyTag: ontent Management & Digital Publishing
 features:
     - title: Feature 1
       description: >

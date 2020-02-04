@@ -14,7 +14,7 @@ const Products = props => {
             </h4>
           </div>
           <div className="mb-5 col-lg-4 col-md-5">
-            <CaseStudiesList />
+            <CaseStudiesList caseStudyTag={props.caseStudyTag}/>
           </div>
         </div>
         

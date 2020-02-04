@@ -10,7 +10,8 @@ const DigitalEvolutionInfo = ({
   content,
   contentComponent,
   img,
-  mainpitch
+  mainpitch,
+  caseStudyTag
 }) => {
 
   const PostContent = contentComponent || Content
@@ -40,7 +41,7 @@ const DigitalEvolutionInfo = ({
             </div>
           </div>
           <div className="mb-5 col-lg-4 col-md-5">
-            <CaseStudiesList />
+            <CaseStudiesList caseStudyTag={caseStudyTag} />
           </div>
         </div>          
       </div>

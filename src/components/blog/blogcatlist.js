@@ -4,10 +4,7 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import lodash from "lodash"
 import './blogcatlist.scss';
-
-
-class BlogCatList extends React.Component {
-  
+class BlogCatList extends React.Component { 
   render() {
     const { data } = this.props
     const { categoryGroup } = data
@@ -39,11 +36,7 @@ class BlogCatList extends React.Component {
      </ul>
    </div>
   </div>
-)
-    
-
-    
-  }
+  )}
 }
 
 BlogCatList.propTypes = {
