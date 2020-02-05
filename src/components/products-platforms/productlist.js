@@ -22,13 +22,13 @@ class ProductList extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="container-fluid">
-      <div className="row productlist">
+      
+      <div className="product-list">
         {posts &&
         posts.map(({ node: post }) => (
           this.boxId !== post.fields.slug.match(/\/([^\/]+)\/?$/)[1] ? (
-          <div key={post.id} className="col p-0">
-            <div className="box">
+          <div key={post.id} className="p-0 box-cover">
+            <div className="position-relative box">
               {post.frontmatter.bgimage ? (
                   <div className="bg-image">
                     <PreviewCompatibleImage
@@ -52,7 +52,7 @@ class ProductList extends React.Component {
             ) : null
         ))}
       </div>
-   </div>
+   
     )
   }
 }
