@@ -1,4 +1,5 @@
 import React from 'react'; 
+import {Link} from 'gatsby';
 import {comapanyMenuData, technologyMenuData, servicesMenuData} from './footer-menu-data';
 import 'font-awesome/css/font-awesome.min.css';
 import Copyright from './copyright';
@@ -43,7 +44,7 @@ const Footer = () => {
                                     <ul className="footer-menu-items unstyled">
                                         { comapanyMenuData.map (item =>
                                             <li key = {item.label} className="mb-3">
-                                                <a href = {item.url}> {item.label} </a>
+                                                <Link to={item.url}> {item.label} </Link>
                                             </li>
                                         ) }
                                     </ul>
@@ -57,7 +58,7 @@ const Footer = () => {
                                     <ul className="footer-menu-items unstyled">
                                         { technologyMenuData.map (item =>
                                             <li key = {item.label} className="mb-3">
-                                                <a href = {item.url}> {item.label} </a>
+                                                <Link to={item.url}> {item.label} </Link>
                                             </li>
                                         ) }
                                     </ul>
@@ -71,7 +72,7 @@ const Footer = () => {
                                     <ul className="footer-menu-items unstyled">
                                         { servicesMenuData.map (item =>
                                             <li key = {item.label} className="mb-3">
-                                                <a href = {item.url}> {item.label} </a>
+                                                <Link to={item.url}> {item.label} </Link>
                                             </li>
                                         ) }
                                     </ul>

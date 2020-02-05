@@ -1,5 +1,14 @@
-.productlist {
-    .box {
+.product-list {
+    width:100%;
+    overflow:auto;
+    white-space:nowrap;
+
+        .box-cover {
+            display: inline-block;
+            width:auto;
+            white-space:normal;
+        }
+        .box {
         &:before {
             content: '';
             position: absolute;
@@ -34,6 +43,17 @@
                 display: block;
                 text-align: center;
             }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        .box-cover {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
         }
     }
 }
