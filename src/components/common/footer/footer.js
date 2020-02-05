@@ -4,6 +4,7 @@ import {comapanyMenuData, technologyMenuData, servicesMenuData} from './footer-m
 import 'font-awesome/css/font-awesome.min.css';
 import Copyright from './copyright';
 import './footer.css';
+import jump from '../jump';
 
 const Footer = () => {
     return(
@@ -42,10 +43,15 @@ const Footer = () => {
                             <nav>
                                 {comapanyMenuData.length && (      
                                     <ul className="footer-menu-items unstyled">
-                                        { comapanyMenuData.map (item =>
-                                            <li key = {item.label} className="mb-3">
-                                                <Link to={item.url}> {item.label} </Link>
-                                            </li>
+                                        { comapanyMenuData.map (item => {
+                                            const urlParts = item.url.split('#');
+                                            if(urlParts.length > 1 ){
+                                              return (<li key = {item.label} className="mb-3"><a href="javascript:;" data-link={item.url} onClick={jump}> {item.label} </a></li>)
+                                            }
+                                            else {
+                                              return (<li key = {item.label} className="mb-3"><Link to={item.url}> {item.label} </Link></li>)
+                                            }
+                                        }
                                         ) }
                                     </ul>
                                 )}
@@ -56,10 +62,15 @@ const Footer = () => {
                             <nav>
                                 {technologyMenuData.length && (      
                                     <ul className="footer-menu-items unstyled">
-                                        { technologyMenuData.map (item =>
-                                            <li key = {item.label} className="mb-3">
-                                                <Link to={item.url}> {item.label} </Link>
-                                            </li>
+                                        { technologyMenuData.map (item => {
+                                             const urlParts = item.url.split('#');
+                                             if(urlParts.length > 1 ){
+                                               return (<li key = {item.label} className="mb-3"><a href="javascript:;" data-link={item.url} onClick={jump}> {item.label} </a></li>)
+                                             }
+                                             else {
+                                               return (<li key = {item.label} className="mb-3"><Link to={item.url}> {item.label} </Link></li>)
+                                             }
+                                        }
                                         ) }
                                     </ul>
                                 )}
@@ -70,10 +81,15 @@ const Footer = () => {
                             <nav>
                                 {servicesMenuData.length && (      
                                     <ul className="footer-menu-items unstyled">
-                                        { servicesMenuData.map (item =>
-                                            <li key = {item.label} className="mb-3">
-                                                <Link to={item.url}> {item.label} </Link>
-                                            </li>
+                                        { servicesMenuData.map (item => {
+                                             const urlParts = item.url.split('#');
+                                             if(urlParts.length > 1 ){
+                                               return (<li key = {item.label} className="mb-3"><a href="javascript:;" data-link={item.url} onClick={jump}> {item.label} </a></li>)
+                                             }
+                                             else {
+                                               return (<li key = {item.label} className="mb-3"><Link to={item.url}> {item.label} </Link></li>)
+                                             }
+                                        }
                                         ) }
                                     </ul>
                                 )}
