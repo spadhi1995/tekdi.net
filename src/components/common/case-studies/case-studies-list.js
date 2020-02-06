@@ -2,20 +2,17 @@ import React from 'react';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import './case-studies-list.scss';
 import lodash from "lodash"
-
-
+import ExampleApp from "../modal/case-study-modal"
 class CaseStudiesList extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+
   render(){
     const { data } = this.props
-    // const { edges: posts } = data.allData
     const { caseStudyTag } = this.props
     const { tagsGroup } = data
-    console.log(data, "This is the tag group")
+    //let modal = true;
+   
     return(
-
+      <div>
       <div className="case-studies-list">
         <h4 className="mod-title font-weight-bold">View Case Studies</h4>
         {caseStudyTag &&
@@ -27,17 +24,25 @@ class CaseStudiesList extends React.Component {
             <Link to={post.fields.slug}>
           <h4 className="font-weight-bold text-black mb-3">{post.frontmatter.heading}</h4>
             </Link>
+            <ExampleApp slug={post.fields.slug} />
             <p>{post.excerpt}</p> 
           </div>
            ))
           ) : null
           ))
        }
+       
+      
       </div>
+     
+      </div>
+      
     )
   }
 }
-//export default CaseStudiesList;
+
+
+
 export default props => (
   <StaticQuery
     query={graphql`
@@ -63,9 +68,8 @@ export default props => (
           }   
         }
       }
-    }
-      
-    `}
+    } 
+  `}
     render={(data, count) => <CaseStudiesList data={data} count={count} caseStudyTag={props.caseStudyTag}  />}
   />
 )
