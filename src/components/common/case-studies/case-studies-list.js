@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import './case-studies-list.scss';
 import lodash from "lodash"
-import ExampleApp from "../modal/case-study-modal"
+import CaseStudyModal from "../modal/case-study-modal"
 class CaseStudiesList extends React.Component {
 
   render(){
@@ -24,7 +24,7 @@ class CaseStudiesList extends React.Component {
             <Link to={post.fields.slug}>
           <h4 className="font-weight-bold text-black mb-3">{post.frontmatter.heading}</h4>
             </Link>
-            <ExampleApp slug={post.fields.slug} />
+            <CaseStudyModal slug={post.fields.slug} />
             <p>{post.excerpt}</p> 
           </div>
            ))
@@ -32,7 +32,6 @@ class CaseStudiesList extends React.Component {
           ))
        }
        
-      
       </div>
      
       </div>

@@ -11,9 +11,7 @@ import FeaturesInfo from '../components/common/features/features-info';
 
 const DigitalEvolution = ({ data }) => {
   const { markdownRemark: post } = data
-  const { modal } = this.props
   return (
-    
     <Layout>
       <Helmet>
         <title>{post.frontmatter.title}</title>
