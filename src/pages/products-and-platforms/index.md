@@ -4,7 +4,7 @@ title: Vowel Learning Platform
 bannerSubTitle: Products & Platforms
 bannerTitle: E-Learning Platform
 icon: /img/products-platforms/elearning-icon.png
-bgimage: /img/products-platforms/e-learning.jpg
+bgimage: /img/products-platforms/dashboard-bg.jpg
 heading: Vowel Learning Platform
 subheading: The quality of training determines the success of any corporate, small enterprise or individual. Vowel LMS is an intuitive interface that helps you deploy different types of offline and online content while tracking training outcomes.
 introtext: In organisations striving for excellence, learning and training is a pillar to drive results. Our e-Learning platform “Vowel” helps corporates, small enterprises and individuals deploy learning content and track outcomes.
