@@ -11,7 +11,7 @@ const Header = () => {
         window.onscroll = function() {myFunction()};
 
         function myFunction() {
-          if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
             document.getElementById("header").className = "header-fix";
           } else {
             document.getElementById("header").className = "";

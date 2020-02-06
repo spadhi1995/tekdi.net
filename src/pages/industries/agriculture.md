@@ -6,7 +6,7 @@ hovericon: /img/industries/education-icon-white.png
 bannerSubTitle: Industries
 bannerTitle: Agriculture
 image: /img/industries/agriculture.jpg
-bgimage: /img/digital-evolution/digital-evolution1.jpg
+bgimage: /img/industries/agriculture-bg.jpg
 heading: Agriculture
 subheading: Digital can bring about revolutionary benefits to this trillion dollar industry worldwide. From IoT and digital platforms to the humble Whatsapp, the agriculture sector can benefit significantly from digital transformation.
 caseStudyTag: agriculture

@@ -10,7 +10,7 @@ const jump = (e, offset = -130) => {
   setTimeout(() => {
     window.history.replaceState('', '', url);
     doJump(`#${urlParts[1]}`, {offset});
-  }, 100)
+  }, 500)
   return false;
 }
 
