@@ -1,6 +1,6 @@
 ---
 templateKey: slideshow
-heading: Digital Solution and Data Analytics for an Efficient Framework and Better Customer Experience
+heading: Catalyse outcomes with Digital Transformation solutions
 img: /img/slideshow/slideshow.png
 alt: slideshow
 ---
