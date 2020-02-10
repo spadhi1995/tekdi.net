@@ -11,6 +11,7 @@ import FeaturesInfo from '../components/common/features/features-info';
 
 const DigitalEvolution = ({ data }) => {
   const { markdownRemark: post } = data
+  //const { modal } = this.props
   return (
     <Layout>
       <Helmet>
@@ -20,7 +21,7 @@ const DigitalEvolution = ({ data }) => {
           content={`${post.frontmatter.subheading}`}
         />
       </Helmet>
-      <div className="digital-evolution">
+      <div className="digital-evolution-page">
         <Banner 
           bannerTitle= {post.frontmatter.bannerTitle} 
           bannerSubTitle = {post.frontmatter.bannerSubTitle}

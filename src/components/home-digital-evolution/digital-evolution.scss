@@ -1,10 +1,7 @@
+@import '../common/scss/mixins.scss';
+
 .digital-evolution {
     a {
-        color: #00d0d2;
-        position: relative;
-        display: inline-block;
-        &:hover {
-            color: #008c8f;
-        }
+        @include anchor-style; 
     }
 }

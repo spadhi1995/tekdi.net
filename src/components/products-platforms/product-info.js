@@ -1,6 +1,6 @@
 import React from 'react';
 import CaseStudiesList from '../common/case-studies/case-studies-list';
-import './products.scss';
+import './product-info.scss';
 
 const Products = props => {
   return(

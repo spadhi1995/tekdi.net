@@ -1,3 +1,5 @@
+@import '../common/scss/mixins.scss';
+
 .bg {
     background: #fff url(./images/industries-bg.png) no-repeat;
     background-size: cover;
@@ -53,7 +55,7 @@
     display:  none;
 }
 .industries-carousel .item p a {
-    color:#fff;
+    @include anchor-white-style;
 }
 .industries-carousel .item:hover p { 
     display: block;

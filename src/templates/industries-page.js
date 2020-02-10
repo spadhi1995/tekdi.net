@@ -36,7 +36,6 @@ const IndustriesPage = ({ data }) => {
         features={post.frontmatter.features}
         />
         <IndustriesList />
-     
       </div>
     </Layout>
   )

@@ -39,7 +39,9 @@ class IndustriesList extends React.Component {
               ) : null}
               <div className="text position-absolute">
                 <h4 className="mb-2">
-                  {post.frontmatter.heading}
+                  <Link to={post.fields.slug} className="text-decoration-none text-white">
+                    {post.frontmatter.heading}
+                  </Link>
                 </h4>
                 <Link to={post.fields.slug} className="text-decoration-none">
                   <img src={require('./images/readmore-white.png')} alt="read more"/>

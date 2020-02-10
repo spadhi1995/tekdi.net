@@ -1,11 +1,5 @@
+@import '../common/scss/mixins.scss';
+
 .about-us-section {
-    img {
-        transition: all 0.4s ease !important;
-        -webkit-transition: all 0.4s ease !important;
-        -moz-transition: all 0.4s ease !important;
-        -o-transition: all 0.4s ease !important;
-    }
-    a:hover img {
-        transform: scale(1.05);
-    }
+    @include anchor-image-style
 }
