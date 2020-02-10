@@ -4,7 +4,7 @@ title: Learning and Education technology
 featured: true
 bannerSubTitle: Digital Transformation
 bannerTitle: Learning and Education technology
-bgimage: /img/digital-evolution/digital-evolution1.jpg
+bgimage: /img/digital-evolution/learning-education-bg.jpg
 heading: Learning and Education technology
 subheading: Curated technology solutions to manage, deliver, track, socialize and monetize learning and training for Businesses, Universities, Schools, Training companies & Content creators. 
 img: /img/digital-evolution/content-management.jpg

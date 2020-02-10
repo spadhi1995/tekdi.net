@@ -2,6 +2,10 @@ import React from 'react';
 import {menuData} from './menu-data';
 import { Link } from 'gatsby';
 
+const activeStyle = {
+  color: '#00d0d2',
+}
+
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
@@ -56,7 +60,7 @@ const Navbar = class extends React.Component {
               <ul className="menu-items unstyled">
                   { menuData.map (item =>
                       <li key = {item.label}>
-                          <Link to={item.url}> {item.label} </Link>
+                          <Link to={item.url} activeStyle={activeStyle}> {item.label} </Link>
                       </li>
                   ) }
               </ul>

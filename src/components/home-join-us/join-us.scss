@@ -1,7 +1,8 @@
+@import '../common/scss/mixins.scss';
+
 .join-us {
     a {
-        color: #00d0d2;
-        text-decoration: none;
+        @include anchor-style;
     }
     .joinus-info {
         background: #010836;

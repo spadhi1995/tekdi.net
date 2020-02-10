@@ -1,8 +1,10 @@
 import React from 'react'; 
+import {Link} from 'gatsby';
 import {comapanyMenuData, technologyMenuData, servicesMenuData} from './footer-menu-data';
 import 'font-awesome/css/font-awesome.min.css';
 import Copyright from './copyright';
 import './footer.css';
+import jump from '../jump';
 
 const Footer = () => {
     return(
@@ -11,15 +13,15 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3 col-sm-6 col-xs-12 mb-4">
-                            <a className="fa-icon" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                            <Link className="fa-icon" to="https://twitter.com" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                            <a className="fa-icon" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            </Link>
+                            <Link className="fa-icon" to="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                            <a className="fa-icon" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            </Link>
+                            <Link className="fa-icon" to="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-pinterest" aria-hidden="true"></i>
-                            </a>
+                            </Link>
                         </div>
                         <div className="col-md-3 col-sm-6 col-xs-12">
                             <div className="office-address mb-5">
@@ -41,10 +43,15 @@ const Footer = () => {
                             <nav>
                                 {comapanyMenuData.length && (      
                                     <ul className="footer-menu-items unstyled">
-                                        { comapanyMenuData.map (item =>
-                                            <li key = {item.label} className="mb-3">
-                                                <a href = {item.url}> {item.label} </a>
-                                            </li>
+                                        { comapanyMenuData.map (item => {
+                                            const urlParts = item.url.split('#');
+                                            if(urlParts.length > 1 ){
+                                              return (<li key = {item.label} className="mb-3"><a href="javascript:;" role="link" data-link={item.url} onClick={jump}> {item.label} </a></li>)
+                                            }
+                                            else {
+                                              return (<li key = {item.label} className="mb-3"><Link to={item.url}> {item.label} </Link></li>)
+                                            }
+                                        }
                                         ) }
                                     </ul>
                                 )}
@@ -55,10 +62,15 @@ const Footer = () => {
                             <nav>
                                 {technologyMenuData.length && (      
                                     <ul className="footer-menu-items unstyled">
-                                        { technologyMenuData.map (item =>
-                                            <li key = {item.label} className="mb-3">
-                                                <a href = {item.url}> {item.label} </a>
-                                            </li>
+                                        { technologyMenuData.map (item => {
+                                             const urlParts = item.url.split('#');
+                                             if(urlParts.length > 1 ){
+                                               return (<li key = {item.label} className="mb-3"><a href="javascript:;" role="link" data-link={item.url} onClick={jump}> {item.label} </a></li>)
+                                             }
+                                             else {
+                                               return (<li key = {item.label} className="mb-3"><Link to={item.url}> {item.label} </Link></li>)
+                                             }
+                                        }
                                         ) }
                                     </ul>
                                 )}
@@ -69,10 +81,15 @@ const Footer = () => {
                             <nav>
                                 {servicesMenuData.length && (      
                                     <ul className="footer-menu-items unstyled">
-                                        { servicesMenuData.map (item =>
-                                            <li key = {item.label} className="mb-3">
-                                                <a href = {item.url}> {item.label} </a>
-                                            </li>
+                                         { servicesMenuData.map (item => {
+                                             const urlParts = item.url.split('#');
+                                             if(urlParts.length > 1 ){
+                                               return (<li key = {item.label} className="mb-3"><a href="javascript:;" role="link" data-link={item.url} onClick={jump}> {item.label} </a></li>)
+                                             }
+                                             else {
+                                               return (<li key = {item.label} className="mb-3"><Link to={item.url}> {item.label} </Link></li>)
+                                             }
+                                        }
                                         ) }
                                     </ul>
                                 )}

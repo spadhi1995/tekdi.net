@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
-import './productlist.scss';
+import './product-list.scss';
 import PreviewCompatibleImage from '../common/preview-compatible-image';
 
 class ProductList extends React.Component {
@@ -22,13 +22,13 @@ class ProductList extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="container-fluid">
-      <div className="row productlist">
+      
+      <div className="product-list">
         {posts &&
         posts.map(({ node: post }) => (
           this.boxId !== post.fields.slug.match(/\/([^\/]+)\/?$/)[1] ? (
-          <div key={post.id} className="col p-0">
-            <div className="box">
+          <div key={post.id} className="p-0 box-cover">
+            <div className="position-relative box">
               {post.frontmatter.bgimage ? (
                   <div className="bg-image">
                     <PreviewCompatibleImage
@@ -41,7 +41,9 @@ class ProductList extends React.Component {
                 ) : null}
                 <div className="text position-absolute">
                   <h4 className="mb-4">
-                    {post.frontmatter.heading}
+                    <Link to={post.fields.slug} className="text-decoration-none text-white">
+                      {post.frontmatter.heading}
+                    </Link>
                   </h4>
                   <Link to={post.fields.slug} className="text-decoration-none">
                     <img src={require('./images/readmore-white.png')} alt="read more"/>
@@ -52,7 +54,7 @@ class ProductList extends React.Component {
             ) : null
         ))}
       </div>
-   </div>
+   
     )
   }
 }

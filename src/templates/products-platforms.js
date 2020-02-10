@@ -4,8 +4,8 @@ import Helmet from 'react-helmet';
 import { graphql} from 'gatsby';
 import Layout from '../components/layout/baselayout';
 import Banner from "../components/common/banner/banner";
-import Products from '../components/products-platforms/productinfo';
-import ProductList from '../components/products-platforms/productlist';
+import Products from '../components/products-platforms/product-info';
+import ProductList from '../components/products-platforms/product-list';
 import FeaturesInfo from '../components/common/features/features-info';
 
 const ProductsPlatforms = ({ data }) => {

@@ -13,6 +13,19 @@ mainpitch:
   title: 
   description: >
     Take your business to the next level by modernizing existing processes that improve business productivity and organizational efficiency.
+features:
+    - title: Feature 1
+      description: >
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+    - title: Feature 2
+      description: >
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+    - title: Feature 3
+      description: >
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+    - title: Feature 4
+      description: >
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 caseStudyTag: Business Process Transformation
 ---
 

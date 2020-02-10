@@ -25,12 +25,14 @@ class BlogCatList extends React.Component {
       </div>
      <div className="bg-white p-4">
      <h3 className="text-black mod-title mb-3 pb-3">Tags</h3>
-     <ul className="blog-cat-list unstyled">  
+     <ul className="blog-cat-list unstyled"> 
+      
      {tagsGroup.group.map(tag => (
           <li key={tag.fieldValue}>
             <Link to = {"blog/tags/" + lodash.kebabCase(tag.fieldValue)}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
+            
           </li>
         ))}
      </ul>

@@ -1,0 +1,53 @@
+@import '../scss/mixins.scss';
+
+.ReactModal__Overlay--after-open {
+  z-index: 9;
+  background-color: rgba(39, 39, 39, 0.75) !important;
+
+  .ReactModal__Content {
+    border-radius: 0 !important;
+    background: #f1f1f1 !important;
+    min-width: 400px;
+    padding:30px !important;
+
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent;
+      border: none;
+      padding: 4px 12px;
+      font-size: 20px;
+      color: #828282;
+
+      &:hover {
+        color: #000;
+      }
+    }
+    
+    .form-group {
+      margin: 0 0 20px 0 !important;
+    }
+
+    .form-control {
+      border-radius: 0 !important;
+      box-shadow: 0 0 10px 0 #ddd;
+      border: none !important;
+      padding: 20px 15px;
+      margin: 0 0 5px 0 !important;
+    }
+
+    input[type=file] {
+      padding: 15px;
+    }
+
+    .btn-submit {
+      background: transparent;
+      border: none;
+      font-size: 18px;
+      font-weight: 600;
+
+      @include anchor-style;
+    }
+  }
+}
