@@ -133,38 +133,30 @@ class CaseStudyModal extends React.Component {
            onRequestClose={this.handleCloseModal}  
            style={customStyles}
         > 
-      <button onClick={this.handleCloseModal}>Close Modal</button>
-        <div >
-        <div className="container">
-          <div className="row com-cover">
-            <div className="col-md-10 offset-md-1">
-              <h2 className="com-heading text-center text-white mb-3">
-                Let's transform your business today
-              </h2>
-              <form  onSubmit={this.handleSubmit}>  
-                {/* <div className="row"> */}
-                  <div className="col-md-12 col-xs-12 form-group">
-                    <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
-                    <span className="error">{this.state.errors["name"]}</span>
-                  </div>
-                  <div className="col-md-12 col-xs-12 form-group">
-                      <input type="email" name="email" id="email" value={this.state.email} onChange={this.handleInputChange} className="form-control" placeholder="Email"  />
-                      <span className="error">{this.state.errors["email"]}</span>
-                  </div> 
-                  <div className="col-md-12 col-xs-12 form-group">
-                      <input type="text" name="phone" id="phone" value={this.state.phone} onChange={this.handleInputChange} className="form-control" placeholder="Phone"  />
-                      <span className="error">{this.state.errors["phone"]}</span>
-                  </div>
-                 
-                {/* </div> */}
-                <div className="text-center my-3">
-                  <button type="submit" className="btn-submit">Submit Now</button>
+          {/* <button onClick={this.handleCloseModal}>Close Modal</button> */}
+          <div >
+            <form  onSubmit={this.handleSubmit}>  
+            <h3 className="section-title text-black text-center mb-4">Please fill the form below</h3>
+              {/* <div className="row"> */}
+                <div className="col-md-12 col-xs-12 form-group">
+                  <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
+                  <span className="error">{this.state.errors["name"]}</span>
                 </div>
-              </form>
-            </div>
+                <div className="col-md-12 col-xs-12 form-group">
+                    <input type="email" name="email" id="email" value={this.state.email} onChange={this.handleInputChange} className="form-control" placeholder="Email"  />
+                    <span className="error">{this.state.errors["email"]}</span>
+                </div> 
+                <div className="col-md-12 col-xs-12 form-group">
+                    <input type="text" name="phone" id="phone" value={this.state.phone} onChange={this.handleInputChange} className="form-control" placeholder="Phone"  />
+                    <span className="error">{this.state.errors["phone"]}</span>
+                </div>
+                
+              {/* </div> */}
+              <div className="text-center mb-4 my-3">
+                <button type="submit" className="btn-submit">Submit Now</button>
+              </div>
+            </form>
           </div>
-        </div>
-      </div>
         </Modal>
       </div>
     );
