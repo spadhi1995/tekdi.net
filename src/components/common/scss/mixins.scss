@@ -1,0 +1,63 @@
+@import './variables.scss';
+
+/* Anchor Tag */
+@mixin anchor-hover-effect {
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: -5px;
+    left: 0;
+    transition: right .4s;
+    -webkit-transition: right .4s;
+    -moz-transition: right .4s;
+    -o-transition: right .4s;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+@mixin anchor-style {
+    color: $anchor-color;
+    position: relative;
+    text-decoration: none;
+
+    &:after {
+        border-color: $anchor-color;
+        @include anchor-hover-effect;
+    }
+    &:hover {
+        text-decoration: none;
+        &:after {
+            right: 0;
+        }
+    }
+}
+
+@mixin anchor-white-style {
+    color: $anchor-white-color;
+    position: relative;
+    text-decoration: none;
+
+    &:after {
+        border-color: $anchor-white-color;
+        @include anchor-hover-effect;
+    }
+
+    &:hover {
+        text-decoration: none;
+        &:after {
+            right: 0;
+        }
+    }
+}
+
+@mixin anchor-image-style {
+    img {
+        transition: all 0.4s ease !important;
+        -webkit-transition: all 0.4s ease !important;
+        -moz-transition: all 0.4s ease !important;
+        -o-transition: all 0.4s ease !important;
+    }
+    a:hover img {
+        transform: scale(1.15);
+    }
+    
+}

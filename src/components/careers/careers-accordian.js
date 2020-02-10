@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql, StaticQuery } from 'gatsby'
 import './careers.scss';
 import Collapsible from 'react-collapsible';
+import CareersModal from "./careers-modal"
 
 class Openingslist extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class Openingslist extends React.Component {
             <br/>
             <a href="#" >Apply Now</a>
           </p>
+          <CareersModal position = {post.frontmatter.heading} />
         </Collapsible>
       ))}
     </Fragment>

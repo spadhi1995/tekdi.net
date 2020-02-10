@@ -6,10 +6,21 @@ import Banner from "../components/common/banner/banner";
 import CaseStudyInfo from '../components/common/case-studies/case-study-info';
 import { HTMLContent } from '../components/common/content';
 class CaseStudyTemplate extends React.Component {
+  constructor(props) {
+    super(props)
+    if(this.props.location.state)
+    {
+      this.modalSubmit = this.props.location.state !==null ?  this.props.location.state.modalSubmit : false;
+    }
+    else
+    {
+      this.modalSubmit = false;
+    }
+    
+  }
     render()
     {
     const { markdownRemark: post } = this.props.data
-      let modalSubmit = this.props.location.state !==null ?  this.props.location.state.modalSubmit : false
       return (
         <Layout>
           <Helmet>
@@ -23,13 +34,13 @@ class CaseStudyTemplate extends React.Component {
               bannerTitle= {post.frontmatter.bannerTitle} 
               bannerSubTitle = {post.frontmatter.bannerSubTitle}
             />
-          {modalSubmit === true ? (
+          {this.modalSubmit === true ? (
           <CaseStudyInfo
             heading = {post.frontmatter.heading}
             content={post.html}
             contentComponent={HTMLContent}
           />
-          ) : "Please fill the information" }
+          ) : <h3>Please fill the information</h3> }
         </Layout>
       )
   }
