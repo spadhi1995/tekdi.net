@@ -133,10 +133,14 @@ class CaseStudyModal extends React.Component {
            onRequestClose={this.handleCloseModal}  
            style={customStyles}
         > 
-          {/* <button onClick={this.handleCloseModal}>Close Modal</button> */}
+          <button className="btn-close" onClick={this.handleCloseModal}>
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
           <div >
             <form  onSubmit={this.handleSubmit}>  
-            <h3 className="section-title text-black text-center mb-4">Please fill the form below</h3>
+              <h3 className="section-title text-black text-center mb-4">
+                Please fill the form below
+              </h3>
               {/* <div className="row"> */}
                 <div className="col-md-12 col-xs-12 form-group">
                   <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
