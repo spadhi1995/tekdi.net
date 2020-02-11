@@ -137,7 +137,9 @@ class CareersModal extends React.Component {
    render () {
     return (
       <div>
-        <button onClick={this.handleOpenModal}>Apply</button>
+        <button className="btn-apply mb-4 p-0 font-weight-bold" onClick={this.handleOpenModal}>
+          Apply Now
+        </button>
         <Modal 
            isOpen={this.state.showModal}
            contentLabel="onRequestClose Example"
@@ -169,7 +171,7 @@ class CareersModal extends React.Component {
                 <input type="file" ref={this.fileInput} />
               {/* </div> */}
               <div className="text-center my-3">
-                <button type="submit" className="btn-submit">Submit Now</button>
+                <button type="submit" className="btn-submit p-0">Submit Now</button>
               </div>
             </form>
           </div>

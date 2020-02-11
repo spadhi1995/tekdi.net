@@ -21,9 +21,6 @@ class Openingslist extends React.Component {
           </ul>
           <p>
             {post.frontmatter.subheading}
-            <br/>
-            <br/>
-            <a href="#" >Apply Now</a>
           </p>
           <CareersModal position = {post.frontmatter.heading} />
         </Collapsible>
