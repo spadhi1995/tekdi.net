@@ -1,6 +1,6 @@
 ---
 templateKey: slideshow
-heading: Digital Solution and Data Analytics for an Efficient Framework and Better Customer Experience
+heading: We build great user experiences
 img: /img/slideshow/slideshow.png
 alt: slideshow
 ---
