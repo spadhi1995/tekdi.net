@@ -8,6 +8,7 @@ import DigitalEvolutionInfo from '../components/digital-evolution/digital-evolut
 import DigitalEvolutionList from '../components/digital-evolution/digital-evolution-list';
 import { HTMLContent } from '../components/common/content';
 import FeaturesInfo from '../components/common/features/features-info';
+import ContactUs from '../components/common/contact/contact';
 
 const DigitalEvolution = ({ data }) => {
   const { markdownRemark: post } = data
@@ -38,6 +39,7 @@ const DigitalEvolution = ({ data }) => {
         features={post.frontmatter.features}
         />
         <DigitalEvolutionList />
+        <ContactUs />
       </div>
     </Layout>
   )

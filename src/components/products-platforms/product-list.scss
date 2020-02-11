@@ -4,6 +4,7 @@
     width:100%;
     overflow:auto;
     white-space:nowrap;
+    border-bottom: 1px solid #fff;
 
         .box-cover {
             display: inline-block;
@@ -17,7 +18,7 @@
             height: 100%;
             width:100%;
             background-color: #000;
-            opacity: 0.5;
+            opacity: 0.2;
             z-index:2;
         }
         .bg-image {
