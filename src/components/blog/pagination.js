@@ -1,6 +1,7 @@
-import React from "react"
-import * as S from "./blog.css"
-import { Link, graphql } from 'gatsby'
+import React from 'react';
+import * as S from './blog.css';
+import './bloglist.scss';
+import { Link } from 'gatsby';
 
 const BlogPagination = ({ numPages, currentPage, contextPage }) => {
   if (numPages <= 1) {
@@ -8,7 +9,7 @@ const BlogPagination = ({ numPages, currentPage, contextPage }) => {
   }
 
   return (
-    <S.Pagination>
+    <S.Pagination className="pagination">
       {Array.from({ length: numPages }).map((item, i) => {
         const index = i + 1
         const baseLink = `/blog/${contextPage ? `${contextPage}/` : ""}`

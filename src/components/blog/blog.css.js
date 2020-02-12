@@ -1,6 +1,5 @@
 
 import styled, { css } from "styled-components"
-import { Link } from "gatsby"
 
 export const Pagination = styled.ul`
   display: flex;
@@ -9,14 +8,17 @@ export const Pagination = styled.ul`
 `
 
 export const PaginationItem = styled.li`
-  min-width: 50px;
-  margin: -1px 0.5em 0;
-  padding: 1em 0;
-  text-align: center;
-  border-top: 1px solid transparent;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+   
+
   ${({ current }) =>
     current &&
     css`
-      border-top: 1px solid #000;
+      background: #216db6;
+      color: #fff;
     `}
 `

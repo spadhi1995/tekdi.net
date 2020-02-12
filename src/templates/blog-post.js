@@ -4,6 +4,7 @@ import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/baselayout';
+import Banner from '../components/common/banner/banner';
 import Content, { HTMLContent } from '../components/common/content';
 import BlogCatList from '../components/blog/blogcatlist';
 import ContactUs from '../components/common/contact/contact';
@@ -86,7 +87,9 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
+    
     <Layout>
+      <Banner />
        <div className="container py-5">
         <div className="row">
           <div className="col-md-9">
