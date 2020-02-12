@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './blog.css';
-import './bloglist.scss';
+import './blog-list.scss';
 import { Link } from 'gatsby';
 
 const BlogPagination = ({ numPages, currentPage, contextPage }) => {

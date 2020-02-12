@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery, Link } from 'gatsby';
 import PreviewCompatibleImage from '../common/preview-compatible-image';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
@@ -63,6 +63,9 @@ class DigitalEvolutionCarousel extends React.Component {
                     <p className="font-weight-normal">
                       {post.excerpt}
                     </p>
+                    <p>
+                      <Link className="read-more font-weight-normal" to={post.fields.slug}>View More</Link>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -91,7 +94,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 150)
+              excerpt(pruneLength: 130)
               id
               fields {
                 slug

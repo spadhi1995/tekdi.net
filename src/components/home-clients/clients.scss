@@ -17,12 +17,12 @@
                filter: grayscale(100%);
                filter: #ccc; 
 
-               &:hover {
-                    -webkit-filter: none;
-                    -moz-filter: none;
-                    -ms-filter: none;
-                    filter: none;
-                }
+            //    &:hover {
+            //         -webkit-filter: none;
+            //         -moz-filter: none;
+            //         -ms-filter: none;
+            //         filter: none;
+            //     }
             }
         }
     }

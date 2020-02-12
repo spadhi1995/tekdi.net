@@ -25,7 +25,6 @@ const IndustriesInfo = ({
           </div>
           <div className="mb-5 col-lg-4 col-md-5">
             <CaseStudiesList caseStudyTag = {caseStudyTag} />
-  
           </div>
         </div>          
       
