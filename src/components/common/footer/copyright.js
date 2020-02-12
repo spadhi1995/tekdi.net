@@ -4,8 +4,8 @@ const Copyright = () => {
     return(
         <div className="copytight py-3">
             <div className="container">
-                <div className="float-left mr-4">2020 Copyrights Tekdi</div>
-                <div className="float-right">a multia design</div>
+                <div className="text-center mr-4">2020 Copyrights Tekdi</div>
+                {/* <div className="float-right">a multia design</div> */}
                 <div className="clearfix"></div>
             </div>
         </div>

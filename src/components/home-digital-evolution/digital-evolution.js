@@ -24,9 +24,6 @@ class DigitalEvolution extends React.Component {
                     </h2>
                     <p>
                       {post.frontmatter.subheading}
-                      <br/>
-                      <br/>
-                    <Link to='/digital-evolution' className="text-decoration-none">View More</Link>
                     </p>
                   </div>
                 </div>

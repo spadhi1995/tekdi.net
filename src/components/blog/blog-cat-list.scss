@@ -1,3 +1,6 @@
+.list-cover {
+    border: 1px solid #ccc;
+}
 .blog-cat-list {
     li {
         font-size: 15px;
@@ -12,5 +15,14 @@
             padding:0;
             margin:0;
         }
+    }
+}
+.tag-list {
+    li {
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+        margin:0 15px 10px 0;
+        display: inline-block;
     }
 }

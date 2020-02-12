@@ -1,8 +1,9 @@
 import Layout from '../components/layout/baselayout';
 import BlogPagination from '../components/blog/pagination';
-import renderList from '../components/blog/renderlist';
+import renderList from '../components/blog/blog-list';
 import { Link, graphql } from 'gatsby'
-import BlogCatList from '../components/blog/blogcatlist';
+import BlogCatList from '../components/blog/blog-cat-list';
+import BlogTagList from '../components/blog/blog-tag-list';
 import Banner from "../components/common/banner/banner"
 import React, { Fragment } from 'react'
 import lodash from "lodash"
@@ -32,6 +33,7 @@ import lodash from "lodash"
             </Fragment>
             <div className="col-md-3">
               <BlogCatList />
+              <BlogTagList />
             </div>
           </div>
         </div>

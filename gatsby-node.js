@@ -125,7 +125,7 @@ exports.createPages = ({ actions, graphql }) => {
       }).forEach((_, i) => {
         createPage({
           path: i === 0 ? link : `${link}/${i + 1}`,
-          component: path.resolve("./src/templates/blogcategory.js"),
+          component: path.resolve("./src/templates/blog-category.js"),
           context: {
             allCategories: allCategories,
             category: cat,

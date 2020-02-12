@@ -6,7 +6,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout/baselayout';
 import Banner from '../components/common/banner/banner';
 import Content, { HTMLContent } from '../components/common/content';
-import BlogCatList from '../components/blog/blogcatlist';
+import BlogCatList from '../components/blog/blog-cat-list';
 import ContactUs from '../components/common/contact/contact';
 import './blog.scss';
 // import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
@@ -43,7 +43,7 @@ export const BlogPostTemplate = ({
             <h1 className="title text-black">
               {title}
             </h1>
-            <ul className="unstyled mb-4">
+            <ul className="unstyled mb-4 info">
               <li className="blog-author mr-4">
                 By <span className="author-name text-black">{author}</span>
               </li>
@@ -57,12 +57,12 @@ export const BlogPostTemplate = ({
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
+              <div style={{ marginTop: `20px` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      <Link to={`/blog/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     </li>
                   ))}
                 </ul>

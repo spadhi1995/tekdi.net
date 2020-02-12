@@ -2,7 +2,7 @@ import React from "react"
 import lodash from "lodash"
 import { Link } from "gatsby"
 import PreviewCompatibleImage from '../common/preview-compatible-image'
-import './bloglist.scss';
+import './blog-list.scss';
 const renderList = ({ node }) => {
   return (
      <div className="blog-list mb-5 pb-5" key={node.fields.id}>
