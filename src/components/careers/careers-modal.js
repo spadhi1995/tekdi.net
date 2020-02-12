@@ -59,7 +59,6 @@ verifyCallback = (recaptchaToken) => {
   .then((response) => {
    // return response;
     this.setState({ recaptchaResponse: response });
-    console.log(this.state.recaptchaResponse, "This is responce in the axios")
   }, (error) => {
    // console.log(error);
   });
@@ -80,8 +79,8 @@ verifyCallback = (recaptchaToken) => {
 
   response = async ()  => { 
     await axios.post(
-      'http://ttpllt-php72.local/gatsby-from/',
-      queryString.stringify (this.state.data),
+      process.env.GATSBY_AWS_API_GETEWAY,
+      JSON.stringify (this.state.data),
       // { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, 
       {
         headers: {
@@ -103,22 +102,7 @@ verifyCallback = (recaptchaToken) => {
                   "phone" : this.state.phone , 
                   "resume" : this.fileInput.current.files[0],
                }
-      // let formData = new FormData();
-      //  formData.append('name', this.state.name);
-      //  formData.append('email', this.state.email);
-      //  formData.append('phone',  this.state.phone);
-      //  formData.append('position', this.state.position);
-      //  //formData.append('resume', this.fileInput.current.files[0])
-      //  formData.append("resume", this.fileInput.current.files[0]); 
-      //  console.log(...formData) 
-
-     // let CheckRecaptcha = this.CheckRecaptcha();
-      //console.log(CheckRecaptcha)
-      if(this.CheckRecaptcha())
-      {
-        console.log(this.CheckRecaptcha(), "this is response")
-      }
-     
+      this.CheckRecaptcha()
       if( this.CheckRecaptcha() && this.state.recaptchaResponse !="" && this.state.recaptchaResponse.data.success=== true)
       {
         this.response();

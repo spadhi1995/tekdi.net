@@ -1,6 +1,7 @@
 import React from 'react';
 import './contact.scss';
-
+import { loadReCaptcha } from 'react-recaptcha-v3'
+import { ReCaptcha } from 'react-recaptcha-v3'
 const axios = require(`axios`);
 const queryString = require('query-string');
 
@@ -10,23 +11,55 @@ export class ContactUs extends React.Component {
     name: "",
     email: "",
     phone: "",
+    message: "",
     data: "",
     errors: {}
   }
 
+  // response = async () => { 
+  //   await axios.post(
+  //     'http://ttpllt-php72.local/gatsby-from/',
+  //     queryString.stringify (this.state.data),
+  //     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
+  //   })
+  // }
+  
   response = async () => { 
     await axios.post(
-      'http://ttpllt-php72.local/gatsby-from/',
-      queryString.stringify (this.state.data),
+      process.env.GATSBY_AWS_API_GETEWAY,
+      JSON.stringify (this.state.data),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
     })
   }
-  
+
+  componentDidMount() {
+    loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
+  }
+
+  verifyCallback = (recaptchaToken) => {
+    this.setState({ recaptchaToken: recaptchaToken });
+  }
+
+  CheckRecaptcha = async ()  => { 
+      var response = await axios.post(
+      'https://www.google.com/recaptcha/api/siteverify',
+     `secret=${process.env.GATSBY_GOOGLE_RECAPTCHA_SECREAT}&response=${this.state.recaptchaToken}`,
+     {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",   
+        },  
+    })
+    const data = await response;
+       this.setState({ recaptchaResponse: data });
+   
+  }
+
   handleSubmit = event => {
     event.preventDefault();
     if(this.handleValidation())
     {
       this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message }
+      this.CheckRecaptcha();
       this.response();
     }
     
@@ -103,7 +136,11 @@ export class ContactUs extends React.Component {
               <h2 className="com-heading text-center text-white mb-3">
                 Let's transform your business today
               </h2>
-              <form  onSubmit={this.handleSubmit}>  
+              <form  onSubmit={this.handleSubmit}> 
+              <ReCaptcha
+            sitekey = {process.env.GATSBY_GOOGLE_RECAPTCHA_KEY}
+            verifyCallback={this.verifyCallback}
+        /> 
                 <div className="row">
                   <div className="col-md-4 col-xs-12 form-group">
                     <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
