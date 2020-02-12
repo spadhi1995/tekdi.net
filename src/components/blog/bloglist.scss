@@ -1,3 +1,4 @@
+@import "../common/scss/mixins.scss";
 .blog-list {
     letter-spacing: 0.5px;
     border-bottom: 1px solid #ccc;
@@ -16,6 +17,12 @@
     }
     .blog-info li {
         display: inline-block;
+    }
+    .blog-category a {
+        @include anchor-style;
+    }
+    a.read-more {
+        @include anchor-blue-style;
     }
 }
 .pagination li a {

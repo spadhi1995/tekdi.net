@@ -9,7 +9,7 @@ const BlogPagination = ({ numPages, currentPage, contextPage }) => {
   }
 
   return (
-    <S.Pagination className="pagination">
+    <S.Pagination className="pagination mb-4">
       {Array.from({ length: numPages }).map((item, i) => {
         const index = i + 1
         const baseLink = `/blog/${contextPage ? `${contextPage}/` : ""}`
