@@ -16,6 +16,7 @@ const customStyles = {
     transform             : 'translate(-50%, -50%)'
   }
 };
+
 class CareersModal extends React.Component {
 
   constructor (props) {
@@ -29,6 +30,8 @@ class CareersModal extends React.Component {
       position : this.props.position,
       resume:"",
       errors: {},
+      recaptchaToken:"",
+      recaptchaResponse:"",
     };
   
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -36,19 +39,42 @@ class CareersModal extends React.Component {
     this.fileInput = React.createRef();
   }
   componentDidMount() {
-  loadReCaptcha("6LdecNcUAAAAAJ0xx3Q960oSJDfxsG3FCubO6atf");
+  loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
 }
+
 verifyCallback = (recaptchaToken) => {
-  // Here you will get the final recaptchaToken!!!  
-  console.log(recaptchaToken, "<= your recaptcha token")
+  this.setState({ recaptchaToken: recaptchaToken });
+}
+
+ CheckRecaptcha = async ()  => { 
+  await axios.post(
+    'https://www.google.com/recaptcha/api/siteverify',
+   `secret=${process.env.GATSBY_GOOGLE_RECAPTCHA_SECREAT}&response=${this.state.recaptchaToken}`,
+   {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",   
+      }, 
+     
+  })
+  .then((response) => {
+   // return response;
+    this.setState({ recaptchaResponse: response });
+    console.log(this.state.recaptchaResponse, "This is responce in the axios")
+  }, (error) => {
+   // console.log(error);
+  });
+ // return response;
+ 
 }
 
   handleOpenModal () {
     //console.log(position)
     this.setState({ showModal: true });
+
   }
   
   handleCloseModal () {
+
     this.setState({ showModal: false });
   }
 
@@ -69,8 +95,6 @@ verifyCallback = (recaptchaToken) => {
   
   handleSubmit = event => {
     event.preventDefault();
-   // this.setState({ resume: this.fileInput.current.files[0].name });
-
     if(this.handleValidation())
     {  
       this.state.data = { 
@@ -87,8 +111,19 @@ verifyCallback = (recaptchaToken) => {
       //  //formData.append('resume', this.fileInput.current.files[0])
       //  formData.append("resume", this.fileInput.current.files[0]); 
       //  console.log(...formData) 
-       this.response();
 
+     // let CheckRecaptcha = this.CheckRecaptcha();
+      //console.log(CheckRecaptcha)
+      if(this.CheckRecaptcha())
+      {
+        console.log(this.CheckRecaptcha(), "this is response")
+      }
+     
+      if( this.CheckRecaptcha() && this.state.recaptchaResponse !="" && this.state.recaptchaResponse.data.success=== true)
+      {
+        this.response();
+        event.target.reset();
+      }
     }  
   }
 
@@ -140,11 +175,11 @@ verifyCallback = (recaptchaToken) => {
    this.setState({errors: errors});
    return formIsValid;
 }
+
   handleInputChange = event => {
     const target = event.target
     const value = target.value
     const name = target.name
-   // this.setState({file:e.target.files[0]})
     this.setState({
       [name]: value,
     })
@@ -153,6 +188,11 @@ verifyCallback = (recaptchaToken) => {
    render () {
     return (
       <div>
+         <ReCaptcha
+            sitekey = {process.env.GATSBY_GOOGLE_RECAPTCHA_KEY}
+            action='careers'
+            verifyCallback={this.verifyCallback}
+        />
         <button className="btn-apply mb-4 p-0 font-weight-bold" onClick={this.handleOpenModal}>
           Apply Now
         </button>
@@ -162,7 +202,6 @@ verifyCallback = (recaptchaToken) => {
            onRequestClose={this.handleCloseModal}  
            style={customStyles}
         > 
-        
           <button className="btn-close" onClick={this.handleCloseModal}>
             <i class="fa fa-times" aria-hidden="true"></i>
           </button>
@@ -170,6 +209,7 @@ verifyCallback = (recaptchaToken) => {
             <form  onSubmit={this.handleSubmit} encType="multipart/form-data">  
               <h3 className="section-title text-black text-center mb-5">
                 Please fill the form below
+                <p>{this.state.position}</p>
               </h3>
               {/* <div className="row"> */}
                 <div className="col-md-12 col-xs-12 form-group">
