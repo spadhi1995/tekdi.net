@@ -53,8 +53,11 @@
         display: inline-block;
     }
 
-    a {
+    .btn-apply {
         @include anchor-style;
+        outline: 0;
+        border: none;
+        background: transparent;
     }
 }
 @media (min-width: 576px) {
