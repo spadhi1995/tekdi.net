@@ -16,11 +16,19 @@ export class contactUs extends React.Component {
 
   response = async () => { 
     await axios.post(
-      'http://ttpllt-php72.local/gatsby_joomla/index.php?option=com_api&app=contactform&resource=contactform',
-     queryString.stringify (this.state.data),
+      process.env.GATSBY_API_URL,
+      queryString.stringify (this.state.data),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
     })
   }
+  // 'http://ttpllt-php72.local/gatsby_joomla/index.php?option=com_api&app=contactform&resource=contactform'
+  // response = async () => { 
+  //   await axios.post(
+  //     'https://ll96yro5ik.execute-api.us-west-2.amazonaws.com/prod',
+  //     JSON.stringify (this.state.data),
+  //     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
+  //   })
+  // }
   
   handleSubmit = event => {
     event.preventDefault();
@@ -28,6 +36,7 @@ export class contactUs extends React.Component {
     if(this.handleValidation())
     {
       this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message }
+      console.log(this.state.data)
       this.response();
     }
   }

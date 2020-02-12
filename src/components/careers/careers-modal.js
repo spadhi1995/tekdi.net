@@ -1,9 +1,11 @@
 
 import React from 'react'
 import Modal from 'react-modal';
-import { navigate } from "gatsby"
+import { loadReCaptcha } from 'react-recaptcha-v3'
+import { ReCaptcha } from 'react-recaptcha-v3'
 const axios = require(`axios`);
 const queryString = require('query-string');
+
 const customStyles = {
   content : {
     top                   : '50%',
@@ -15,6 +17,7 @@ const customStyles = {
   }
 };
 class CareersModal extends React.Component {
+
   constructor (props) {
     super(props);
     this.state = {
@@ -26,14 +29,20 @@ class CareersModal extends React.Component {
       position : this.props.position,
       resume:"",
       errors: {},
-      file:null
     };
   
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.fileInput = React.createRef();
   }
-  
+  componentDidMount() {
+  loadReCaptcha("6LdecNcUAAAAAJ0xx3Q960oSJDfxsG3FCubO6atf");
+}
+verifyCallback = (recaptchaToken) => {
+  // Here you will get the final recaptchaToken!!!  
+  console.log(recaptchaToken, "<= your recaptcha token")
+}
+
   handleOpenModal () {
     //console.log(position)
     this.setState({ showModal: true });
@@ -43,7 +52,7 @@ class CareersModal extends React.Component {
     this.setState({ showModal: false });
   }
 
-  response = async () => { 
+  response = async ()  => { 
     await axios.post(
       'http://ttpllt-php72.local/gatsby-from/',
       queryString.stringify (this.state.data),
@@ -60,20 +69,26 @@ class CareersModal extends React.Component {
   
   handleSubmit = event => {
     event.preventDefault();
-        const formData = new FormData();
-
-        formData.append('avatar',this.state.file)
-        console.log(formData)
-        var options = { content: formData };
-        console.log(options)
-
    // this.setState({ resume: this.fileInput.current.files[0].name });
 
     if(this.handleValidation())
-    {
-      this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message, "position": this.state.position, "resume":this.fileInput.current.files[0].name }
-      this.response();
-      console.log(this.state.data)
+    {  
+      this.state.data = { 
+                  "name" : this.state.name , 
+                  "email" : this.state.email , 
+                  "phone" : this.state.phone , 
+                  "resume" : this.fileInput.current.files[0],
+               }
+      // let formData = new FormData();
+      //  formData.append('name', this.state.name);
+      //  formData.append('email', this.state.email);
+      //  formData.append('phone',  this.state.phone);
+      //  formData.append('position', this.state.position);
+      //  //formData.append('resume', this.fileInput.current.files[0])
+      //  formData.append("resume", this.fileInput.current.files[0]); 
+      //  console.log(...formData) 
+       this.response();
+
     }  
   }
 
@@ -169,6 +184,17 @@ class CareersModal extends React.Component {
                       <span className="error">{this.state.errors["phone"]}</span>
                   </div>
                   <input type="file" ref={this.fileInput} />
+                  <div>
+                    <ReCaptcha
+                   sitekey="6LdecNcUAAAAAJ0xx3Q960oSJDfxsG3FCubO6atf"
+                   action='homepage'
+                   size="normal"
+                  data-theme="dark"            
+                  render="explicit"
+                   verifyCallback={this.verifyCallback}
+                />
+                  </div>
+                  
                 {/* </div> */}
                 <div className="text-center my-3">
                   <button type="submit" className="btn-submit">Submit Now</button>

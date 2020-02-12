@@ -12,6 +12,8 @@ const CareersIndexPage =  ({data}) => {
     return (
       <Layout>
         <Helmet>
+        <script src={`https://www.google.com/recaptcha/api.js? r=${Math.random()}`} async defer>
+    </script>
           <title>{frontmatter.title}</title>
           <meta
             name="description"
