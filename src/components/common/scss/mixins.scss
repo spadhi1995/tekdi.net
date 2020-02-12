@@ -49,6 +49,25 @@
     }
 }
 
+@mixin anchor-blue-style {
+    color: $anchor-blue-color;
+    position: relative;
+    text-decoration: none;
+
+    &:after {
+        border-color: $anchor-blue-color;
+        @include anchor-hover-effect;
+    }
+
+    &:hover {
+        text-decoration: none;
+        &:after {
+            right: 0;
+        }
+    }
+}
+
+
 @mixin anchor-image-style {
     img {
         transition: all 0.4s ease !important;

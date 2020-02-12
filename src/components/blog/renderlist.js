@@ -5,7 +5,6 @@ import PreviewCompatibleImage from '../common/preview-compatible-image'
 import './bloglist.scss';
 const renderList = ({ node }) => {
   return (
-<div> 
      <div className="blog-list mb-5 pb-5" key={node.fields.id}>
       <div
         className={`row ${
@@ -38,21 +37,20 @@ const renderList = ({ node }) => {
                 On <span className="text-black">{node.frontmatter.date}</span>
               </li>
               <li className="blog-category">
-                In <Link to= {"blog/" + lodash.kebabCase(node.frontmatter.category)}>{node.frontmatter.category.join(" ")}</Link>
+                In <Link to= {"blog/" + lodash.kebabCase(node.frontmatter.category)}>{node.frontmatter.category.join(", ")}</Link>
               </li>
             </ul>
             <p>
               {node.excerpt}
               <br />
               <br />
-              <Link to={node.fields.slug}>
+              <Link className="read-more" to={node.fields.slug}>
                 Keep Reading
               </Link>
             </p>
           </div>
       </div>
     </div> 
-</div> 
 )}
 
 export default renderList

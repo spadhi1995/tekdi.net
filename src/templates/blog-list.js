@@ -1,6 +1,7 @@
 
 
 import Layout from '../components/layout/baselayout';
+import Helmet from 'react-helmet';
 import BlogPagination from '../components/blog/pagination';
 import renderList from '../components/blog/renderlist';
 import { Link, graphql } from 'gatsby'
@@ -17,7 +18,17 @@ import React, { Fragment } from 'react'
 
     return (
       <Layout>
-        <Banner bannerTitle= "blogs" bannerSubTitle = "blogs"/> 
+        <Helmet>
+          <title>Blogs</title>
+          <metaBlogPostTemplate
+            name="description"
+            content= ""
+          />
+        </Helmet>
+        <Banner 
+          bannerTitle= "Blogs" 
+          bannerSubTitle = "Latest blogs"
+        /> 
         <div className="container py-5">
           <div className="row">
               <Fragment>

@@ -74,7 +74,12 @@ export class ContactUs extends React.Component {
       if(!this.state.phone.match(/^[0]?[789]\d{9}$/)){
         formIsValid = false;
         errors["phone"] = "Phone number is not valid";
-    }        
+    }   
+    
+    if (this.state.message === ""){
+      formIsValid = false;
+      errors["message"] = "Enter an Message";
+    } 
   }
 
    this.setState({errors: errors});
@@ -112,8 +117,12 @@ export class ContactUs extends React.Component {
                       <input type="email" name="email" id="email" value={this.state.email} onChange={this.handleInputChange} className="form-control" placeholder="Email"  />
                       <span className="error">{this.state.errors["email"]}</span>
                   </div> 
+                  <div className="col-md-12 form-group">
+                    <textarea className="form-control" name="message" id="message" value={this.state.massage} onChange={this.handleInputChange} rows="2" placeholder="Message" ></textarea>
+                    <span className="error">{this.state.errors["message"]}</span>
+                  </div> 
                 </div>
-                <div className="text-center my-3">
+                <div className="text-center mt-2">
                   <button type="submit" className="btn-submit p-0">Submit Now</button>
                 </div>
               </form>

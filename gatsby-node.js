@@ -76,7 +76,7 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
     const  blog = result.data. blog.edges  
-    const postsPerPage = 1
+    const postsPerPage = 5
     const numPages = Math.ceil(blog.length / postsPerPage)
     blog.forEach(edge => {
     edge.node.frontmatter.category.forEach(cat => categories.push(cat))
