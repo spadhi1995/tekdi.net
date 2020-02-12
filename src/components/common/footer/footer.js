@@ -46,7 +46,7 @@ const Footer = () => {
                                         { comapanyMenuData.map (item => {
                                             const urlParts = item.url.split('#');
                                             if(urlParts.length > 1 ){
-                                              return (<li key = {item.label} className="mb-3"><a href="javascript:;" data-link={item.url} onClick={jump}> {item.label} </a></li>)
+                                              return (<li key = {item.label} className="mb-3"><a href="#" role="link" data-link={item.url} onClick={jump}> {item.label} </a></li>)
                                             }
                                             else {
                                               return (<li key = {item.label} className="mb-3"><Link to={item.url}> {item.label} </Link></li>)
@@ -65,7 +65,7 @@ const Footer = () => {
                                         { technologyMenuData.map (item => {
                                              const urlParts = item.url.split('#');
                                              if(urlParts.length > 1 ){
-                                               return (<li key = {item.label} className="mb-3"><a href="javascript:;" data-link={item.url} onClick={jump}> {item.label} </a></li>)
+                                               return (<li key = {item.label} className="mb-3"><a href="#" role="link" data-link={item.url} onClick={jump}> {item.label} </a></li>)
                                              }
                                              else {
                                                return (<li key = {item.label} className="mb-3"><Link to={item.url}> {item.label} </Link></li>)
@@ -81,10 +81,10 @@ const Footer = () => {
                             <nav>
                                 {servicesMenuData.length && (      
                                     <ul className="footer-menu-items unstyled">
-                                        { servicesMenuData.map (item => {
+                                         { servicesMenuData.map (item => {
                                              const urlParts = item.url.split('#');
                                              if(urlParts.length > 1 ){
-                                               return (<li key = {item.label} className="mb-3"><a href="javascript:;" data-link={item.url} onClick={jump}> {item.label} </a></li>)
+                                               return (<li key = {item.label} className="mb-3"><a href="#" role="link" data-link={item.url} onClick={jump}> {item.label} </a></li>)
                                              }
                                              else {
                                                return (<li key = {item.label} className="mb-3"><Link to={item.url}> {item.label} </Link></li>)

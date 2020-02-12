@@ -8,6 +8,7 @@ import IndustriesInfo from '../components/industries/industries-info';
 import  IndustriesList from '../components/industries/industries-list';
 import { HTMLContent } from '../components/common/content';
 import FeaturesInfo from '../components/common/features/features-info';
+import ContactUs from '../components/common/contact/contact';
 
 const IndustriesPage = ({ data }) => {
   const { markdownRemark: post } = data
@@ -36,6 +37,7 @@ const IndustriesPage = ({ data }) => {
         features={post.frontmatter.features}
         />
         <IndustriesList />
+        <ContactUs />
       </div>
     </Layout>
   )

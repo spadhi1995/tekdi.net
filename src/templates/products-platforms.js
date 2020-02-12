@@ -7,6 +7,7 @@ import Banner from "../components/common/banner/banner";
 import Products from '../components/products-platforms/product-info';
 import ProductList from '../components/products-platforms/product-list';
 import FeaturesInfo from '../components/common/features/features-info';
+import ContactUs from '../components/common/contact/contact';
 
 const ProductsPlatforms = ({ data }) => {
   const { markdownRemark: post } = data
@@ -38,6 +39,7 @@ const ProductsPlatforms = ({ data }) => {
         features={post.frontmatter.features}
         />
         <ProductList />
+        <ContactUs />
       </div>
     </Layout>
   )

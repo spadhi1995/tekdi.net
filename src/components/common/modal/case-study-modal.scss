@@ -9,6 +9,21 @@
     background: #f1f1f1 !important;
     min-width: 400px;
     padding:30px !important;
+
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent;
+      border: none;
+      padding: 4px 12px;
+      font-size: 20px;
+      color: #828282;
+
+      &:hover {
+        color: #000;
+      }
+    }
     
     .form-group {
       margin: 0 0 20px 0 !important;
@@ -22,11 +37,16 @@
       margin: 0 0 5px 0 !important;
     }
 
+    input[type=file] {
+      padding: 15px;
+    }
+
     .btn-submit {
       background: transparent;
       border: none;
       font-size: 18px;
       font-weight: 600;
+      outline: 0;
 
       @include anchor-style;
     }

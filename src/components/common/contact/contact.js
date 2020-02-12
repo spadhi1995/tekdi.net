@@ -114,7 +114,7 @@ export class ContactUs extends React.Component {
                   </div> 
                 </div>
                 <div className="text-center my-3">
-                  <button type="submit" className="btn-submit">Submit Now</button>
+                  <button type="submit" className="btn-submit p-0">Submit Now</button>
                 </div>
               </form>
             </div>

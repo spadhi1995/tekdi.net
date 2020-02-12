@@ -153,7 +153,9 @@ verifyCallback = (recaptchaToken) => {
    render () {
     return (
       <div>
-        <button onClick={this.handleOpenModal}>Apply</button>
+        <button className="btn-apply mb-4 p-0 font-weight-bold" onClick={this.handleOpenModal}>
+          Apply Now
+        </button>
         <Modal 
            isOpen={this.state.showModal}
            contentLabel="onRequestClose Example"
@@ -161,52 +163,36 @@ verifyCallback = (recaptchaToken) => {
            style={customStyles}
         > 
         
-      <button onClick={this.handleCloseModal}>Close Modal</button>
-        <div >
-        <div className="container">
-          <div className="row com-cover">
-            <div className="col-md-10 offset-md-1">
-              <h2 className="com-heading text-center text-white mb-3">
-                Let's transform your business today
-              </h2>
-              <form  onSubmit={this.handleSubmit} encType="multipart/form-data">  
-                {/* <div className="row"> */}
-                  <div className="col-md-12 col-xs-12 form-group">
-                    <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
-                    <span className="error">{this.state.errors["name"]}</span>
-                  </div>
-                  <div className="col-md-12 col-xs-12 form-group">
-                      <input type="email" name="email" id="email" value={this.state.email} onChange={this.handleInputChange} className="form-control" placeholder="Email"  />
-                      <span className="error">{this.state.errors["email"]}</span>
-                  </div> 
-                  <div className="col-md-12 col-xs-12 form-group">
-                      <input type="text" name="phone" id="phone" value={this.state.phone} onChange={this.handleInputChange} className="form-control" placeholder="Phone"  />
-                      <span className="error">{this.state.errors["phone"]}</span>
-                  </div>
-                  <input type="file" ref={this.fileInput} />
-                  <div>
-                    <ReCaptcha
-                   sitekey="6LdecNcUAAAAAJ0xx3Q960oSJDfxsG3FCubO6atf"
-                   action='homepage'
-                   size="normal"
-                  data-theme="dark"            
-                  render="explicit"
-                   verifyCallback={this.verifyCallback}
-                />
-                  </div>
-                  
-                {/* </div> */}
-                <div className="text-center my-3">
-                  <button type="submit" className="btn-submit">Submit Now</button>
+          <button className="btn-close" onClick={this.handleCloseModal}>
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </button>
+          <div>
+            <form  onSubmit={this.handleSubmit} encType="multipart/form-data">  
+              <h3 className="section-title text-black text-center mb-5">
+                Please fill the form below
+              </h3>
+              {/* <div className="row"> */}
+                <div className="col-md-12 col-xs-12 form-group">
+                  <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
+                  <span className="error">{this.state.errors["name"]}</span>
                 </div>
-              </form>
-            </div>
+                <div className="col-md-12 col-xs-12 form-group">
+                    <input type="email" name="email" id="email" value={this.state.email} onChange={this.handleInputChange} className="form-control" placeholder="Email"  />
+                    <span className="error">{this.state.errors["email"]}</span>
+                </div> 
+                <div className="col-md-12 col-xs-12 form-group">
+                    <input type="text" name="phone" id="phone" value={this.state.phone} onChange={this.handleInputChange} className="form-control" placeholder="Phone"  />
+                    <span className="error">{this.state.errors["phone"]}</span>
+                </div>
+                <input type="file" ref={this.fileInput} />
+              {/* </div> */}
+              <div className="text-center my-3">
+                <button type="submit" className="btn-submit p-0">Submit Now</button>
+              </div>
+            </form>
           </div>
-        </div>
-      </div>
         </Modal>
       </div>
-     
     );
    }
 }
