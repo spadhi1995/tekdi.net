@@ -18,3 +18,11 @@
         display: inline-block;
     }
 }
+.pagination li a {
+    color:#333 !important;
+
+    &:hover {
+        text-decoration: none;
+        color: #216db6 !important;
+    }
+}
