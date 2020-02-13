@@ -31,7 +31,7 @@ class CareersModal extends React.Component {
       resume:"",
       errors: {},
       recaptchaToken:"",
-      recaptchaResponse:"",
+      submitMessage:"",
     };
   
     this.handleOpenModal = this.handleOpenModal.bind(this);
@@ -39,32 +39,43 @@ class CareersModal extends React.Component {
     this.fileInput = React.createRef();
   }
   componentDidMount() {
-  loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
-}
+    loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
+  }
 
 verifyCallback = (recaptchaToken) => {
   this.setState({ recaptchaToken: recaptchaToken });
 }
 
  CheckRecaptcha = async ()  => { 
-  await axios.post(
-    'https://www.google.com/recaptcha/api/siteverify',
-   `secret=${process.env.GATSBY_GOOGLE_RECAPTCHA_SECREAT}&response=${this.state.recaptchaToken}`,
-   {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",   
-      }, 
-     
-  })
-  .then((response) => {
-   // return response;
-    this.setState({ recaptchaResponse: response });
-  }, (error) => {
-   // console.log(error);
-  });
- // return response;
- 
-}
+  try {
+        await axios.post(
+          'https://www.google.com/recaptcha/api/siteverify',
+        `secret=${process.env.GATSBY_GOOGLE_RECAPTCHA_SECREAT}&response=${this.state.recaptchaToken}`,
+        {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",   
+            }, 
+          
+        })
+        .then((response) => {
+          if(  response.data.success=== true)
+            {
+              this.response();
+              this.setState({name:"", email: "",phone:"",message:"",data:"",errors:"",recaptchaResponse:"" });
+              //this.setState({ showModal: false });
+              //loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
+            }
+        }, (error) => {
+        // console.log(error);
+        });
+      // return response;
+    }
+    catch (error)
+    {
+      console.log(error)
+    }
+      
+  }
 
   handleOpenModal () {
     //console.log(position)
@@ -81,15 +92,15 @@ verifyCallback = (recaptchaToken) => {
     await axios.post(
       process.env.GATSBY_AWS_API_GETEWAY,
       JSON.stringify (this.state.data),
-      // { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, 
       {
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          
+          "Content-Type": "application/x-www-form-urlencoded",        
         },  
-      //},
-      
-    })
+    }).then((response) => {
+          this.setState({ submitMessage: response });   
+    }, (error) => {
+     // console.log(error);
+    });
   }
   
   handleSubmit = event => {
@@ -102,12 +113,13 @@ verifyCallback = (recaptchaToken) => {
                   "phone" : this.state.phone , 
                   "resume" : this.fileInput.current.files[0],
                }
-      this.CheckRecaptcha()
-      if( this.CheckRecaptcha() && this.state.recaptchaResponse !="" && this.state.recaptchaResponse.data.success=== true)
-      {
-        this.response();
-        event.target.reset();
-      }
+      this.CheckRecaptcha();
+      // this.CheckRecaptcha()
+      // if( this.CheckRecaptcha() && this.state.recaptchaResponse !="" && this.state.recaptchaResponse.data.success=== true)
+      // {
+      //   //this.response();
+      //   event.target.reset();
+      // }
     }  
   }
 
@@ -195,6 +207,12 @@ verifyCallback = (recaptchaToken) => {
                 Please fill the form below
                 <p>{this.state.position}</p>
               </h3>
+              {this.state.submitMessage !== "" ? 
+              
+              <div className= {this.state.submitMessage.data.success === true ? "alert alert-success" : "alert alert-danger"} role = "alert">    
+                {this.state.submitMessage.data.message}
+              </div>
+              :null }
               {/* <div className="row"> */}
                 <div className="col-md-12 col-xs-12 form-group">
                   <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />

@@ -13,23 +13,20 @@ export class ContactUs extends React.Component {
     phone: "",
     message: "",
     data: "",
-    errors: {}
+    errors: {},
+    submitMessage:"",
   }
 
-  // response = async () => { 
-  //   await axios.post(
-  //     'http://ttpllt-php72.local/gatsby-from/',
-  //     queryString.stringify (this.state.data),
-  //     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
-  //   })
-  // }
-  
   response = async () => { 
     await axios.post(
       process.env.GATSBY_AWS_API_GETEWAY,
       JSON.stringify (this.state.data),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
-    })
+    }).then((response) => {
+      this.setState({ submitMessage: response });   
+      }, (error) => {
+      // console.log(error);
+      });
   }
 
   componentDidMount() {
@@ -50,7 +47,9 @@ export class ContactUs extends React.Component {
         },  
     })
     const data = await response;
-       this.setState({ recaptchaResponse: data });
+    this.setState({ recaptchaResponse: data });
+    this.response();
+    this.setState({name:"", email: "",phone:"",message:"",data:"",errors:""});
    
   }
 
@@ -59,8 +58,7 @@ export class ContactUs extends React.Component {
     if(this.handleValidation())
     {
       this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message }
-      this.CheckRecaptcha();
-      this.response();
+      this.CheckRecaptcha();          
     }
     
   }
@@ -138,9 +136,17 @@ export class ContactUs extends React.Component {
               </h2>
               <form  onSubmit={this.handleSubmit}> 
               <ReCaptcha
-            sitekey = {process.env.GATSBY_GOOGLE_RECAPTCHA_KEY}
-            verifyCallback={this.verifyCallback}
-        /> 
+                sitekey = {process.env.GATSBY_GOOGLE_RECAPTCHA_KEY}
+                verifyCallback={this.verifyCallback}
+             /> 
+                <div className="row">
+                  {this.state.submitMessage !== "" ?   
+                      <div className= {this.state.submitMessage.data.success === true ? "alert alert-success  col form-group" : "alert alert-danger col form-group"} role = "alert">    
+                        {this.state.submitMessage.data.message}
+                        
+                      </div>
+                    :null }
+                </div>
                 <div className="row">
                   <div className="col-md-4 col-xs-12 form-group">
                     <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
@@ -155,7 +161,7 @@ export class ContactUs extends React.Component {
                       <span className="error">{this.state.errors["email"]}</span>
                   </div> 
                   <div className="col-md-12 form-group">
-                    <textarea className="form-control" name="message" id="message" value={this.state.massage} onChange={this.handleInputChange} rows="2" placeholder="Message" ></textarea>
+                    <textarea className="form-control" name="message" id="message" value={this.state.message} onChange={this.handleInputChange} rows="2" placeholder="Message" ></textarea>
                     <span className="error">{this.state.errors["message"]}</span>
                   </div> 
                 </div>

@@ -4,17 +4,17 @@ import { loadReCaptcha } from 'react-recaptcha-v3'
 import { ReCaptcha } from 'react-recaptcha-v3'
 const axios = require(`axios`);
 const queryString = require('query-string');
-
 export class contactUs extends React.Component {
   form = "";
   state = {
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    data: "",
-    errors: {},
-    recaptchaResponse:"",
+    name     : "",
+    email    : "",
+    phone    : "",
+    message  : "",
+    data     : "",
+    errors   : {},
+    submitMessage:"",
+
   }
 
   response = async () => { 
@@ -22,16 +22,12 @@ export class contactUs extends React.Component {
       process.env.GATSBY_AWS_API_GETEWAY,
       JSON.stringify (this.state.data),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
-    })
+    }).then((response) => {
+      this.setState({ submitMessage: response });   
+      }, (error) => {
+      // console.log(error);
+      });
   }
-  // 'http://ttpllt-php72.local/gatsby_joomla/index.php?option=com_api&app=contactform&resource=contactform'
-  // response = async () => { 
-  //   await axios.post(
-  //     'https://ll96yro5ik.execute-api.us-west-2.amazonaws.com/prod',
-  //     JSON.stringify (this.state.data),
-  //     { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
-  //   })
-  // }
   componentDidMount() {
     loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
   }
@@ -50,21 +46,23 @@ export class contactUs extends React.Component {
         },  
     })
     const data = await response;
-     await  this.setState({ recaptchaResponse: data });
+    
+     if( data.data.success=== true)
+      {
+        this.response();
+        this.setState({name:"", email: "",phone:"",message:"",data:"",errors:""});
+        //loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
+      }
    
   }
 
   handleSubmit =  async (event) => {
+
     event.preventDefault();
     if(this.handleValidation())
     {
       this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message }
       this.CheckRecaptcha();
-      if( this.state.recaptchaResponse !=="" && this.state.recaptchaResponse.data.success=== true)
-      {
-        this.response();
-        this.setState({name:"", email: "",phone:"",message:"",data:"",errors:"",recaptchaResponse:"" });
-      }
     }
   }
 
@@ -117,11 +115,11 @@ export class contactUs extends React.Component {
         formIsValid = false;
         errors["phone"] = "Phone number is not valid";
     }        
-}
+  }
 
    this.setState({errors: errors});
    return formIsValid;
-}
+  }
 
   handleInputChange = event => {
     const target = event.target
@@ -142,6 +140,15 @@ export class contactUs extends React.Component {
             action='contact'
             verifyCallback={this.verifyCallback}
         />
+         <div className="row">
+          {this.state.submitMessage !== "" ?   
+              <div className= {this.state.submitMessage.data.success === true ? "alert alert-success  col form-group" : "alert alert-danger col form-group"} role = "alert">    
+                {this.state.submitMessage.data.message}
+                
+              </div>
+            :null }
+          </div>
+        
           <div className="row">
             <div className="col form-group">
               <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
@@ -160,7 +167,7 @@ export class contactUs extends React.Component {
           </div>
           <div className="row">
             <div className="col form-group">
-             <textarea className="form-control" name="message" id="message" value={this.state.massage} onChange={this.handleInputChange} rows="3" placeholder="Message" ></textarea>
+             <textarea className="form-control" name="message" id="message" value={this.state.message} onChange={this.handleInputChange} rows="3" placeholder="Message" ></textarea>
              <span className="error">{this.state.errors["message"]}</span>
             </div> 
           </div>
