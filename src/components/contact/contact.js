@@ -1,34 +1,68 @@
 import React from "react"
 import './contact.scss'
+import { loadReCaptcha } from 'react-recaptcha-v3'
+import { ReCaptcha } from 'react-recaptcha-v3'
 const axios = require(`axios`);
 const queryString = require('query-string');
-
 export class contactUs extends React.Component {
   form = "";
   state = {
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    data: "",
-    errors: {}
+    name     : "",
+    email    : "",
+    phone    : "",
+    message  : "",
+    data     : "",
+    errors   : {},
+    submitMessage:"",
+
   }
 
   response = async () => { 
     await axios.post(
-      'http://ttpllt-php72.local/gatsby_joomla/index.php?option=com_api&app=contactform&resource=contactform',
-     queryString.stringify (this.state.data),
+      process.env.GATSBY_AWS_API_GETEWAY,
+      JSON.stringify (this.state.data),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
-    })
+    }).then((response) => {
+      this.setState({ submitMessage: response });   
+      }, (error) => {
+      // console.log(error);
+      });
   }
-  
-  handleSubmit = event => {
+  componentDidMount() {
+    loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
+  }
+
+  verifyCallback = (recaptchaToken) => {
+    this.setState({ recaptchaToken: recaptchaToken });
+  }
+
+  CheckRecaptcha = async ()  => { 
+      var response = await axios.post(
+      'https://www.google.com/recaptcha/api/siteverify',
+     `secret=${process.env.GATSBY_GOOGLE_RECAPTCHA_SECREAT}&response=${this.state.recaptchaToken}`,
+     {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",   
+        },  
+    })
+    const data = await response;
+    
+     if( data.data.success=== true)
+      {
+        this.response();
+        this.setState({name:"", email: "",phone:"",message:"",data:"",errors:""});
+        //loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
+      }
+   
+  }
+
+  handleSubmit =  async (event) => {
+
     event.preventDefault();
-    console.log(this.state)
     if(this.handleValidation())
     {
       this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message }
-      this.response();
+      this.CheckRecaptcha();
     }
   }
 
@@ -81,11 +115,11 @@ export class contactUs extends React.Component {
         formIsValid = false;
         errors["phone"] = "Phone number is not valid";
     }        
-}
+  }
 
    this.setState({errors: errors});
    return formIsValid;
-}
+  }
 
   handleInputChange = event => {
     const target = event.target
@@ -101,6 +135,20 @@ export class contactUs extends React.Component {
   render() {
     return (
         <form  onSubmit={this.handleSubmit}>
+            <ReCaptcha
+            sitekey = {process.env.GATSBY_GOOGLE_RECAPTCHA_KEY}
+            action='contact'
+            verifyCallback={this.verifyCallback}
+        />
+         <div className="row">
+          {this.state.submitMessage !== "" ?   
+              <div className= {this.state.submitMessage.data.success === true ? "alert alert-success  col form-group" : "alert alert-danger col form-group"} role = "alert">    
+                {this.state.submitMessage.data.message}
+                
+              </div>
+            :null }
+          </div>
+        
           <div className="row">
             <div className="col form-group">
               <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
@@ -119,7 +167,7 @@ export class contactUs extends React.Component {
           </div>
           <div className="row">
             <div className="col form-group">
-             <textarea className="form-control" name="message" id="message" value={this.state.massage} onChange={this.handleInputChange} rows="3" placeholder="Message" ></textarea>
+             <textarea className="form-control" name="message" id="message" value={this.state.message} onChange={this.handleInputChange} rows="3" placeholder="Message" ></textarea>
              <span className="error">{this.state.errors["message"]}</span>
             </div> 
           </div>
@@ -128,4 +176,5 @@ export class contactUs extends React.Component {
     );
   }
 }
+
 export default contactUs

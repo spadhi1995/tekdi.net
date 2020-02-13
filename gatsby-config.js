@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: 'Tekdi Technologies pvt. ltd.',
@@ -65,5 +68,13 @@ module.exports = {
         // Add any options here
       },
     },
+  //   {
+  //     resolve: `gatsby-plugin-recaptcha`,
+  //     options: {
+  //        async: false,
+  //        defer: false,
+  //        args: `?onload=onloadCallback&render=explicit`,
+  //     },
+  //  },
   ],
 }

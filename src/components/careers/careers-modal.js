@@ -1,8 +1,11 @@
 
 import React from 'react'
 import Modal from 'react-modal';
+import { loadReCaptcha } from 'react-recaptcha-v3'
+import { ReCaptcha } from 'react-recaptcha-v3'
 const axios = require(`axios`);
 const queryString = require('query-string');
+
 const customStyles = {
   content : {
     top                   : '50%',
@@ -13,7 +16,9 @@ const customStyles = {
     transform             : 'translate(-50%, -50%)'
   }
 };
+
 class CareersModal extends React.Component {
+
   constructor (props) {
     super(props);
     this.state = {
@@ -25,54 +30,96 @@ class CareersModal extends React.Component {
       position : this.props.position,
       resume:"",
       errors: {},
-      file:null
+      recaptchaToken:"",
+      submitMessage:"",
     };
   
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.fileInput = React.createRef();
   }
-  
+  componentDidMount() {
+    loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
+  }
+
+verifyCallback = (recaptchaToken) => {
+  this.setState({ recaptchaToken: recaptchaToken });
+}
+
+ CheckRecaptcha = async ()  => { 
+  try {
+        await axios.post(
+          'https://www.google.com/recaptcha/api/siteverify',
+        `secret=${process.env.GATSBY_GOOGLE_RECAPTCHA_SECREAT}&response=${this.state.recaptchaToken}`,
+        {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",   
+            }, 
+          
+        })
+        .then((response) => {
+          if(  response.data.success=== true)
+            {
+              this.response();
+              this.setState({name:"", email: "",phone:"",message:"",data:"",errors:"",recaptchaResponse:"" });
+              //this.setState({ showModal: false });
+              //loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
+            }
+        }, (error) => {
+        // console.log(error);
+        });
+      // return response;
+    }
+    catch (error)
+    {
+      console.log(error)
+    }
+      
+  }
+
   handleOpenModal () {
     //console.log(position)
     this.setState({ showModal: true });
+
   }
   
   handleCloseModal () {
+
     this.setState({ showModal: false });
   }
 
-  response = async () => { 
+  response = async ()  => { 
     await axios.post(
-      'http://ttpllt-php72.local/gatsby-from/',
-      queryString.stringify (this.state.data),
-      // { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, 
+      process.env.GATSBY_AWS_API_GETEWAY,
+      JSON.stringify (this.state.data),
       {
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          
+          "Content-Type": "application/x-www-form-urlencoded",        
         },  
-      //},
-      
-    })
+    }).then((response) => {
+          this.setState({ submitMessage: response });   
+    }, (error) => {
+     // console.log(error);
+    });
   }
   
   handleSubmit = event => {
     event.preventDefault();
-        const formData = new FormData();
-
-        formData.append('avatar',this.state.file)
-        console.log(formData)
-        var options = { content: formData };
-        console.log(options)
-
-   // this.setState({ resume: this.fileInput.current.files[0].name });
-
     if(this.handleValidation())
-    {
-      this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message, "position": this.state.position, "resume":this.fileInput.current.files[0].name }
-      this.response();
-      console.log(this.state.data)
+    {  
+      this.state.data = { 
+                  "name" : this.state.name , 
+                  "email" : this.state.email , 
+                  "phone" : this.state.phone , 
+                  "resume" : this.fileInput.current.files[0],
+               }
+      this.CheckRecaptcha();
+      // this.CheckRecaptcha()
+      // if( this.CheckRecaptcha() && this.state.recaptchaResponse !="" && this.state.recaptchaResponse.data.success=== true)
+      // {
+      //   //this.response();
+      //   event.target.reset();
+      // }
     }  
   }
 
@@ -124,11 +171,11 @@ class CareersModal extends React.Component {
    this.setState({errors: errors});
    return formIsValid;
 }
+
   handleInputChange = event => {
     const target = event.target
     const value = target.value
     const name = target.name
-   // this.setState({file:e.target.files[0]})
     this.setState({
       [name]: value,
     })
@@ -137,6 +184,11 @@ class CareersModal extends React.Component {
    render () {
     return (
       <div>
+         <ReCaptcha
+            sitekey = {process.env.GATSBY_GOOGLE_RECAPTCHA_KEY}
+            action='careers'
+            verifyCallback={this.verifyCallback}
+        />
         <button className="btn-apply mb-4 p-0 font-weight-bold" onClick={this.handleOpenModal}>
           Apply Now
         </button>
@@ -146,7 +198,6 @@ class CareersModal extends React.Component {
            onRequestClose={this.handleCloseModal}  
            style={customStyles}
         > 
-        
           <button className="btn-close" onClick={this.handleCloseModal}>
             <i class="fa fa-times" aria-hidden="true"></i>
           </button>
@@ -154,7 +205,14 @@ class CareersModal extends React.Component {
             <form  onSubmit={this.handleSubmit} encType="multipart/form-data">  
               <h3 className="section-title text-black text-center mb-5">
                 Please fill the form below
+                <p>{this.state.position}</p>
               </h3>
+              {this.state.submitMessage !== "" ? 
+              
+              <div className= {this.state.submitMessage.data.success === true ? "alert alert-success" : "alert alert-danger"} role = "alert">    
+                {this.state.submitMessage.data.message}
+              </div>
+              :null }
               {/* <div className="row"> */}
                 <div className="col-md-12 col-xs-12 form-group">
                   <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange}  className="form-control" placeholder="Name"  />
