@@ -1,3 +1,5 @@
+@import '../common/scss/mixins.scss';
+
 .digital-evolution-carousel {
     .swiper-container {
         padding: 50px 0 10px 0;
@@ -19,6 +21,10 @@
         position: absolute;
         bottom: 11px;
         margin-left: 10px;
+    }
+
+    a.read-more {
+        @include anchor-style;
     }
     .gatsby-image-wrapper picture img {
         transition: all 0.4s ease !important;

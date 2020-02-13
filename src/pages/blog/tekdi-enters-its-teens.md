@@ -3,15 +3,13 @@ templateKey: blog-post
 title: Tekdi enters its teens
 date: 2019-04-08T15:04:10.000Z
 featuredpost: true
-author: Admin
+author: Ashwin
 category: 
-  - science
-  - technology
+  - Technology
 featuredimage: /img/blog/tekdi-enters-its-teens.png
 description:
 tags:
-  - brewing
-  - chemex
+  - website
 ---
 ![default](/img/blog/tekdi-enters-its-teens.png)
 

@@ -3,9 +3,10 @@
 import Layout from '../components/layout/baselayout';
 import Helmet from 'react-helmet';
 import BlogPagination from '../components/blog/pagination';
-import renderList from '../components/blog/renderlist';
+import renderList from '../components/blog/blog-list';
 import { Link, graphql } from 'gatsby'
-import BlogCatList from '../components/blog/blogcatlist';
+import BlogCatList from '../components/blog/blog-cat-list';
+import BlogTagList from '../components/blog/blog-tag-list';
 import Banner from "../components/common/banner/banner"
 import ContactUs from '../components/common/contact/contact';
 import React, { Fragment } from 'react'
@@ -39,6 +40,7 @@ import React, { Fragment } from 'react'
               </Fragment>
             <div className="col-md-3">
               <BlogCatList />
+              <BlogTagList />
             </div>
           </div>
         </div>

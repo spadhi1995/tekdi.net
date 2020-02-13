@@ -13,15 +13,15 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3 col-sm-6 col-xs-12 mb-4">
-                            <Link className="fa-icon" to="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                            {/* <Link className="fa-icon" to="https://twitter.com" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-twitter" aria-hidden="true"></i>
-                            </Link>
-                            <Link className="fa-icon" to="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            </Link> */}
+                            <a className="fa-icon" href="https://www.facebook.com/search/top/?q=Tekdi" target="_blank">
                                 <i className="fa fa-facebook" aria-hidden="true"></i>
-                            </Link>
-                            <Link className="fa-icon" to="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            </a>
+                            {/* <Link className="fa-icon" to="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-pinterest" aria-hidden="true"></i>
-                            </Link>
+                            </Link> */}
                         </div>
                         <div className="col-md-3 col-sm-6 col-xs-12">
                             <div className="office-address mb-5">

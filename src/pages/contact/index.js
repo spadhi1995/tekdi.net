@@ -44,7 +44,7 @@ const ContactPage = ({ data }) => {
                       </p> 
                     </div>
                   </div>
-                  <div className="row mb-3">
+                  {/* <div className="row mb-3">
                     <div className="col-lg-6 col-md-12 col-sm-8 col-xs-12">
                       <h5 className="font-weight-bold text-black">
                         {frontmatter.email_title}
@@ -53,7 +53,7 @@ const ContactPage = ({ data }) => {
                         {frontmatter.email_address} 
                       </p> 
                     </div>
-                  </div> 
+                  </div>  */}
                 </div>  
                 <div className="col-md-6 col-xs-12 ">
                   <h3 className="font-weight-bold  text-black com-heading">
