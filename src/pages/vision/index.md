@@ -2,7 +2,7 @@
 templateKey: vision-page
 title: Vision
 heading: Vision Out
-subheading: If your first love is data-analytics, you thrive on cloud technology and are just a tad competitive then Tekdi is the place for you
+subheading: By 2021 have a team of 200+ catalysts to make India proud by serving 10,000+ Clients across the world
 img: /img/team-vision.png
 ---
 
