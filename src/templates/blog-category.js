@@ -17,6 +17,7 @@ class BlogCategoryPage extends React.Component {
     console.log(this.props.pageContext);
     return (
       <Layout>
+        <div className="blog-page">
         <Banner bannerTitle= "blogs" bannerSubTitle = "blogs"/> 
         <div className="container py-5">
           <div className="row">
@@ -38,6 +39,7 @@ class BlogCategoryPage extends React.Component {
               <BlogTagList />
             </div>
           </div>
+        </div>
         </div>
       </Layout>
     )

@@ -1,8 +1,8 @@
 ---
 templateKey: industries-page
 title: Agriculture
-icon: /img/industries/education-icon.png
-hovericon: /img/industries/education-icon-white.png
+icon: /img/industries/agriculture-icon.png
+hovericon: /img/industries/agriculture-icon-white.png
 bannerSubTitle: Industries
 bannerTitle: Agriculture
 image: /img/industries/agriculture.jpg

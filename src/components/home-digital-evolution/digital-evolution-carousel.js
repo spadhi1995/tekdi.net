@@ -90,7 +90,7 @@ export default () => (
       query DigitalEvolutionCarouselQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "digital-evolution" } } }
+          filter: { frontmatter: { templateKey: { eq: "digital-transformation" } } }
         ) {
           edges {
             node {

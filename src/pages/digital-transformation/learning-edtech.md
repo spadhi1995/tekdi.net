@@ -1,19 +1,19 @@
 ---
-templateKey: digital-evolution
-title: Transportation
-featured: false
+templateKey: digital-transformation
+title: Learning and Education technology
+featured: true
 bannerSubTitle: Digital Transformation
-bannerTitle: Transportation
-bgimage: /img/digital-evolutionl/digital-evolution3.jpg
-heading: Transportation
-subheading: Technology can do a lot for your transportation services by mobilising vehicle fleets that makes anything from booking taxis to tracking large shipments convenient.
+bannerTitle: Learning and Education technology
+bgimage: /img/digital-evolution/learning-education-bg.jpg
+heading: Learning and Education technology
+subheading: Curated technology solutions to manage, deliver, track, socialize and monetize learning and training for Businesses, Universities, Schools, Training companies & Content creators. 
 img: /img/digital-evolution/content-management.jpg
 featuresubheading: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
 mainpitch:
-  title: 
+  title: Technology has transformed the learning landscape
   description: >
-    Technology can do a lot for your transportation services by mobilising vehicle fleets that makes anything from booking taxis to tracking large shipments convenient. 
-caseStudyTag: Transportation
+    Moving over typical classroom training, learning is now anytime, anywhere and also unstructured at times. We help organisations deploy, track and measure learning outcomes and make learning a strategic initiative. 
+caseStudyTag: Learning and Education technology
 features:
     - title: Feature 1
       description: >
@@ -29,8 +29,6 @@ features:
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 ---
 
-The way we move around has changed radically over the years. Technology now plays a major role in mobilising vehicle fleets. From letting customers book taxis to tracking large logistics fleet there is a lot that technology can do for your transportation services.
+A few lines and link to case study for Climate Learning Platforms
 
-A few lines and link to case study for Limo Leader App
-
-A few lines and link to case study for Truck App
+A few lines and link to case study for Ekstep

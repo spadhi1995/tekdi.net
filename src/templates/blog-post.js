@@ -89,6 +89,7 @@ const BlogPost = ({ data }) => {
   return (
     
     <Layout>
+      <div className="blog-page">
       <Banner />
        <div className="container py-5">
         <div className="row">
@@ -121,6 +122,7 @@ const BlogPost = ({ data }) => {
         </div>
        </div>
        <ContactUs />
+       </div>
     </Layout>
   )
 }

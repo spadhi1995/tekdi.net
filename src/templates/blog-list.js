@@ -26,25 +26,27 @@ import React, { Fragment } from 'react'
             content= ""
           />
         </Helmet>
-        <Banner 
-          bannerTitle= "Blogs" 
-          bannerSubTitle = "Latest blogs"
-        /> 
-        <div className="container py-5">
-          <div className="row">
-              <Fragment>
-                <div className="col-md-9">
-                  {posts.map(renderList)}
-                  <BlogPagination currentPage={currentPage} numPages={numPages} />
-                </div> 
-              </Fragment>
-            <div className="col-md-3">
-              <BlogCatList />
-              <BlogTagList />
+        <div className="blog-page">
+          <Banner 
+            bannerTitle= "Blogs" 
+            bannerSubTitle = "Latest blogs"
+          /> 
+          <div className="container py-5">
+            <div className="row">
+                <Fragment>
+                  <div className="col-md-9">
+                    {posts.map(renderList)}
+                    <BlogPagination currentPage={currentPage} numPages={numPages} />
+                  </div> 
+                </Fragment>
+              <div className="col-md-3">
+                <BlogCatList />
+                <BlogTagList />
+              </div>
             </div>
           </div>
+          <ContactUs />
         </div>
-        <ContactUs />
       </Layout>
     )
   }
