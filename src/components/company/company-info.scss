@@ -3,21 +3,29 @@
         background: -webkit-gradient(linear, left top, right bottom, from(#1665a2), to(#41c6e7));
         background: linear-gradient(to bottom right, #1665a2, #41c6e7);
         padding: 20px;
-        margin-bottom: 150px;
+        
         p {
             font-weight: 500;
         }
     }
-    .gatsby-image-wrapper {
-        position: absolute !important;
-        right: -80px;
-        top: 20%;
-        z-index: 1;
+    .gatsby-image-wrapper { 
+        margin: 20px 0;
     }
 }
 @media (min-width: 768px) {
-    .company-info .description p {
-        padding: 7% 7% 7% 22%;
-        font-size: 20px;
+    .company-info {
+        .gatsby-image-wrapper {
+            position: absolute !important;
+            right: -80px;
+            top: 20%;
+            z-index: 1;
+        }
+        .description {
+            margin-bottom: 150px;
+            p {
+                padding: 7% 7% 7% 22%;
+                font-size: 20px;
+            }
+        }
     }
 }

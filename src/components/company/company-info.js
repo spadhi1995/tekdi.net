@@ -14,7 +14,7 @@ const CompanyInfo = ({
     <div className="company-info section1">
       <div className="container">
         <div className="row">
-          <div className="col-lg-5 col-md-4 position-relative">
+          <div className="col-lg-5 col-md-4 col-xs-12 position-relative">
             <PreviewCompatibleImage
               imageInfo={{
                 image: companyImg,
@@ -22,8 +22,10 @@ const CompanyInfo = ({
               }}
             />
           </div>
-          <div className="col-lg-7 col-md-8 description text-white">
-            <p>{companyInfo}</p>
+          <div className="col-lg-7 col-md-8 col-xs-12 text-white">
+            <div className="description">
+              <p>{companyInfo}</p>
+              </div>
           </div>
         </div>
 
