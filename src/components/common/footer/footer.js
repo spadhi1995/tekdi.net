@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-md-3 col-sm-6 col-xs-12 mb-4">
                             <a className="fa-icon" href="https://www.linkedin.com/company/tekdi-technologies/" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-linkedin-square"></i>
+                            <i className="fa fa-linkedin-square"></i>
                             </a>
                             <a className="fa-icon" href="https://www.facebook.com/tekditechnologies" target="_blank">
                                 <i className="fa fa-facebook" aria-hidden="true"></i>
