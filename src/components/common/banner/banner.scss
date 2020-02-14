@@ -1,6 +1,19 @@
 .banner {
     background-image:url('./images/banner.jpg');
     padding: 130px 0 70px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &:before {
+        content:"";
+        background-color: rgba(2, 14, 36, 0.6);
+        position: absolute;
+        top:0;
+        height: 100%;
+        width: 100%;
+    }
 }
 .products-platforms .banner {
     background-image:url('./images/product-banner.jpg');
@@ -8,7 +21,20 @@
 .digital-evolution .banner {
     background-image:url('./images/digital-banner.jpg');
 }
+.careers-page .banner {
+    background-image:url('./images/careers-banner.jpg');
+}
+.blog-page .banner {
+    background-image:url('./images/blog-banner.jpg');
+}
+.contact-page .banner {
+    background-image:url('./images/contact-banner.jpg');
+}
 .banner-text {
+    position: absolute;
+    top:60%;
+    transform: translateY(-40%);
+
     h1 {
         font-size: 30px;
         line-height: 38px;
@@ -32,7 +58,7 @@
 }
 @media (min-width: 768px) {
     .banner {
-        padding: 15% 0 10% 0;
+        padding: 15% 0 13% 0;
     }
     .banner-text {
         h1 {

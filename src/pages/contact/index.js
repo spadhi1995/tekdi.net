@@ -20,6 +20,7 @@ const ContactPage = ({ data }) => {
             content={`${frontmatter.description}`}
           />
       </Helmet>
+      <div className="contact-page">
         <Banner bannerTitle= {frontmatter.title} bannerSubTitle = { frontmatter.banner_sub_title}/>
         <div className="container py-5 contact-us">
           <div className="mb-5 row">
@@ -65,6 +66,7 @@ const ContactPage = ({ data }) => {
             </div>
           </div>                         
         </div>
+      </div>
     </Layout>
   )
 }

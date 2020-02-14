@@ -15,6 +15,7 @@ import lodash from "lodash"
     const { currentPage, numPages, tag, allTag } = this.props.pageContext
     return (
       <Layout>
+        <div className="blog-page">
         <Banner bannerTitle= "blogs" bannerSubTitle = "blogs"/> 
         <div className="container py-5">
           <div className="row">
@@ -36,6 +37,7 @@ import lodash from "lodash"
               <BlogTagList />
             </div>
           </div>
+        </div>
         </div>
       </Layout>
     )
