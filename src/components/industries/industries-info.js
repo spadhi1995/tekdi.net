@@ -1,6 +1,8 @@
 import React from 'react';
 import CaseStudiesList from '../common/case-studies/case-studies-list';
 import Content from '../common/content';
+import PreviewCompatibleImage from '../common/preview-compatible-image';
+
 import './industries-info.scss';
 
 
@@ -8,7 +10,8 @@ const IndustriesInfo = ({
   content,
   contentComponent,
   subheading,
-  caseStudyTag
+  caseStudyTag,
+  bgimage
 }) => {
 
   const PostContent = contentComponent || Content
@@ -32,7 +35,15 @@ const IndustriesInfo = ({
           <div className="col-lg-8 col-md-7">
             <div className="row">
               <div className="col-lg-6 col-md-5">
-                <img src={require('./images/industry.jpg')} alt="industry" />
+            
+                <PreviewCompatibleImage
+                  imageInfo={{
+                    image: bgimage,
+                    alt: `featured image for post `,
+                  }}
+                />
+              
+                {/* <img src={require('./images/industry.jpg')} alt="industry" /> */}
               </div>
               <div className="col-lg-6 col-md-7 content">
                 <PostContent content={content} />
