@@ -44,7 +44,7 @@ class CoreValuesCarousel extends React.Component {
                     <div className="item" key={post.id}>
                       <h4 className="text-black font-weight-bold">{post.frontmatter.heading}</h4>
                       <p>
-                        {post.html}
+                        {post.excerpt}
                       </p>
                     </div>
                 ))}

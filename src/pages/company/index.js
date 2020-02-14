@@ -7,6 +7,7 @@ import Banner from '../../components/common/banner/banner';
 import CompanyInfo from '../../components/company/company-info';
 import CorePurpose from '../../components/company/core-purpose';
 import CoreValuesCarousel from '../../components/company/core-values-carousel';
+import CompanyJourney from '../../components/company/company-journey';
 
 const CompanyTemplate = ({ data }) => {
   const { markdownRemark: post } = data
@@ -35,20 +36,9 @@ const CompanyTemplate = ({ data }) => {
         corePurposeImg={post.frontmatter.corePurposeImg}
       />
       <CoreValuesCarousel />
-      {/* <div id="team">
-      <CompanyInfo 
-        teamheading= {post.frontmatter.teamheading}
-        content={post.html}
-        contentComponent={HTMLContent}
-      />
-      </div>
-      <div id="vision">
-       <CompanyInfo 
-        visionheading= {post.frontmatter.visionheading}
-        content={post.html}
-        contentComponent={HTMLContent}
-      />
-      </div> */}
+      {/* <CompanyJourney 
+        journeyInfo={post.frontmatter.journeyInfo}
+      /> */}
     </Layout>
   )
 }
@@ -89,6 +79,10 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid
             }
           }
+        }
+        journeyInfo {
+          title
+          description
         }
       }
     }
