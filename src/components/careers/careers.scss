@@ -49,10 +49,15 @@
     background: #fff;
     font-size: 14px;
 
-    ul li {
+    ul.list li {
         display: inline-block;
     }
-
+    .main-content {
+        h1, h2, h3, h4, h5, strong {
+            font-weight: 700;
+            color: #000;
+        }
+    }
     .btn-apply {
         @include anchor-style;
         outline: 0;
