@@ -52,3 +52,10 @@
     }
   }
 }
+
+.btn-apply {
+        @include anchor-style;
+        outline: 0;
+        border: none;
+        background: transparent;
+    }

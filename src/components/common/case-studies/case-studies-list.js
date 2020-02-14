@@ -22,9 +22,9 @@ class CaseStudiesList extends React.Component {
             tag.edges.map(({ node: post }) => (
           <div className="item" key={post.id}> 
             <Link to={post.fields.slug}>
-          <h4 className="font-weight-bold text-black mb-3">{post.frontmatter.heading}</h4>
+          {/* <h4 className="font-weight-bold text-black mb-3">{post.frontmatter.heading}</h4> */}
             </Link>
-            <CaseStudyModal slug={post.fields.slug} />
+            <CaseStudyModal slug={post.fields.slug} caseStudyName={post.frontmatter.heading} />
             <p>{post.excerpt}</p> 
           </div>
            ))

@@ -147,7 +147,6 @@ exports.createPages = ({ actions, graphql }) => {
   const allTags = Object.keys(countTags)
   allTags.forEach((tag, i) => {
     const tagLink = `/blog/tags/${_.kebabCase(tag)}`
-    console.log(tagLink, "this is the tag link")
     Array.from({
       length: Math.ceil(countTags[tag] / postsPerPage),
     }).forEach((_, i) => {

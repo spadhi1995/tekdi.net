@@ -5,6 +5,7 @@ heading: Driving benefits to farmers - Digital backbone for an agricultural ware
 summary: 
 tags: 
    - business-process-transformation
+   - agriculture
 bannerTitle: Driving benefits to farmers - Digital backbone for an agricultural warehouse
 bannerSubTitle: Case Studies
 ---
