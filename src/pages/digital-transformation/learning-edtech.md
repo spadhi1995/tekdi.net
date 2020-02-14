@@ -1,5 +1,5 @@
 ---
-templateKey: digital-evolution
+templateKey: digital-transformation
 title: Learning and Education technology
 featured: true
 bannerSubTitle: Digital Transformation
