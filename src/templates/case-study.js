@@ -7,18 +7,18 @@ import CaseStudyInfo from '../components/common/case-studies/case-study-info';
 import { HTMLContent } from '../components/common/content';
 import ContactUs from '../components/common/contact/contact';
 class CaseStudyTemplate extends React.Component {
-  constructor(props) {
-    super(props)
-    if(this.props.location.state)
-    {
-      this.modalSubmit = this.props.location.state !==null ?  this.props.location.state.modalSubmit : false;
-    }
-    else
-    {
-      this.modalSubmit = false;
-    }
+  // constructor(props) {
+  //   super(props)
+  //   if(this.props.location.state)
+  //   {
+  //     this.modalSubmit = this.props.location.state !==null ?  this.props.location.state.modalSubmit : false;
+  //   }
+  //   else
+  //   {
+  //     this.modalSubmit = false;
+  //   }
     
-  }
+  // }
     render()
     {
     const { markdownRemark: post } = this.props.data
@@ -35,13 +35,13 @@ class CaseStudyTemplate extends React.Component {
               bannerTitle= {post.frontmatter.bannerTitle} 
               bannerSubTitle = {post.frontmatter.bannerSubTitle}
             />
-          {this.modalSubmit === true ? (
+          {/* {this.modalSubmit === true ? ( */}
           <CaseStudyInfo
             heading = {post.frontmatter.heading}
             content={post.html}
             contentComponent={HTMLContent}
           />
-          ) : <h3>Please fill the information</h3> }
+          {/* ) : <h3>Please fill the information</h3> } */}
            <ContactUs />
         </Layout>
       )
