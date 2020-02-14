@@ -1,7 +1,9 @@
 ---
 templateKey: core-values
-heading: Enjoy the Magic of Creation!
+heading: Build for most, not for few
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+* Think Generic not just specific
+* Build to reuse & Reuse to build
+* Product first approach 
 

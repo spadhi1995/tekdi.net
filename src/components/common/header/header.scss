@@ -156,6 +156,10 @@ header {
     header {
         .logo-lg {
             display: block;
+
+            img {
+                width: 90px;
+            }
         }
         .logo-sm {
             display: none;

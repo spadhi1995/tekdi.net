@@ -4,8 +4,18 @@ import { graphql, StaticQuery } from 'gatsby';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 import './core-values.scss';
+import Content, { HTMLContent } from '../common/content';
 
+export const CoreValuesDetail = ({
+  content,
+  contentComponent
+}) => {
+  const PostContent = contentComponent || Content
 
+  return (
+    <PostContent content={content} />
+  )
+}
 class CoreValuesCarousel extends React.Component {
     
   render(){
@@ -43,9 +53,12 @@ class CoreValuesCarousel extends React.Component {
                     posts.map(({ node: post }) => (
                     <div className="item" key={post.id}>
                       <h4 className="text-black font-weight-bold">{post.frontmatter.heading}</h4>
-                      <p>
-                        {post.excerpt}
-                      </p>
+                      <div className="main-content">
+                        <CoreValuesDetail
+                          content = {post.html}
+                          contentComponent = {HTMLContent}
+                        />
+                      </div>
                     </div>
                 ))}
             </Swiper> 
