@@ -35,15 +35,14 @@ class CareersModal extends React.Component {
   
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
-    this.fileInput = React.createRef();
   }
   componentDidMount() {
     loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
   }
 
-verifyCallback = (recaptchaToken) => {
-  this.setState({ recaptchaToken: recaptchaToken });
-}
+  verifyCallback = (recaptchaToken) => {
+    this.setState({ recaptchaToken: recaptchaToken });
+  }
   handleOpenModal () {
     //console.log(position)
     this.setState({ showModal: true });
@@ -65,12 +64,14 @@ verifyCallback = (recaptchaToken) => {
         },  
     }).then((response) => {
           this.setState({ submitMessage: response });
-          this.setState({name:"", email: "",phone:"",message:"",data:"",errors:"",recaptchaResponse:"" });   
-          loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
+          this.setState({name:"", email: "",phone:"",message:"",data:"",errors:"",recaptchaResponse:"" });  
+          this.setState({ showModal: false }); 
     }, (error) => {
      // console.log(error);
     });
   }
+
+  
   
   handleSubmit = event => {
     event.preventDefault();
@@ -80,12 +81,13 @@ verifyCallback = (recaptchaToken) => {
                   "name" : this.state.name , 
                   "email" : this.state.email , 
                   "phone" : this.state.phone , 
-                  "resume" : this.fileInput.current.files[0],
                   "recaptchaToken": this.state.recaptchaToken,
-               }
-      this.CheckRecaptcha();
+               }  
+               this.response();      
     }  
+   
   }
+
 
   handleValidation(){
     let fields = this.state;
@@ -124,13 +126,6 @@ verifyCallback = (recaptchaToken) => {
     formIsValid = false;
     errors["phone"] = "Please enter an Phone";
     }
-
-    if (this.state.phone!== ""){
-      if(!this.state.phone.match(/^[0]?[789]\d{9}$/)){
-        formIsValid = false;
-        errors["phone"] = "Phone number is not valid";
-    }        
-  }
 
    this.setState({errors: errors});
    return formIsValid;
@@ -190,8 +185,6 @@ verifyCallback = (recaptchaToken) => {
                     <input type="text" name="phone" id="phone" value={this.state.phone} onChange={this.handleInputChange} className="form-control" placeholder="Phone"  />
                     <span className="error">{this.state.errors["phone"]}</span>
                 </div>
-                <input type="file" ref={this.fileInput} />
-              {/* </div> */}
               <div className="text-center my-3">
                 <button type="submit" className="btn-submit p-0">Submit Now</button>
               </div>
