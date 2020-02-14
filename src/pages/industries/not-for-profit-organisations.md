@@ -5,6 +5,7 @@ title: Not for Profit Organisations
 bannerSubTitle: Industries
 bannerTitle: Not for Profit Organisations
 heading: Not for Profit Organisations
+caseStudyTag: not-for-profit
 
 subheading: Not for profits have a huge role in social change and transformation. Technology is helping them transform how they work, increase access to resources and increase their impact many fold.
 featuresubheading: Not for profits have a huge role in social change and transformation. Technology is helping them transform how they work, increase access to resources and increase their impact many fold.
