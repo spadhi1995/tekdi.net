@@ -14,7 +14,7 @@ featuresubheading: Lorem Ipsum is simply dummy text of the printing and typesett
 features:
     - title: Feature 1
       description: >
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        LoremIpsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
     - title: Feature 2
       description: >
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.

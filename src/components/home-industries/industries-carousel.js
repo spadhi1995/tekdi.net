@@ -63,7 +63,7 @@ class IndustriesCarousel extends React.Component {
                               </div>
                               <h3 className="section-title mt-4 mb-2">{post.frontmatter.title}</h3>
                               <p className="font-weight-normal">
-                                {post.excerpt}
+                              {post.frontmatter.subheading.substring(0,130)+"..."}
                                 <br/>
                                 <br/>
                                 <Link to={post.fields.slug} className="font-weight-bold">View More </Link>
