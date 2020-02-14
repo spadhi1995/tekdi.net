@@ -1,5 +1,5 @@
 ---
-templateKey: digital-evolution
+templateKey: digital-transformation
 title: Technology enablement of Nonprofits
 featured: true
 bannerSubTitle: Digital Transformation

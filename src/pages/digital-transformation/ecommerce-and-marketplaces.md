@@ -1,5 +1,5 @@
 ---
-templateKey: digital-evolution
+templateKey: digital-transformation
 title: E-commerce and Marketplaces
 featured: false
 bannerSubTitle: Digital Transformation
