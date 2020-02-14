@@ -4,7 +4,7 @@ title: Company
 bannerTitle: Company
 teamheading: Team
 visionheading: Vision
-companyInfo: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+companyInfo:We focus on providing you with cutting edge technology solutions. Our emphasis is on using Open Source technologies in order to deliver the most cost effective, secure & up-to-date solutions & enabling you with the tools to take your business to the next level.
 companyImg: /img/company/about-company.jpg
 corePurposeHeading: Core Purpose
 corePurposeDesc: Be a catalyst for societal transformation by empowering organisations and individuals with technology
