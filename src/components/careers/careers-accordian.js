@@ -4,7 +4,18 @@ import { graphql, StaticQuery } from 'gatsby'
 import './careers.scss';
 import Collapsible from 'react-collapsible';
 import CareersModal from "./careers-modal"
+import Content, { HTMLContent } from '../common/content';
 
+export const PositionDetails = ({
+  content,
+  contentComponent
+}) => {
+  const PostContent = contentComponent || Content
+
+  return (
+    <PostContent content={content} />
+  )
+}
 class Openingslist extends React.Component {
   render() {
     const { data } = this.props
@@ -15,15 +26,17 @@ class Openingslist extends React.Component {
       {posts &&
       posts.map(({ node: post }) => (
         <Collapsible trigger={`${post.frontmatter.heading}`} key={post.id}>
-          <ul className="unstyled mb-4">
+          <ul className="unstyled mb-4 list">
             <li className="mr-4">Type <span className="text-black">{post.frontmatter.type}</span></li>
             <li className="mr-4">Location <span className="text-black">{post.frontmatter.location}</span></li>
             <li className="mr-4">Posts <span className="text-black">{post.frontmatter.vacancy}</span></li>
-            <li>Experience <span className="text-black">{post.frontmatter.experience}</span></li>
           </ul>
-          <p>
-            {post.html}
-          </p>
+          <div className="main-content">
+            <PositionDetails
+              content = {post.html}
+              contentComponent = {HTMLContent}
+            />
+          </div>
           <CareersModal position = {post.frontmatter.heading} />
         </Collapsible>
       ))}
@@ -60,7 +73,6 @@ export default () => (
                 type
                 location
                 vacancy
-                experience
               }
             }
           }
