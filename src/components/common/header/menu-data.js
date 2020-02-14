@@ -8,8 +8,8 @@ export const menuData = [
         url:'/industries'
     },
     {
-        label:'Digital Evolution',
-        url:'/digital-evolution'
+        label:'Digital Transformation',
+        url:'/digital-transformation'
     },
     {
         label:'Products',

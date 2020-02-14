@@ -1,32 +1,35 @@
 import React from 'react';
 import Content from '../common/content';
+import PreviewCompatibleImage from '../common/preview-compatible-image';
 import './company-info.scss';
-
+import ProjectInfo from './project-info';
 
 const CompanyInfo = ({
-  content,
-  contentComponent,
-  teamheading,
-  visionheading
+  companyInfo,
+  companyImg,
+  projectInfo
 }) => {
 
-  const PostContent = contentComponent || Content
-
   return(
-    <div className="industries-info mb-4">
+    <div className="company-info section1">
       <div className="container">
-        <h3 className="font-weight-normal text-black">
-          {teamheading}
-        </h3>
-        <h3 className="font-weight-normal text-black">
-          {visionheading}
-        </h3>       
-      
-        <div className="main-content row">
-          <div className="col-xs-12 content">
-            <PostContent content={content} />
+        <div className="row">
+          <div className="col-lg-5 col-md-4 position-relative">
+            <PreviewCompatibleImage
+              imageInfo={{
+                image: companyImg,
+                alt: `company info image`,
+              }}
+            />
+          </div>
+          <div className="col-lg-7 col-md-8 description text-white">
+            <p>{companyInfo}</p>
           </div>
         </div>
+
+        <ProjectInfo 
+          InfoItems={projectInfo}
+        />
       </div>
     </div>
   );
