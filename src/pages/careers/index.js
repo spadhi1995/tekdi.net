@@ -20,17 +20,19 @@ const CareersIndexPage =  ({data}) => {
             content={`${frontmatter.description}`}
           />
         </Helmet>
-        <Banner 
-          bannerTitle= {frontmatter.bannerTitle} 
-          bannerSubTitle = {frontmatter.bannerSubTitle}
-        />
-        <div className="container py-5">
-          <div className="col-lg-8 col-md-10 offset-lg-2 offset-md-1 col-xs-12">
-            <h3 className="com-heading text-black text-center mb-5">{frontmatter.heading}</h3>
-            <Openingslist />
+        <div className="careers-page">
+          <Banner 
+            bannerTitle= {frontmatter.bannerTitle} 
+            bannerSubTitle = {frontmatter.bannerSubTitle}
+          />
+          <div className="container py-5">
+            <div className="col-lg-8 col-md-10 offset-lg-2 offset-md-1 col-xs-12">
+              <h3 className="com-heading text-black text-center mb-5">{frontmatter.heading}</h3>
+              <Openingslist />
+            </div>
           </div>
-        </div>
-        <ContactUs />
+          <ContactUs />
+          </div>
       </Layout>
     )
 

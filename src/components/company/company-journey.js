@@ -6,12 +6,13 @@ const JourneyInfo = ({
 }) => {
 
   return(
-    <div className="project-info">
+    <div className="company-journey">
       <div className="container">
-        <div className="row">
-          <div className="col-lg-9 offset-lg-2 col-md-10 offset-md-1">
+        <div className="text-center">
+          <h2 className="com-heading text-black">The Journey</h2>
+          <div className="">
             {JourneyItems.map(item => (
-            <div className="item float-left" key={item.id}>
+            <div className="item" key={item.id}>
               <h4 className="text-black">{item.title}</h4>
               <p>
                 {item.description}
@@ -28,15 +29,10 @@ const JourneyInfo = ({
 const CompanyJourney = ({
   journeyInfo
 }) => {
-
   return(
-    <div className="company-journey">
-      <div className="container">
-        <JourneyInfo 
-          JourneyItems={journeyInfo}
-        />
-      </div>
-    </div>
+    <JourneyInfo 
+      JourneyItems={journeyInfo}
+    />
   );
 }
 export default CompanyJourney;
