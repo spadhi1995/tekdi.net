@@ -4,7 +4,6 @@ import Modal from 'react-modal';
 import { loadReCaptcha } from 'react-recaptcha-v3'
 import { ReCaptcha } from 'react-recaptcha-v3'
 const axios = require(`axios`);
-const queryString = require('query-string');
 
 const customStyles = {
   content : {
@@ -45,38 +44,6 @@ class CareersModal extends React.Component {
 verifyCallback = (recaptchaToken) => {
   this.setState({ recaptchaToken: recaptchaToken });
 }
-
- CheckRecaptcha = async ()  => { 
-  try {
-        await axios.post(
-          'https://www.google.com/recaptcha/api/siteverify',
-        `secret=${process.env.GATSBY_GOOGLE_RECAPTCHA_SECREAT}&response=${this.state.recaptchaToken}`,
-        {
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",   
-            }, 
-          
-        })
-        .then((response) => {
-          if(  response.data.success=== true)
-            {
-              this.response();
-              this.setState({name:"", email: "",phone:"",message:"",data:"",errors:"",recaptchaResponse:"" });
-              //this.setState({ showModal: false });
-              //loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
-            }
-        }, (error) => {
-        // console.log(error);
-        });
-      // return response;
-    }
-    catch (error)
-    {
-      console.log(error)
-    }
-      
-  }
-
   handleOpenModal () {
     //console.log(position)
     this.setState({ showModal: true });
@@ -97,7 +64,9 @@ verifyCallback = (recaptchaToken) => {
           "Content-Type": "application/x-www-form-urlencoded",        
         },  
     }).then((response) => {
-          this.setState({ submitMessage: response });   
+          this.setState({ submitMessage: response });
+          this.setState({name:"", email: "",phone:"",message:"",data:"",errors:"",recaptchaResponse:"" });   
+          loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
     }, (error) => {
      // console.log(error);
     });
@@ -112,14 +81,9 @@ verifyCallback = (recaptchaToken) => {
                   "email" : this.state.email , 
                   "phone" : this.state.phone , 
                   "resume" : this.fileInput.current.files[0],
+                  "recaptchaToken": this.state.recaptchaToken,
                }
       this.CheckRecaptcha();
-      // this.CheckRecaptcha()
-      // if( this.CheckRecaptcha() && this.state.recaptchaResponse !="" && this.state.recaptchaResponse.data.success=== true)
-      // {
-      //   //this.response();
-      //   event.target.reset();
-      // }
     }  
   }
 
