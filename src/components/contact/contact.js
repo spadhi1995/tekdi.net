@@ -3,7 +3,6 @@ import './contact.scss'
 import { loadReCaptcha } from 'react-recaptcha-v3'
 import { ReCaptcha } from 'react-recaptcha-v3'
 const axios = require(`axios`);
-const queryString = require('query-string');
 export class contactUs extends React.Component {
   form = "";
   state = {
@@ -14,6 +13,7 @@ export class contactUs extends React.Component {
     data     : "",
     errors   : {},
     submitMessage:"",
+    recaptchaToken:"",
 
   }
 
@@ -23,7 +23,9 @@ export class contactUs extends React.Component {
       JSON.stringify (this.state.data),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
     }).then((response) => {
-      this.setState({ submitMessage: response });   
+      this.setState({ submitMessage: response });  
+      this.setState({name:"", email: "",phone:"",message:"",data:"",errors:"", recaptchaToken : ""});
+      loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY); 
       }, (error) => {
       // console.log(error);
       });
@@ -36,33 +38,12 @@ export class contactUs extends React.Component {
     this.setState({ recaptchaToken: recaptchaToken });
   }
 
-  CheckRecaptcha = async ()  => { 
-      var response = await axios.post(
-      'https://www.google.com/recaptcha/api/siteverify',
-     `secret=${process.env.GATSBY_GOOGLE_RECAPTCHA_SECREAT}&response=${this.state.recaptchaToken}`,
-     {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",   
-        },  
-    })
-    const data = await response;
-    
-     if( data.data.success=== true)
-      {
-        this.response();
-        this.setState({name:"", email: "",phone:"",message:"",data:"",errors:""});
-        //loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
-      }
-   
-  }
-
   handleSubmit =  async (event) => {
-
     event.preventDefault();
     if(this.handleValidation())
     {
-      this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message }
-      this.CheckRecaptcha();
+      this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message, "recaptchaToken": this.state.recaptchaToken  }
+      this.response();
     }
   }
 
@@ -139,6 +120,8 @@ export class contactUs extends React.Component {
             sitekey = {process.env.GATSBY_GOOGLE_RECAPTCHA_KEY}
             action='contact'
             verifyCallback={this.verifyCallback}
+            render="explicit"
+            size="invisible"
         />
          <div className="row">
           {this.state.submitMessage !== "" ?   

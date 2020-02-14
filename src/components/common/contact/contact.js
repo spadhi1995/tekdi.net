@@ -3,10 +3,8 @@ import './contact.scss';
 import { loadReCaptcha } from 'react-recaptcha-v3'
 import { ReCaptcha } from 'react-recaptcha-v3'
 const axios = require(`axios`);
-const queryString = require('query-string');
 
 export class ContactUs extends React.Component {
-  form = "";
   state = {
     name: "",
     email: "",
@@ -15,6 +13,7 @@ export class ContactUs extends React.Component {
     data: "",
     errors: {},
     submitMessage:"",
+    recaptchaToken:"",
   }
 
   response = async () => { 
@@ -23,7 +22,9 @@ export class ContactUs extends React.Component {
       JSON.stringify (this.state.data),
       { headers: { 'Content-Type': 'application/x-www-form-urlencoded' },   
     }).then((response) => {
-      this.setState({ submitMessage: response });   
+      this.setState({ submitMessage: response }); 
+      this.setState({name:"", email: "",phone:"",message:"",data:"",errors:"",recaptchaResponse:"" });   
+      loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);  
       }, (error) => {
       // console.log(error);
       });
@@ -37,28 +38,18 @@ export class ContactUs extends React.Component {
     this.setState({ recaptchaToken: recaptchaToken });
   }
 
-  CheckRecaptcha = async ()  => { 
-      var response = await axios.post(
-      'https://www.google.com/recaptcha/api/siteverify',
-     `secret=${process.env.GATSBY_GOOGLE_RECAPTCHA_SECREAT}&response=${this.state.recaptchaToken}`,
-     {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",   
-        },  
-    })
-    const data = await response;
-    this.setState({ recaptchaResponse: data });
-    this.response();
-    this.setState({name:"", email: "",phone:"",message:"",data:"",errors:""});
-   
-  }
 
   handleSubmit = event => {
     event.preventDefault();
     if(this.handleValidation())
     {
-      this.state.data = { "name" : this.state.name , "email" : this.state.email , "phone" : this.state.phone , "message" : this.state.message }
-      this.CheckRecaptcha();          
+      this.state.data = { "name" : this.state.name , 
+                          "email" : this.state.email, 
+                          "phone" : this.state.phone, 
+                          "message" : this.state.message, 
+                          "recaptchaToken": this.state.recaptchaToken, 
+                        }
+      this.response();          
     }
     
   }
