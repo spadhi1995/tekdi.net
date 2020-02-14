@@ -5,6 +5,7 @@ import Layout from '../components/layout/baselayout';
 import Banner from "../components/common/banner/banner";
 import CaseStudyInfo from '../components/common/case-studies/case-study-info';
 import { HTMLContent } from '../components/common/content';
+import ContactUs from '../components/common/contact/contact';
 class CaseStudyTemplate extends React.Component {
   constructor(props) {
     super(props)
@@ -41,6 +42,7 @@ class CaseStudyTemplate extends React.Component {
             contentComponent={HTMLContent}
           />
           ) : <h3>Please fill the information</h3> }
+           <ContactUs />
         </Layout>
       )
   }
