@@ -25,7 +25,22 @@ projectInfo:
     - title: 39+
       description: >
         Projects delivered
-caseStudyTag:  E-Learning Platform
+journeyInfo:
+    - title: '2002'
+      description: >
+        Open Source Produtcs created
+    - title: '2004'
+      description: >
+        Projects delivered
+    - title: '2006'
+      description: >
+        Years in service
+    - title: '2007'
+      description: >
+        Open Source Produtcs created
+    - title: '2009'
+      description: >
+        Projects delivered
  
         
 ---
