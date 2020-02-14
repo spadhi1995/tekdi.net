@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql} from 'gatsby';
-import { HTMLContent } from '../../components/common/content';
 import Layout from '../../components/layout/baselayout';
 import Banner from '../../components/common/banner/banner';
 import CompanyInfo from '../../components/company/company-info';
+import CorePurpose from '../../components/company/core-purpose';
+import CoreValuesCarousel from '../../components/company/core-values-carousel';
 
 const CompanyTemplate = ({ data }) => {
   const { markdownRemark: post } = data
@@ -24,10 +25,17 @@ const CompanyTemplate = ({ data }) => {
           bannerSubTitle = {post.frontmatter.bannerSubTitle}
       />
       <CompanyInfo 
-       content={post.html}
-        contentComponent={HTMLContent}
+        companyInfo={post.frontmatter.companyInfo}
+        companyImg={post.frontmatter.companyImg}
+        projectInfo={post.frontmatter.projectInfo}
       />
-      <div id="team">
+      <CorePurpose 
+        corePurposeHeading={post.frontmatter.corePurposeHeading}
+        corePurposeDesc={post.frontmatter.corePurposeDesc}
+        corePurposeImg={post.frontmatter.corePurposeImg}
+      />
+      <CoreValuesCarousel />
+      {/* <div id="team">
       <CompanyInfo 
         teamheading= {post.frontmatter.teamheading}
         content={post.html}
@@ -40,7 +48,7 @@ const CompanyTemplate = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
       />
-      </div>
+      </div> */}
     </Layout>
   )
 }
@@ -61,8 +69,27 @@ export const pageQuery = graphql`
         title
         bannerTitle
         bannerSubTitle
-        teamheading
-        visionheading
+        companyInfo
+        companyImg {
+          childImageSharp {
+            fluid(maxWidth: 350, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        projectInfo {
+          title
+          description   
+        }
+        corePurposeHeading
+        corePurposeDesc
+        corePurposeImg {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

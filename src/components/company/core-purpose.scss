@@ -1,0 +1,34 @@
+.core-purpose {
+    background: #f2f2f2;
+    padding: 20px;
+
+    .left-section {
+        position: relative;
+        .content {
+            position: absolute;
+            background-color: #fff;
+            padding: 30px;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .core-purpose {
+        padding: 40px 20px;
+    
+        .left-section {
+            .content {
+                position: absolute;
+                padding: 60px;
+                width: 70%;
+                right: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
