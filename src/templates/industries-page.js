@@ -27,6 +27,7 @@ const IndustriesPage = ({ data }) => {
         />
         <IndustriesInfo 
           subheading={post.frontmatter.subheading}
+          bgimage={post.frontmatter.bgimage}
           content={post.html}
           contentComponent={HTMLContent}
           caseStudyTag={post.frontmatter.caseStudyTag}
@@ -68,7 +69,14 @@ export const pageQuery = graphql`
         features {
             title
             description   
-        }        
+        }     
+        bgimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }   
       }
     }
   }

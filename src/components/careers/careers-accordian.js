@@ -17,10 +17,12 @@ class Openingslist extends React.Component {
         <Collapsible trigger={`${post.frontmatter.heading}`} key={post.id}>
           <ul className="unstyled mb-4">
             <li className="mr-4">Type <span className="text-black">{post.frontmatter.type}</span></li>
-            <li>Location <span className="text-black">{post.frontmatter.location}</span></li>
+            <li className="mr-4">Location <span className="text-black">{post.frontmatter.location}</span></li>
+            <li className="mr-4">Posts <span className="text-black">{post.frontmatter.vacancy}</span></li>
+            <li>Experience <span className="text-black">{post.frontmatter.experience}</span></li>
           </ul>
           <p>
-            {post.frontmatter.subheading}
+            {post.html}
           </p>
           <CareersModal position = {post.frontmatter.heading} />
         </Collapsible>
@@ -47,7 +49,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt
+              html
               id
               fields {
                 slug
@@ -57,7 +59,8 @@ export default () => (
                 heading
                 type
                 location
-                subheading
+                vacancy
+                experience
               }
             }
           }
