@@ -1,6 +1,6 @@
 ---
 templateKey: core-values
-heading: Enjoy the Magic of Creation!
+heading: Giving Back
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Giving back & being socially responsible in a very important part of Tekdi. For us doing good for society is a purpose, an attitude and a way of life and conducting business. 

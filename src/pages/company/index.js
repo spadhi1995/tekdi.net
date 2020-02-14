@@ -35,10 +35,16 @@ const CompanyTemplate = ({ data }) => {
         corePurposeDesc={post.frontmatter.corePurposeDesc}
         corePurposeImg={post.frontmatter.corePurposeImg}
       />
-      <CoreValuesCarousel />
+      <div id="vision">
+        <CoreValuesCarousel />
+      </div>
+      
       {/* <CompanyJourney 
         journeyInfo={post.frontmatter.journeyInfo}
       /> */}
+      <div id="team">
+
+      </div>
     </Layout>
   )
 }

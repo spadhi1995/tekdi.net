@@ -34,10 +34,10 @@ const ProductsPlatforms = ({ data }) => {
           excerpt={post.excerpt}
           caseStudyTag={post.frontmatter.caseStudyTag}
         />
-        <FeaturesInfo 
+        {/* <FeaturesInfo 
         featuresubheading={post.frontmatter.featuresubheading}
         features={post.frontmatter.features}
-        />
+        /> */}
         <ProductList />
         <ContactUs />
       </div>

@@ -7,15 +7,24 @@
     .swiper-container {
         padding-bottom: 30px;
     }
+    
         .item {
             background-color: #fff;
             padding: 30px;
             box-shadow: 0 0 14px 0 #b9b9b9;
+            height: auto;
+            flex: 1;
 
             h4 {
                 font-size: 18px;
                 line-height: 24px;
             }
+            .main-content {
+                ul {
+                    padding-left: 20px;
+                }
+            }
+            
         }
 }
 @media (min-width: 992px) {
