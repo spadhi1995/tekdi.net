@@ -3,14 +3,17 @@ templateKey: blog-post
 title: Tekdi enters its teens
 date: 2019-04-08T15:04:10.000Z
 featuredpost: true
-author: Ashwin
-category: 
-  - Technology
+author: Parth
 featuredimage: /img/blog/tekdi-enters-its-teens.png
-description:
+
+category: 
+  - About Tekdi
+
 tags:
   - website
+description: test
 ---
+
 ![default](/img/blog/tekdi-enters-its-teens.png)
 
 Teens is that time between being a child and an adult when you start experiencing freedom & start liking the taste of it. It's that time when you slowly start taking the controls of your life into your own hands. It is like the first time you drive a car on a learner’s license with an adult [riding shotgun](https://en.wikipedia.org/wiki/Riding_shotgun). It's that time when your parents slowly start transitioning to being ‘guardians’ and helping you take control.
