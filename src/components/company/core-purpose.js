@@ -15,7 +15,7 @@ const CorePurpose = ({
         <div className="row">
         <div className="col-lg-6 col-sm-4 col-xs-12 left-section">
           <div className="content text-black">
-            <h3 class="com-heading">{corePurposeHeading}</h3>
+            <h3 className="com-heading">{corePurposeHeading}</h3>
             <p>{corePurposeDesc}</p>
           </div>
         </div>
