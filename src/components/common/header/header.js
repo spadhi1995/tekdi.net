@@ -31,8 +31,8 @@ const Header = () => {
                         </div>
                         <div className="logo logo-sm float-left">
                             <Link to="/">
-                                <img className="logo-white-text" src={`${withPrefix('/')}img/logo/logo-white-txt-sm.png`} alt="logo" />
-                                <img className="logo-black-text" src={`${withPrefix('/')}img/logo/logo-black-txt-sm.png`} alt="logo" />
+                                <img className="logo-white-text" src={`${withPrefix('/')}img/logo/logo-white-txt-lg.png`} alt="logo" />
+                                <img className="logo-black-text" src={`${withPrefix('/')}img/logo/logo-black-txt-lg.png`} alt="logo" />
                             </Link>
                         </div>
                         <Navbar />

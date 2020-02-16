@@ -27,21 +27,34 @@ projectInfo:
         Projects delivered
 journeyInfo:
     - title: '2002'
+      icon: /img/company/icon1.png
       description: >
-        Open Source Produtcs created
+        Founder met on the hill of the Pune, got involved in saving the hills and green cover from commercial motives.
     - title: '2004'
+      icon: /img/company/icon2.png
       description: >
-        Projects delivered
+        Founder launched the Tekdi Eco Portal, an online forum for green activities to discuss ideas.
     - title: '2006'
+      icon: /img/company/icon3.png
       description: >
-        Years in service
+        Tekdi Eco Services was incorporated. Started off in the ground floor of Parth's house. 
     - title: '2007'
+      icon: /img/company/icon4.png
       description: >
-        Open Source Produtcs created
+        First team member joins.
     - title: '2009'
+      icon: /img/company/icon5.png
       description: >
-        Projects delivered
- 
-        
+        Products in the Joomla space launched under the Techjoomla brand.
+lifeAtTekdiImg:
+    - img: /img/company/photos/1.jpg
+    - img: /img/company/photos/7.jpg
+    - img: /img/company/photos/6.jpg
+    - img: /img/company/photos/4.jpg
+    - img: /img/company/photos/5.jpg
+    - img: /img/company/photos/3.jpg
+    - img: /img/company/photos/2.jpg
+    
+
 ---
 
