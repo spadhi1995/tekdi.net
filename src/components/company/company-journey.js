@@ -11,10 +11,10 @@ const JourneyInfo = ({
       <div className="container">
           <h2 className="com-heading text-black text-center">The Journey</h2>
             {JourneyItems.map(item => (
-            <div className="item" key={item.id}>
+            <div className="item">
               <div className="item-inner">
                 <h4 className="text-black font-weight-bold">{item.title}</h4>
-                <p class="content">
+                <p className="content">
                   {item.description}
                 </p>
                 <div className="icon">
