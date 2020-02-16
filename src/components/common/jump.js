@@ -1,7 +1,7 @@
 import doJump from 'jump.js';
 import { navigate } from "gatsby";
 
-const jump = (e, offset = -130) => {
+const jump = (e, offset = -100) => {
   const url = e.target.dataset.link;
   const urlParts = url.split('#');
 
