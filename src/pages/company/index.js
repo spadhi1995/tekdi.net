@@ -54,8 +54,10 @@ const CompanyTemplate = ({ data }) => {
 
 CompanyTemplate.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  })
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default CompanyTemplate;
