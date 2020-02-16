@@ -1,0 +1,13 @@
+.life-at-tekdi {
+    background: #f2f2f2;
+    padding: 20px;
+
+    .pics {
+        padding: 15px;
+    }
+}
+@media(min-width: 768px){
+    .life-at-tekdi {
+        padding: 40px 20px;
+    }
+}

@@ -8,6 +8,7 @@ import CompanyInfo from '../../components/company/company-info';
 import CorePurpose from '../../components/company/core-purpose';
 import CoreValuesCarousel from '../../components/company/core-values-carousel';
 import CompanyJourney from '../../components/company/company-journey';
+import LifeAtTekdiInfo from '../../components/company/life-at-tekdi';
 
 const CompanyTemplate = ({ data }) => {
   const { markdownRemark: post } = data
@@ -39,11 +40,13 @@ const CompanyTemplate = ({ data }) => {
         <CoreValuesCarousel />
       </div>
       
-      {/* <CompanyJourney 
+      <CompanyJourney 
         journeyInfo={post.frontmatter.journeyInfo}
-      /> */}
+      />
       <div id="team">
-
+          <LifeAtTekdiInfo 
+            lifeAtTekdiImg={post.frontmatter.lifeAtTekdiImg}
+          />
       </div>
     </Layout>
   )
@@ -89,6 +92,22 @@ export const pageQuery = graphql`
         journeyInfo {
           title
           description
+          icon {
+            childImageSharp {
+              fluid(maxWidth: 90, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        lifeAtTekdiImg {
+          img {
+            childImageSharp {
+              fluid(maxHeight: 260, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

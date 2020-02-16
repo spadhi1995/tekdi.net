@@ -1,3 +1,170 @@
 .company-journey {
-    margin: 0 auto;
+    h4 {
+        color: #00d0d2;
+    }
+    .item {
+        position: relative;
+        .item-inner {
+            margin: 0 0 20px 90px;
+        }
+
+        .icon {
+            position: absolute;
+            top: 10px;
+            left: 0;
+
+            &:after {
+                content: '';
+                border-left: 1px dashed #333;
+                position: absolute;
+                left: 50%;
+                height: 100%;
+            }
+        }
+        &:last-child {
+            .icon:after {
+                border-left: none;
+            }
+        }
+        h4 {
+            font-size: 24px;
+            padding: 15px 0 5px 20px;
+        }
+        .content {
+            border-top: 1px dashed #333;
+            padding: 10px 0 5px 20px;
+            margin: 0;
+        }
+    }  
+}
+@media (min-width: 576px) {
+    .company-journey {
+        margin: 0 auto;
+        width: 450px;
+
+        .item {
+            position: relative;
+
+            .item-inner {
+                margin: 0 0 20px 0;
+            }
+
+            .icon {
+                position: absolute;
+                top: 10px;
+                left: unset;
+
+                &:after {
+                    content: '';
+                    border-left: 1px dashed #333;
+                    position: absolute;
+                    left: 50%;
+                    height: 100%;
+                }
+            }
+            &:last-child {
+                .icon:after {
+                    border-left: none;
+                }
+            }
+            
+            &:nth-child(odd) {
+                width: 50%;
+
+                .icon {
+                    right: -40px;
+                }
+                .item-inner {
+                    margin-right: 40px;
+                }
+                h4, .content {
+                    padding: 10px 30px 5px 0;
+                    margin: 0;
+                }
+            }
+            &:nth-child(even) {
+                margin-left: 50%;
+                .icon {
+                    left: -50px;
+                }
+                .item-inner {
+                    margin-left: 40px;
+                }
+                h4, .content {
+                    padding: 10px 0 5px 30px;
+                    margin: 0;
+                }
+            }
+            h4 {
+                font-size: 28px;
+                padding: 5px 30px;
+            }
+            .content {
+                border-top: 1px dashed #333;
+            }
+        }  
+    }
+}
+@media (min-width: 768px) {
+    .company-journey {
+        margin: 0 auto;
+        width: 600px;
+
+        .item {
+            position: relative;
+
+            .icon {
+                position: absolute;
+                top: 10px;
+
+                &:after {
+                    content: '';
+                    border-left: 1px dashed #333;
+                    position: absolute;
+                    left: 50%;
+                    height: 100%;
+                }
+            }
+            &:last-child {
+                .icon:after {
+                    border-left: none;
+                }
+            }
+            
+            &:nth-child(odd) {
+                width: 50%;
+
+                .icon {
+                    right: -40px;
+                }
+                .item-inner {
+                    margin-right: 40px;
+                }
+                h4, .content {
+                    padding: 10px 30px 5px 0;
+                    margin: 0;
+                }
+            }
+            &:nth-child(even) {
+                margin-left: 50%;
+                .icon {
+                    left: -50px;
+                }
+                .item-inner {
+                    margin-left: 40px;
+                }
+                h4, .content {
+                    padding: 10px 0 5px 30px;
+                    margin: 0;
+                }
+            }
+            h4 {
+                font-size: 32px;
+                padding: 5px 30px;
+            }
+            .content {
+                border-top: 1px dashed #333;
+            }
+        }  
+    }
 }
