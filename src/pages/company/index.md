@@ -25,7 +25,7 @@ projectInfo:
     - title: 39+
       description: >
         Projects delivered
-journeyInfo:
+journeyinfo:
     - title: '2002'
       icon: /img/company/icon1.png
       description: >
@@ -46,7 +46,7 @@ journeyInfo:
       icon: /img/company/icon5.png
       description: >
         Products in the Joomla space launched under the Techjoomla brand.
-lifeAtTekdiImg:
+lifeattekdiimg:
     - img: /img/company/photos/1.jpg
     - img: /img/company/photos/7.jpg
     - img: /img/company/photos/6.jpg
