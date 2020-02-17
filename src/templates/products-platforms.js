@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import SEO from '../components/common/site-metadata';
 import { graphql} from 'gatsby';
 import Layout from '../components/layout/baselayout';
 import Banner from "../components/common/banner/banner";
 import Products from '../components/products-platforms/product-info';
 import ProductList from '../components/products-platforms/product-list';
-import FeaturesInfo from '../components/common/features/features-info';
+// import FeaturesInfo from '../components/common/features/features-info';
 import ContactUs from '../components/common/contact/contact';
 
 const ProductsPlatforms = ({ data }) => {
@@ -14,13 +14,17 @@ const ProductsPlatforms = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet>
+      <SEO 
+        title={post.frontmatter.title}
+        description={post.frontmatter.subheading}
+      />
+      {/* <Helmet>
         <title>{post.frontmatter.title}</title>
         <meta
           name="description"
           content={`${post.frontmatter.subheading}`}
         />
-      </Helmet>
+      </Helmet> */}
       <div className="products-platforms">
         <Banner 
           bannerTitle= {post.frontmatter.bannerTitle} 

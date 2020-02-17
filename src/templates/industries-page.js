@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import SEO from '../components/common/site-metadata';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout/baselayout';
 import Banner from '../components/common/banner/banner';
@@ -13,7 +13,11 @@ const IndustriesPage = ({ data }) => {
   const { markdownRemark: post } = data
   return (
     <Layout> 
-      <Helmet>
+      <SEO 
+        title={post.frontmatter.title}
+        description={post.frontmatter.subheading}
+      />
+      {/* <Helmet>
         <title>{post.frontmatter.title}</title>
         <meta property="og:title" content={`${post.frontmatter.title}`} />
         <meta property="og:description" content={`${post.frontmatter.subheading}`} />
@@ -21,7 +25,7 @@ const IndustriesPage = ({ data }) => {
         <meta property="og:type" content="website" />
 
         <meta name="description" content={`${post.frontmatter.subheading}`} />
-      </Helmet>
+      </Helmet> */}
       <div className="industries">
         <Banner 
           bannerTitle= {post.frontmatter.bannerTitle} 
