@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import SEO from '../../components/common/site-metadata';
 import Layout from '../../components/layout/baselayout';
 import Openingslist from '../../components/careers/careers-accordian'; 
 import Banner from '../../components/common/banner/banner';
@@ -11,14 +12,18 @@ const CareersIndexPage =  ({data}) => {
 
     return (
       <Layout>
+        <SEO 
+          title={frontmatter.title}
+          description={frontmatter.description}
+        />
         <Helmet>
         <script src={`https://www.google.com/recaptcha/api.js? r=${Math.random()}`} async defer>
-    </script>
-          <title>{frontmatter.title}</title>
+       </script>
+          {/* <title>{frontmatter.title}</title>
           <meta
             name="description"
             content={`${frontmatter.description}`}
-          />
+          /> */}
         </Helmet>
         <div className="careers-page">
           <Banner 

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql} from 'gatsby';
+import SEO from '../../components/common/site-metadata';
 import Layout from '../../components/layout/baselayout';
 import Banner from '../../components/common/banner/banner';
 import CompanyInfo from '../../components/company/company-info';
@@ -15,8 +16,11 @@ const CompanyTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO 
+        title={post.frontmatter.title}
+        description="We focus on providing you with cutting edge technology solutions. Our emphasis is on using Open Source technologies in order to deliver the most cost effective, secure & up-to-date solutions & enabling you with the tools to take your business to the next level."
+      />
       <Helmet>
-        <title>{post.frontmatter.title}</title>
         {/* <meta
           name="description"
           content={`${frontmatter.subheading}`}

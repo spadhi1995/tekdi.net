@@ -5,15 +5,15 @@ export const menuData = [
     },
     {
         label:'Industries',
-        url:'/industries'
+        url:'/industries/education/'
     },
     {
         label:'Digital Transformation',
-        url:'/digital-transformation'
+        url:'/digital-transformation/content-management-digital-publishing/'
     },
     {
         label:'Products',
-        url:'/products-and-platforms'
+        url:'/products-and-platforms/e-learning-platform'
     },
     {
         label:'Careers',
