@@ -41,11 +41,11 @@ const CompanyTemplate = ({ data }) => {
       </div>
       
       <CompanyJourney 
-        journeyInfo={post.frontmatter.journeyInfo}
+        journeyInfo={post.frontmatter.journeyinfo}
       />
       <div id="team">
           <LifeAtTekdiInfo 
-            lifeAtTekdiImg={post.frontmatter.lifeAtTekdiImg}
+            lifeAtTekdiImg={post.frontmatter.lifeattekdiimg}
           />
       </div>
     </Layout>
@@ -91,7 +91,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        journeyInfo {
+        journeyinfo {
           title
           description
           icon {
@@ -102,7 +102,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        lifeAtTekdiImg {
+        lifeattekdiimg {
           img {
             childImageSharp {
               fluid(maxHeight: 260, quality: 100) {
