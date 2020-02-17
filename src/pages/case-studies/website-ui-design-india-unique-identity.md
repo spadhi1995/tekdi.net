@@ -2,12 +2,15 @@
 templateKey: case-study
 title: Mobile Website and UI revamp for India's Unique Indentity Program
 heading: Website and UI revamp for India's Unique Indentity Program
-summary: 
+summary: Revamp of the UIDAI website to make it responsive. In addition, UI design for all public web properties and style guides for internal portals.
 tags: 
    - cms
    - government-public-sector
+   - publishing-media-news
 bannerTitle: Mobile Website and UI revamp for India's Unique Indentity Program. Serving 50 million hits a month.
 bannerSubTitle: Case Studies
+
+image: /img/case-studies/aadhaar-dashboard.png
 ---
 
 The Aadhaar project by Indian Government operates on a massive scale. Unique Identification Authority of India (UIDAI), which handles this project, under the Ministry of Electronics and Information Technology (MeitY) has issued more than 120 crores (1.2 billion) Aadhaar numbers to the residents of India till date. For context, the Aadhaar number in India is somewhat similar to the Social Security Number in the US.

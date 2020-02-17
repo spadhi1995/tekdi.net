@@ -43,7 +43,7 @@ class CoreValuesCarousel extends React.Component {
       };
 
       return (
-      <div className="core-values section3 mb-5"> 
+      <div className="core-values"> 
         <div className="bg-image">
           <h2 className="com-heading text-center text-white">Core Values</h2>
         </div>
@@ -52,7 +52,7 @@ class CoreValuesCarousel extends React.Component {
                 {posts &&
                     posts.map(({ node: post }) => (
                     <div className="item" key={post.id}>
-                      <h4 className="text-black font-weight-bold">{post.frontmatter.heading}</h4>
+                      <h4 className="text-black font-weight-bold mb-3">{post.frontmatter.heading}</h4>
                       <div className="main-content">
                         <CoreValuesDetail
                           content = {post.html}

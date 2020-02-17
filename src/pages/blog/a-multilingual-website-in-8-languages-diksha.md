@@ -4,16 +4,19 @@ title: A Multilingual Website in 8 Languages - DIKSHA
 date: 2019-09-27T15:04:10.000Z
 featuredpost: false
 author: Lakhan Mandloi 
-category: 
-  - Beyond Joomla
 featuredimage: /img/blog/a-multilingual-website-in-8-languages.png
-description: 
+
+category: 
+  - Education
+
 tags:
   - website
   - language
   - margin 
   - height 
   - Font
+
+description: 
 ---
 ![Multilingual](/img/blog/a-multilingual-website-in-8-languages.png)
 

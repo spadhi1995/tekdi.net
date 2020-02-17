@@ -16,10 +16,12 @@ const DigitalEvolution = ({ data }) => {
     <Layout>
       <Helmet>
         <title>{post.frontmatter.title}</title>
-        <meta
-          name="description"
-          content={`${post.frontmatter.subheading}`}
-        />
+        <meta property="og:title" content={`${post.frontmatter.title}`} />
+        <meta property="og:description" content={`${post.frontmatter.subheading}`} />
+        <meta property="og:image" content={`${post.frontmatter.image}`} />
+        <meta property="og:type" content="website" />
+
+        <meta name="description" content={`${post.frontmatter.subheading}`} />
       </Helmet>
       <div className="digital-evolution-page">
         <Banner 
