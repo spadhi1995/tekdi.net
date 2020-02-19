@@ -73,7 +73,7 @@ class CareersModal extends React.Component {
 
    }
     await axios.post(
-     "https://1fhmqtz26j.execute-api.us-west-2.amazonaws.com/careers-prod",
+      process.env.GATSBY_AWS_API_GETEWAY_CAREERS,
       JSON.stringify (this.state.data),
       {
         headers: {
@@ -254,7 +254,7 @@ class CareersModal extends React.Component {
 
   
    this.setState({errors: errors});
-   if(FOrmISValid === true)
+   if(formIsValid === false)
    {
     this.setState({ buttonDisabled: false });
    }
