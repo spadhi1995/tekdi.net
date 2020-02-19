@@ -1,38 +1,5 @@
 export const menuData = [
     {
-        label:'Company',
-        url:'/company'
-    },
-    {
-        label:'Industries',
-        items: [
-            {
-                label:'Education',
-                url:'/industries/education',
-            },
-            {
-                label:'Agriculture',
-                url:'/industries/agriculture',
-            },
-            {
-                label:'Government and Public Sector',
-                url:'/industries/government-public-sector',
-            },
-            {
-                label:'Not for Profit Organisations',
-                url:'/industries/not-for-profit-organisations',
-            },
-            {
-                label:'Logistics & Transport',
-                url:'/industries/logistics-transport',
-            },
-            {
-                label:'Publishing, Media and News',
-                url:'/industries/publishing-media-news',
-            },            
-        ]
-    },
-    {
         label:'Digital Transformation',
         items: [
             {
@@ -83,12 +50,45 @@ export const menuData = [
         ]
     },
     {
+        label:'Industries',
+        items: [
+            {
+                label:'Education',
+                url:'/industries/education',
+            },
+            {
+                label:'Agriculture',
+                url:'/industries/agriculture',
+            },
+            {
+                label:'Government and Public Sector',
+                url:'/industries/government-public-sector',
+            },
+            {
+                label:'Not for Profit Organisations',
+                url:'/industries/not-for-profit-organisations',
+            },
+            {
+                label:'Logistics & Transport',
+                url:'/industries/logistics-transport',
+            },
+            {
+                label:'Publishing, Media and News',
+                url:'/industries/publishing-media-news',
+            },            
+        ]
+    },
+    {
         label:'Careers',
         url:'/careers'
     },
     {
         label:'Blog',
         url:'/blog'
+    },
+    {
+        label:'Company',
+        url:'/company'
     },
     {
         label:'Contact',
