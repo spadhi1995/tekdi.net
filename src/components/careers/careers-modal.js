@@ -37,14 +37,9 @@ class CareersModal extends React.Component {
   
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
-    this.handleCloseModal = this.loadCpatcha.bind(this);
     this.fileInput = React.createRef();
   }
   componentDidMount() {
-    loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
-  }
-  loadCpatcha()
-  {
     loadReCaptcha(process.env.GATSBY_GOOGLE_RECAPTCHA_KEY);
   }
   
