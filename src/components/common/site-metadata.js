@@ -44,14 +44,13 @@ const SEO = props => (
         />
 
         <meta name="theme-color" content="#fff" />
-
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content=""/>
+        <meta name="twitter:description" content={description}/>
         <meta property="og:type" content="website" />
-        {/* <meta property="og:title" content={title} /> */}
+        <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix('/')}img/tekdi-logo.png`}
-        />
+        <meta property="og:image" content={`${withPrefix('/')}img/tekdi-logo.png`} />
       </Helmet>
       );
     }}
