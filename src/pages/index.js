@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO 
         title={frontmatter.title}
-        description=""
+        description={frontmatter.description}
       />
        {/* <Helmet>
           <meta
