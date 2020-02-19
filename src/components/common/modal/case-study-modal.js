@@ -155,7 +155,8 @@ class CaseStudyModal extends React.Component {
   render () {
     return (
       <div>
-  <button onClick={this.handleOpenModal} className="btn-apply mb-4 p-0  font-weight-bold text-black mb-3">{this.props.caseStudyName}</button>
+  {/* <button onClick={this.handleOpenModal} className="btn-apply mb-4 p-0  font-weight-bold text-black mb-3">{this.props.caseStudyName}</button> */}
+  <Link to={this.props.slug}>{this.props.caseStudyName}</Link>
 
         <Modal 
            isOpen={this.state.showModal}
