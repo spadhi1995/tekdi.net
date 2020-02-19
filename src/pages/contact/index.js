@@ -1,8 +1,7 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-
+import SEO from '../../components/common/site-metadata';
 import Layout from '../../components/layout/baselayout';
 import Map from '../../components/contact/map';
 import ContactUs from '../../components/contact/contact';
@@ -13,13 +12,9 @@ const ContactPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (
     <Layout>
-       <Helmet>
-          <title>{frontmatter.title}</title>
-          <meta
-            name="description"
-            content={`${frontmatter.description}`}
-          />
-      </Helmet>
+      <SEO 
+          title={frontmatter.title}
+        />
       <div className="contact-page">
         <Banner bannerTitle= {frontmatter.title} bannerSubTitle = { frontmatter.banner_sub_title}/>
         <div className="container py-5 contact-us">

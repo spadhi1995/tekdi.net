@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import SEO from '../components/common/site-metadata'
 import Layout from '../components/layout/baselayout';
 import Slideshow from '../components/slideshow/slideshow';
 import AboutUs from '../components/home-about-us/about-us';
@@ -18,13 +19,16 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   return (
     <Layout>
-       <Helmet>
-          <title>{frontmatter.title}</title>
+      <SEO 
+        title={frontmatter.title}
+        description={frontmatter.description}
+      />
+       {/* <Helmet>
           <meta
             name="description"
             content={`${frontmatter.description}`}
           />
-      </Helmet>
+      </Helmet> */}
       <Slideshow />
       <AboutUs />
       <DigitalEvolution />

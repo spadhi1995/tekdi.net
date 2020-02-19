@@ -2,10 +2,9 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 module.exports = {
-  siteMetadata: {
-    title: 'Tekdi Technologies pvt. ltd.',
-    description:
-      '',
+    siteMetadata: {
+      title: 'Tekdi Technologies pvt. ltd.',
+      description: 'Tekdi was founded in 2006 with an aim to use technology to make a positive impact to society. Since then, we have empowered 100+ organisations with the technology solutions across verticals',
   },
   plugins: [
     'gatsby-plugin-sharp',

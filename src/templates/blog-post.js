@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import Helmet from 'react-helmet';
+// import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
+import SEO from '../components/common/site-metadata';
 import Layout from '../components/layout/baselayout';
 import Banner from '../components/common/banner/banner';
 import Content, { HTMLContent } from '../components/common/content';
@@ -17,7 +18,6 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet,
   image,
   author,
   date,
@@ -28,7 +28,7 @@ export const BlogPostTemplate = ({
 
   return (
     <section className="section">
-      {helmet || ''}
+      {/* {helmet || ''} */}
       {/* <div className="featured-thumbnail">
         <PreviewCompatibleImage
           imageInfo={{
@@ -80,7 +80,7 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  // helmet: PropTypes.object,
 }
 
 const BlogPost = ({ data }) => {
@@ -89,6 +89,10 @@ const BlogPost = ({ data }) => {
   return (
     
     <Layout>
+      <SEO 
+         title={post.frontmatter.title}
+         description={post.excerpt}
+      />
       <div className="blog-page">
       <Banner />
        <div className="container py-5">
@@ -98,15 +102,15 @@ const BlogPost = ({ data }) => {
               content={post.html}
               contentComponent={HTMLContent}
               description={post.frontmatter.description}
-              helmet={
-                <Helmet titleTemplate="%s | Blog">
-                  <title>{`${post.frontmatter.title}`}</title>
-                  <metaBlogPostTemplate
-                    name="description"
-                    content={`${post.frontmatter.description}`}
-                  />
-                </Helmet>
-              }
+              // helmet={
+              //   <Helmet titleTemplate="%s | Blog">
+              //     <title>{`${post.frontmatter.title}`}</title>
+              //     <metaBlogPostTemplate
+              //       name="description"
+              //       content={`${post.frontmatter.description}`}
+              //     />
+              //   </Helmet>
+              // }
               tags={post.frontmatter.tags}
               title={post.frontmatter.title}
               image={post.frontmatter.featuredimage}
@@ -139,6 +143,7 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
+      excerpt(pruneLength: 200)
       html
       fields {
         slug

@@ -1,7 +1,8 @@
 
 
 import Layout from '../components/layout/baselayout';
-import Helmet from 'react-helmet';
+//import Helmet from 'react-helmet';
+import SEO from '../components/common/site-metadata';
 import BlogPagination from '../components/blog/pagination';
 import renderList from '../components/blog/blog-list';
 import { Link, graphql } from 'gatsby'
@@ -19,13 +20,16 @@ import React, { Fragment } from 'react'
 
     return (
       <Layout>
-        <Helmet>
+        {/* <Helmet>
           <title>Blogs</title>
           <metaBlogPostTemplate
             name="description"
             content= ""
           />
-        </Helmet>
+        </Helmet> */}
+        <SEO 
+          title="Blogs"
+        />
         <div className="blog-page">
           <Banner 
             bannerTitle= "Blogs" 
