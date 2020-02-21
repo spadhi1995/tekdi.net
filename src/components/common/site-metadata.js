@@ -49,6 +49,7 @@ const SEO = props => (
         <meta name="twitter:description" content={description}/>
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content={`${withPrefix('/')}img/tekdi-logo.png`} />
       </Helmet>
