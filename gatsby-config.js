@@ -10,6 +10,10 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-XXXXXXXXX-X",
+      },
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
