@@ -1,5 +1,5 @@
 ---
-templateKey: industries-page
+templateKey: industries-page-x
 
 heading: Logistics & Transport
 title: Logistics & Transport
