@@ -8,6 +8,7 @@ export const menuData = [
         label:'Industries',
         link:'#',
         key: 'industries',
+        className: 'parent',
         submenus: [
             {
                 label:'Education',
@@ -39,6 +40,7 @@ export const menuData = [
         label:'Digital Transformation',
         link:'#',
         key: 'digital',
+        className: 'parent',
         submenus: [
             {
                 label:'Content Management & Digital Publishing',
@@ -70,6 +72,7 @@ export const menuData = [
         label:'Products',
         link:'#',
         key: 'products',
+        className: 'parent',
         submenus: [
             {
                 label:'E-Learning Platform',
