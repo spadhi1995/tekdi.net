@@ -1,97 +1,107 @@
 export const menuData = [
     {
         label:'Company',
-        url:'/company'
+        link:'/company',
+        key: 'company'
     },
     {
         label:'Industries',
-        items: [
+        link:'#',
+        key: 'industries',
+        submenus: [
             {
                 label:'Education',
-                url:'/industries/education',
+                link:'/industries/education',
             },
             {
                 label:'Agriculture',
-                url:'/industries/agriculture',
+                link:'/industries/agriculture',
             },
             {
-                label:'Government and Public Sector',
-                url:'/industries/government-public-sector',
+                label:'Government Public Sector',
+                link:'/industries/government-public-sector',
             },
             {
                 label:'Not for Profit Organisations',
-                url:'/industries/not-for-profit-organisations',
+                link:'/industries/not-for-profit-organisations',
             },
             {
-                label:'Logistics & Transport',
-                url:'/industries/logistics-transport',
+                label:'Logistics Transport',
+                link:'/industries/logistics-transport',
             },
             {
                 label:'Publishing, Media and News',
-                url:'/industries/publishing-media-news',
-            },            
+                link:'/industries/publishing-media-news',
+            }
         ]
     },
     {
         label:'Digital Transformation',
-        items: [
+        link:'#',
+        key: 'digital',
+        submenus: [
             {
                 label:'Content Management & Digital Publishing',
-                url:'/digital-transformation/content-management-digital-publishing',
+                link:'/digital-transformation/content-management-digital-publishing',
             },
             {
                 label:'Business Process Transformation',
-                url:'/digital-transformation/business-process-transformation',
+                link:'/digital-transformation/business-process-transformation',
             },
             {
                 label:'E-commerce and Marketplaces',
-                url:'/digital-transformation/ecommerce-and-marketplaces',
+                link:'/digital-transformation/ecommerce-and-marketplaces',
             },
             {
                 label:'Learning and Education technology',
-                url:'/digital-transformation/learning-edtech',
+                link:'/digital-transformation/learning-edtech',
             },
             {
                 label:'Technology enablement of Nonprofits',
-                url:'/digital-transformation/technology-for-nonprofits',
+                link:'/digital-transformation/technology-for-nonprofits',
             },
             {
                 label:'Transportation',
-                url:'/digital-transformation/transportation',
+                link:'/digital-transformation/transportation',
             },            
         ]
     },
     {
         label:'Products',
-        items: [
+        link:'#',
+        key: 'products',
+        submenus: [
             {
                 label:'E-Learning Platform',
-                url:'/products-and-platforms/e-learning-platform',
+                link:'/products-and-platforms/e-learning-platform',
             },
             {
                 label:'Non Profit Management',
-                url:'/products-and-platforms/non-profit-management',
+                link:'/products-and-platforms/non-profit-management',
             },
             {
                 label:'Enterprise Application Development Platform',
-                url:'/products-and-platforms/enterprise-application-development-platform',
+                link:'/products-and-platforms/enterprise-application-development-platform',
             },
             {
                 label:'Unite',
-                url:'/products-and-platforms/unite',
+                link:'/products-and-platforms/unite',
             },
         ]
     },
     {
         label:'Careers',
-        url:'/careers'
+        link:'/careers',
+        key: 'careers',
     },
     {
         label:'Blog',
-        url:'/blog'
+        link:'/blog',
+        key: 'blog',
     },
     {
         label:'Contact',
-        url:'/contact'
+        link:'/contact',
+        key: 'contact',
     }
 ];
