@@ -1,5 +1,4 @@
 import React, {useReducer} from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {CSSTransition} from 'react-transition-group';
 
@@ -32,12 +31,7 @@ const MainMenu = ({items}) => {
   const [menuState, dispatch] = useReducer(menuReducer, initialState);
 
   return (
-    <nav className="mainmenu float-right" role="navigation" aria-label="main-navigation">
-      {/* <button class="navbar-burger burger" data-target="navMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button> */}
+    <nav className="mainmenu" role="navigation" aria-label="main-navigation">
       <div id="navMenu" class="navbar-menu ">
         <ul className="menu-items unstyled">
           {items.map(item => {
@@ -101,12 +95,5 @@ const MainMenu = ({items}) => {
 }
 
 MainMenu.displayName = 'mainmenu';
-
-// MainMenu.propTypes = {
-//   items: PropTypes.arrayOf(PropTypes.shape({
-//     label: PropTypes.string.isRequired,
-//     link: PropTypes.string.isRequired
-//   }))
-// };
 
 export default MainMenu;
