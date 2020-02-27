@@ -99,8 +99,8 @@ export const menuData = [
     },
     {
         label:'Company',
-        link:'/company',
-        key: '/company'
+        url:'/company',
+        key:'company'
     },
     {
         label:'Contact',
