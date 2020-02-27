@@ -3,7 +3,7 @@
     .swiper-slide  {
         height: 80px;
 
-        .gatsby-image-wrapper  {
+        .gatsby-image-wrapper {
             position: absolute;
             top: 50%;
             transform: translate(0, -50%);
@@ -11,19 +11,17 @@
             width: 100%;
 
             img {
-               -webkit-filter: grayscale(100%);
-               -moz-filter: grayscale(100%);
-               -ms-filter: grayscale(100%);
-               filter: grayscale(100%);
-               filter: #ccc; 
-
-            //    &:hover {
-            //         -webkit-filter: none;
-            //         -moz-filter: none;
-            //         -ms-filter: none;
-            //         filter: none;
-            //     }
+                -webkit-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                filter: grayscale(100%);
             }
         }
+        &:hover img {
+            -webkit-filter: none;
+            -moz-filter: none;
+            -ms-filter: none;
+            filter: none;
+        }    
     }
 }
