@@ -30,9 +30,11 @@ const MainMenu = ({items}) => {
 
   const [menuState, dispatch] = useReducer(menuReducer, initialState);
 
+  var url =  typeof window !== 'undefined' ? window.location.pathname : '';
+
   return (
     <nav className="mainmenu" role="navigation" aria-label="main-navigation">
-      <div id="navMenu" class="navbar-menu ">
+      <div id="navMenu" className="navbar-menu ">
         <ul className="menu-items unstyled">
           {items.map(item => {
             let props = {};
@@ -49,7 +51,7 @@ const MainMenu = ({items}) => {
             let isMenuActive = false;
             if (item.link && item.submenus) {
               submenuD = item.submenus.map(submenu => {
-                const isMenuActiveInternal = window.location.pathname === submenu.link;
+                const isMenuActiveInternal = url === submenu.link;
                 if (isMenuActiveInternal) {
                   isMenuActive = isMenuActiveInternal;
                 }
@@ -69,7 +71,7 @@ const MainMenu = ({items}) => {
               {
                 'parentmenu-active': isMenuActive,
                 'parentmenu-open': menuState[item.key],
-                'menu-active': item.link === window.location.pathname
+                'menu-active': item.link === url
               },
               `mainmenu-${item.className}`
             );

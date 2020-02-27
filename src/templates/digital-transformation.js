@@ -27,7 +27,7 @@ const DigitalEvolution = ({ data }) => {
 
         <meta name="description" content={`${post.frontmatter.subheading}`} />
       </Helmet> */}
-      <div className="digital-evolution-page">
+      <div className= {`digital-evolution-page ${post.frontmatter.title}`}>
         <Banner 
           bannerTitle= {post.frontmatter.bannerTitle} 
           bannerSubTitle = {post.frontmatter.bannerSubTitle}
