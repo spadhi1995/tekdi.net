@@ -99,7 +99,7 @@ export const menuData = [
     },
     {
         label:'Company',
-        url:'/company',
+        link:'/company',
         key:'company'
     },
     {
