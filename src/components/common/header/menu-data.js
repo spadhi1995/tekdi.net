@@ -57,7 +57,10 @@ export const menuData = [
     },
     {
         label:'Industries',
-        items: [
+        link:'#',
+        key: 'industries',
+        className: 'parent',
+        submenus: [
             {
                 label:'Education',
                 url:'/industries/education',

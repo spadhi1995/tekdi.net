@@ -15,13 +15,15 @@
                 -moz-filter: grayscale(100%);
                 -ms-filter: grayscale(100%);
                 filter: grayscale(100%);
+                filter: #ccc; 
             }
         }
+     
         &:hover img {
-            -webkit-filter: none;
-            -moz-filter: none;
-            -ms-filter: none;
-            filter: none;
-        }    
+            -webkit-filter: unset;
+            -moz-filter: unset;
+            -ms-filter: unset;
+            filter: unset;
+        }            
     }
 }
