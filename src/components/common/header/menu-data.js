@@ -63,27 +63,27 @@ export const menuData = [
         submenus: [
             {
                 label:'Education',
-                url:'/industries/education',
+                link:'/industries/education',
             },
             {
                 label:'Agriculture',
-                url:'/industries/agriculture',
+                link:'/industries/agriculture',
             },
             {
                 label:'Government and Public Sector',
-                url:'/industries/government-public-sector',
+                link:'/industries/government-public-sector',
             },
             {
                 label:'Not for Profit Organisations',
-                url:'/industries/not-for-profit-organisations',
+                link:'/industries/not-for-profit-organisations',
             },
             {
                 label:'Logistics & Transport',
-                url:'/industries/logistics-transport',
+                link:'/industries/logistics-transport',
             },
             {
                 label:'Publishing, Media and News',
-                url:'/industries/publishing-media-news',
+                link:'/industries/publishing-media-news',
             },            
         ]
     },
