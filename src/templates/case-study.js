@@ -13,22 +13,22 @@ class CaseStudyTemplate extends React.Component {
     const { markdownRemark: post } = this.props.data
       return (
         <Layout>
-         <SEO 
+          <SEO 
             title={post.frontmatter.title}
-            description={post.excerpt}
-            metakeywords={post.frontmatter.keywords}
+            metakeywords= {post.frontmatter.metakeywords}
+            metadescription={post.frontmatter.metadescription}
+            ogimage={post.frontmatter.ogimage}
           />
           <Banner 
-              bannerTitle= {post.frontmatter.bannerTitle} 
+              bannerTitle= {post.frontmatter.title} 
               bannerSubTitle = {post.frontmatter.bannerSubTitle}
-            />
-          {/* {this.modalSubmit === true ? ( */}
+          />
+          
           <CaseStudyInfo
-            heading = {post.frontmatter.heading}
+            heading = {post.frontmatter.title}
             content={post.html}
             contentComponent={HTMLContent}
           />
-          {/* ) : <h3>Please fill the information</h3> } */}
            <ContactUs />
         </Layout>
       )
@@ -48,10 +48,16 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        keywords
-        heading   
-        bannerTitle
         bannerSubTitle
+        metakeywords
+        metadescription
+        ogimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import SEO from '../components/common/site-metadata'
 import Layout from '../components/layout/baselayout';
 import Slideshow from '../components/slideshow/slideshow';
@@ -21,15 +20,10 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO 
         title={frontmatter.title}
-        description={frontmatter.description}
-        metakeywords= {frontmatter.keywords}
+        metakeywords= {frontmatter.metakeywords}
+        metadescription={frontmatter.metadescription}
+        ogimage={frontmatter.ogimage}
       />
-       {/* <Helmet>
-          <meta
-            name="description"
-            content={`${frontmatter.description}`}
-          />
-      </Helmet> */}
       <Slideshow />
       <AboutUs />
       <DigitalEvolution />
@@ -67,8 +61,15 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        description
-        keywords
+        metakeywords
+        metadescription
+        ogimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

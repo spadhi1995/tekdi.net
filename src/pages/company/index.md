@@ -1,15 +1,17 @@
 ---
 templateKey: company-page
 title: Company
-description: We focus on providing you with cutting edge technology solutions. Our emphasis is on using Open Source technologies in order to deliver the most cost effective, secure & up-to-date solutions & enabling you with the tools to take your business to the next level.
-bannerTitle: Company
-teamheading: Team
-visionheading: Vision
+metakeywords: ["", ""]
+metadescription: We focus on providing you with cutting edge technology solutions. Our emphasis is on using Open Source technologies in order to deliver the most cost effective, secure & up-to-date solutions & enabling you with the tools to take your business to the next level.
+ogimage: /img/company/about-company.jpg
+
 companyInfo: We focus on providing you with cutting edge technology solutions. Our emphasis is on using Open Source technologies in order to deliver the most cost effective, secure & up-to-date solutions & enabling you with the tools to take your business to the next level.
 companyImg: /img/company/about-company.jpg
+
 corePurposeHeading: Core Purpose
 corePurposeDesc: Be a catalyst for societal transformation by empowering organisations and individuals with technology
 corePurposeImg: /img/company/core-purpose.jpg
+
 projectInfo:
     - title: 20+
       description: >
@@ -26,6 +28,7 @@ projectInfo:
     - title: 39+
       description: >
         Projects delivered
+
 journeyinfo:
     - title: '2002'
       icon: /img/company/icon1.png
@@ -47,6 +50,7 @@ journeyinfo:
       icon: /img/company/icon5.png
       description: >
         Products in the Joomla space launched under the Techjoomla brand.
+
 lifeattekdiimg:
     - img: /img/company/photos/1.jpg
     - img: /img/company/photos/7.jpg

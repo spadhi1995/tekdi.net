@@ -32,7 +32,7 @@ class IndustriesList extends React.Component {
                     <PreviewCompatibleImage
                       imageInfo={{
                         image: post.frontmatter.bgimage,
-                        alt: `image thumbnail for post ${post.frontmatter.heading}`,
+                        alt: `image thumbnail for post ${post.frontmatter.title}`,
                       }}
                     />
                   </div>
@@ -40,7 +40,7 @@ class IndustriesList extends React.Component {
               <div className="text position-absolute">
                 <h4 className="mb-2">
                   <Link to={post.fields.slug} className="text-decoration-none text-white">
-                    {post.frontmatter.heading}
+                    {post.frontmatter.title}
                   </Link>
                 </h4>
                 <Link to={post.fields.slug} className="text-decoration-none">
@@ -79,7 +79,7 @@ export default () => (
                 slug
               }
               frontmatter {
-                heading
+                title
                 bgimage {
                   childImageSharp {
                     fluid(maxWidth: 250, maxHeight: 200, quality: 100) {

@@ -14,9 +14,15 @@ const ContactPage = ({ data }) => {
     <Layout>
       <SEO 
           title={frontmatter.title}
+          metakeywords= {frontmatter.metakeywords}
+          metadescription={frontmatter.metadescription}
+          ogimage={frontmatter.ogimage}
         />
       <div className="contact-page">
-        <Banner bannerTitle= {frontmatter.title} bannerSubTitle = { frontmatter.banner_sub_title}/>
+        <Banner 
+          bannerTitle= {frontmatter.title} 
+          bannerSubTitle = { frontmatter.bannerSubTitle}
+        />
         <div className="container py-5 contact-us">
           <div className="mb-5 row">
             <div className="col-md-10 col-xs-12 offset-md-1">
@@ -82,12 +88,20 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "contact-page" } }) {
       frontmatter {
         title
-        description
+        bannerSubTitle
+        metakeywords
+        metadescription
+        ogimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         address 
         address_title
         email_title
         email_address
-        banner_sub_title
       }
     }
   }

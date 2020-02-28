@@ -1,8 +1,10 @@
 ---
 templateKey: blog-post
-keywords: ["", ""]
-
 title: A Multilingual Website in 8 Languages - DIKSHA
+metakeywords: ["", ""]
+metadescription: We recently happened to design a widely adopted learning website for one of our clients. India, being a multicultural and multi-diverse country, languages and dialects all vary from state to state and so the teaching medium also changes. Designing a multilingual educational website was a challenge. An additional challenge was to deliver the same typographical/font representation across all channels like a book, a website, and a mobile app, as it matters in education domain.
+ogimage: /img/industries/agriculture-bg.jpg
+
 date: 2019-09-27T15:04:10.000Z
 featuredpost: false
 author: Lakhan Mandloi 

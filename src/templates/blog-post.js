@@ -82,8 +82,9 @@ const BlogPost = ({ data }) => {
     <Layout>
       <SEO 
          title={post.frontmatter.title}
-         description={post.excerpt}
-         metakeywords={post.frontmatter.keywords}
+         metakeywords= {post.frontmatter.metakeywords}
+         metadescription={post.frontmatter.metadescription}
+         ogimage={post.frontmatter.ogimage}
       />
       <div className="blog-page">
       <Banner />
@@ -94,15 +95,6 @@ const BlogPost = ({ data }) => {
               content={post.html}
               contentComponent={HTMLContent}
               description={post.frontmatter.description}
-              // helmet={
-              //   <Helmet titleTemplate="%s | Blog">
-              //     <title>{`${post.frontmatter.title}`}</title>
-              //     <metaBlogPostTemplate
-              //       name="description"
-              //       content={`${post.frontmatter.description}`}
-              //     />
-              //   </Helmet>
-              // }
               tags={post.frontmatter.tags}
               title={post.frontmatter.title}
               image={post.frontmatter.featuredimage}
@@ -143,7 +135,15 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "DD MMMM YYYY")
         title
-        keywords
+        metakeywords
+        metadescription
+        ogimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         author
         category
         description

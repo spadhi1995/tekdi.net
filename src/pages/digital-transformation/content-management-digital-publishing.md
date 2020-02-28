@@ -1,18 +1,18 @@
 ---
 templateKey: digital-transformation
-keywords: ["", ""]
-
 title: Content Management & Digital Publishing
-featured: false
-heading: Content Management & Digital Publishing
+metakeywords: ["", ""]
+metadescription: Content is being consumed on a variety of devices - desktops, smartphones, TVs and even wearables. There is a need to adapt the content to these changing consumption patterns to be able to reach your audience. On the web, SEO, microdata and other paradigms are evolving to make content more discoverable.
+ogimage: /img/digital-evolution/content-management-bg.jpg
+
 bannerSubTitle: Digital Transformation
-bannerTitle: Content Management & Digital Publishing
+
 caseStudyTag: cms
 
 bgimage: /img/digital-evolution/content-management-bg.jpg
 img: /img/digital-evolution/content-management.jpg
-
 subheading: Create ambitious digital experiences to reach your audience across devices and channels via efficient and effective content management and delivery solutions.
+
 featuresubheading: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
 mainpitch:
   title: We are in the middle of a digital revolution

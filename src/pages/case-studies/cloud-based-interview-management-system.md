@@ -1,14 +1,16 @@
 ---
 templateKey: case-study
-keywords: ["", ""]
-
 title: Cloud-based Interview Management System
-heading: Cloud-based Interview Management System
+metakeywords: ["", ""]
+metadescription: 
+ogimage: /img/tekdi-logo.png
+
+bannerSubTitle: Case Studies
+
 summary: 
 tags: 
    - business-process-transformation
-bannerTitle: Cloud-based Interview Management System
-bannerSubTitle: Case Studies
+
 ---
 
 As technology advances at lightning-fast speed, the recruitment industry is under immense pressure to attract (and retain) the best talent – quickly and cost-effectively. HR departments are always on the lookout to streamline their interview process.
