@@ -1,5 +1,6 @@
 ---
 templateKey: industries-page
+metatags:
 
 heading: Government and Public Sector
 title: Government and Public Sector
