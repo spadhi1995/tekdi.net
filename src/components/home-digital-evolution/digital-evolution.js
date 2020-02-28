@@ -20,7 +20,7 @@ class DigitalEvolution extends React.Component {
                 <div key={post.id} className="row mb-5 digital-evolution">
                   <div className="col-md-5 offset-md-1">
                     <h2 className="com-heading text-black">
-                      {post.frontmatter.heading}
+                      {post.frontmatter.title}
                     </h2>
                     <p>
                       {post.frontmatter.subheading}
@@ -59,7 +59,7 @@ export default () => (
                 slug
               }
               frontmatter {
-                heading
+                title
                 subheading
               }
             }

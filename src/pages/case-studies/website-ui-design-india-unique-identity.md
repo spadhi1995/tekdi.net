@@ -1,16 +1,17 @@
 ---
 templateKey: case-study
-keywords: ["", ""]
-
 title: Mobile Website and UI revamp for India's Unique Indentity Program
-heading: Website and UI revamp for India's Unique Indentity Program
+metakeywords: ["", ""]
+metadescription: 
+ogimage: /img/tekdi-logo.png
+
+bannerSubTitle: Case Studies
+
 summary: Revamp of the UIDAI website to make it responsive. In addition, UI design for all public web properties and style guides for internal portals.
 tags: 
    - cms
    - government-public-sector
    - publishing-media-news
-bannerTitle: Mobile Website and UI revamp for India's Unique Indentity Program. Serving 50 million hits a month.
-bannerSubTitle: Case Studies
 
 image: /img/case-studies/aadhaar-dashboard.png
 ---

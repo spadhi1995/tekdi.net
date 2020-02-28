@@ -1,17 +1,20 @@
 ---
 templateKey: digital-transformation
-keywords: ["", ""]
-
 title: Business Process Transformation
+metakeywords: ["", ""]
+metadescription: 
+ogimage: /img/digital-evolution/digital-evolution2.jpg
+
 bannerSubTitle: Digital Transformation
-bannerTitle: Business Process Transformation
-featured: false
+
+caseStudyTag: business-process-transformation
+
 bgimage: /img/digital-evolution/digital-evolution2.jpg
-heading: Business Process Transformation
 subheading: Take your business to the next level by modernizing existing processes that improve business productivity and organizational efficiency. 
 img: /img/digital-evolution/content-management.jpg
+
 featuresubheading: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-caseStudyTag: business-process-transformation
+
 mainpitch:
   title: 
   description: >

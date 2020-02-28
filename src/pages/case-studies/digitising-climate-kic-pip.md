@@ -1,14 +1,16 @@
 ---
 templateKey: case-study
-keywords: ["", ""]
-
 title: Digitising one of Europe's most prestigious climate innovation programs
-heading: Digitising one of Europe's most prestigious climate innovation programs
+metakeywords: ["", ""]
+metadescription: 
+ogimage: /img/tekdi-logo.png
+
+bannerSubTitle: Case Studies
+
 summary: 
 tags: 
    - business-process-transformation
-bannerTitle: Digitising one of Europe's most prestigious climate innovation programs
-bannerSubTitle: Case Studies
+
 ---
 
 EIT Climate-KIC is a European knowledge & innovation community, working towards a prosperous, inclusive, climate-resilient society founded on a circular, zero-carbon economy. Climate-KIC’s ‘Pioneers into Practice’ (PIP) programme is a development and placement programme aimed at professionals who want to be the next generation of climate innovators.

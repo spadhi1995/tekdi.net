@@ -8,8 +8,11 @@ const SEO = props => (
     query={detailsQuery}
     render={(data) => {
       const title = props.title || data.site.siteMetadata.title;
-      const description = props.description;
-      const metakeywords = props.metakeywords;
+      const metakeywords = props.metakeywords
+      const metadescription = props.metadescription
+      const ogimage = props.ogimage
+
+      var url =  typeof window !== 'undefined' ? window.location.pathname : '';
       
       return (
         <Helmet
@@ -23,9 +26,6 @@ const SEO = props => (
           ]}
         >
         <html lang="en" />
-        {/* <title>{title}</title> */}
-        <meta name="description" content={description} />
-        <meta name="keywords" content={metakeywords} />
 
         <link
           rel="apple-touch-icon"
@@ -44,16 +44,17 @@ const SEO = props => (
           href={`${withPrefix('/')}img/favicon/favicon-16x16.png`}
           sizes="16x16"
         />
-
-        <meta name="theme-color" content="#fff" />
+        <meta name="description" content={metadescription} />
+        <meta name="keywords" content={metakeywords} />
+        <meta name="theme-color" content="#089add" />
         <meta name="twitter:card" content="summary"/>
         <meta name="twitter:site" content=""/>
-        <meta name="twitter:description" content={description}/>
+        <meta name="twitter:description" content={metadescription}/>
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content="/" />
-        <meta property="og:image" content={`${withPrefix('/')}img/tekdi-logo.png`} />
+        <meta property="og:description" content={metadescription} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={ogimage} />
       </Helmet>
       );
     }}

@@ -1,14 +1,16 @@
 ---
 templateKey: case-study
-keywords: ["", ""]
-
 title: SaaS platform for data protection education and audit
-heading: SaaS platform for data protection education and audit
+metakeywords: ["", ""]
+metadescription: 
+ogimage: /img/tekdi-logo.png
+
+bannerSubTitle: Case Studies
+
 summary: 
 tags: 
    - product-engineering
-bannerTitle: SaaS platform for data protection education and audit
-bannerSubTitle: Case Studies
+
 ---
 
 ## Background

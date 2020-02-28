@@ -20,13 +20,6 @@ import React, { Fragment } from 'react'
 
     return (
       <Layout>
-        {/* <Helmet>
-          <title>Blogs</title>
-          <metaBlogPostTemplate
-            name="description"
-            content= ""
-          />
-        </Helmet> */}
         <SEO 
           title="Blogs"
         />

@@ -14,20 +14,17 @@ const CareersIndexPage =  ({data}) => {
       <Layout>
         <SEO 
           title={frontmatter.title}
-          description={frontmatter.description}
+          metakeywords= {frontmatter.metakeywords}
+          metadescription={frontmatter.metadescription}
+          ogimage={frontmatter.ogimage}
         />
         <Helmet>
         <script src={`https://www.google.com/recaptcha/api.js? r=${Math.random()}`} async defer>
        </script>
-          {/* <title>{frontmatter.title}</title>
-          <meta
-            name="description"
-            content={`${frontmatter.description}`}
-          /> */}
         </Helmet>
         <div className="careers-page">
           <Banner 
-            bannerTitle= {frontmatter.bannerTitle} 
+            bannerTitle= {frontmatter.title} 
             bannerSubTitle = {frontmatter.bannerSubTitle}
           />
           <div className="container py-5">
@@ -50,10 +47,17 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "careers-banner" }}) {
       frontmatter {
         title
-        description
-        heading
-        bannerTitle
+        metakeywords
+        metadescription
+        ogimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         bannerSubTitle
+        heading
       }
     }
   }

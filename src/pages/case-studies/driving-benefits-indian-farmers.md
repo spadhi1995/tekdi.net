@@ -1,15 +1,18 @@
 ---
 templateKey: case-study
-keywords: ["", ""]
+title: Digitising one of Europe's most prestigious climate innovation programs
+metakeywords: ["", ""]
+metadescription: 
+ogimage: /img/tekdi-logo.png
 
-title: Driving benefits to farmers - Digital backbone for an agricultural warehouse
-heading: Driving benefits to farmers - Digital backbone for an agricultural warehouse
+bannerSubTitle: Case Studies
+
 summary: 
 tags: 
    - business-process-transformation
    - agriculture
-bannerTitle: Driving benefits to farmers - Digital backbone for an agricultural warehouse
-bannerSubTitle: Case Studies
+
+
 ---
 
 ## Background

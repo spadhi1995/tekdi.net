@@ -1,8 +1,10 @@
 ---
 templateKey: blog-post
-keywords: ["", ""]
-
 title: Tekdi enters its teens
+metakeywords: ["", ""]
+metadescription: Teens is that time between being a child and an adult when you start experiencing freedom & start liking the taste of it. It's that time when you slowly start taking the controls of your life into your own hands.
+ogimage: /img/blog/tekdi-enters-its-teens.png
+
 date: 2019-04-08T15:04:10.000Z
 featuredpost: true
 author: Parth

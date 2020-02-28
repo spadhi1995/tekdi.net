@@ -1,8 +1,10 @@
 ---
 templateKey: blog-post
-keywords: ["", ""]
-
 title: Tekdi Eco Warriors
+metakeywords: ["", ""]
+metadescription: At Tekdi, "Giving Back" is one of our core values. In Open Source software, the giving back philosophy leaves the project in an improved state than what we started with. However, Giving Back for us goes beyond just software. We wish to leave our planet in a better state than how we found it. Tekdi's "Eco Warriors" are doing every bit they can to ensure we contribute towards sustainable progress.
+ogimage: /img/industries/agriculture-bg.jpg
+
 date: 2019-10-30T15:04:10.000Z
 featuredpost: true
 author: Ashwin

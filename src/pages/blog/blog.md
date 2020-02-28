@@ -1,5 +1,10 @@
 ---
 templateKey: blog-banner
-bannerTitle: Blogs
+title: Blogs
+metakeywords: ["", ""]
+metadescription: 
+ogimage: /img/tekdi-logo.png
+
 bannerSubTitle: Letest Reads
+
 ---

@@ -16,19 +16,13 @@ const ProductsPlatforms = ({ data }) => {
     <Layout>
       <SEO 
         title={post.frontmatter.title}
-        description={post.frontmatter.subheading}
-        metakeywords={post.frontmatter.keywords}
+        metakeywords= {post.frontmatter.metakeywords}
+        metadescription={post.frontmatter.metadescription}
+        ogimage={post.frontmatter.ogimage}
       />
-      {/* <Helmet>
-        <title>{post.frontmatter.title}</title>
-        <meta
-          name="description"
-          content={`${post.frontmatter.subheading}`}
-        />
-      </Helmet> */}
       <div className="products-platforms">
         <Banner 
-          bannerTitle= {post.frontmatter.bannerTitle} 
+          bannerTitle= {post.frontmatter.title} 
           bannerSubTitle = {post.frontmatter.bannerSubTitle}
         />
         <Products 
@@ -69,13 +63,19 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        keywords
-        heading
+        metakeywords
+        metadescription
+        ogimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }        
         subheading
         introtext
         description
         content
-        bannerTitle
         bannerSubTitle
         featuresubheading
         caseStudyTag

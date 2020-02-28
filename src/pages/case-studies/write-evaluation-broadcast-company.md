@@ -1,14 +1,16 @@
 ---
 templateKey: case-study
-keywords: ["", ""]
-
 title: Writer Evaluation and recruitment platform for a TV Broadcast Company
-heading: Writer Evaluation and recruitment platform for a TV Broadcast Company
+metakeywords: ["", ""]
+metadescription: 
+ogimage: /img/tekdi-logo.png
+
+bannerSubTitle: Case Studies
+
 summary: 
 tags: 
    - publishing-media-news
-bannerTitle: Writer Evaluation and recruitment platform for a TV Broadcast Company
-bannerSubTitle: Case Studies
+
 ---
 
 One of India's largest media companies required a platform to host a competition to recruit talent for their Writer training program, Internships and eventual recruitment. 
