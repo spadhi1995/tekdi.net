@@ -1,5 +1,7 @@
 ---
 templateKey: blog-post
+keywords: ["", ""]
+
 title: Tekdi enters its teens
 date: 2019-04-08T15:04:10.000Z
 featuredpost: true

@@ -1,5 +1,7 @@
 ---
 templateKey: case-study
+keywords: ["", ""]
+
 title: Driving benefits to farmers - Digital backbone for an agricultural warehouse
 heading: Driving benefits to farmers - Digital backbone for an agricultural warehouse
 summary: 

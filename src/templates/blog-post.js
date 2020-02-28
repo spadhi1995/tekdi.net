@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-// import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
 import SEO from '../components/common/site-metadata';
 import Layout from '../components/layout/baselayout';
@@ -28,15 +27,7 @@ export const BlogPostTemplate = ({
 
   return (
     <section className="section">
-      {/* {helmet || ''} */}
-      {/* <div className="featured-thumbnail">
-        <PreviewCompatibleImage
-          imageInfo={{
-            image,
-            alt: `featured image for post ${title}`,
-          }}
-        />
-      </div> */}
+
       <div className="container">
         <div className="blog-detail">
           <div className="">
@@ -92,6 +83,7 @@ const BlogPost = ({ data }) => {
       <SEO 
          title={post.frontmatter.title}
          description={post.excerpt}
+         metakeywords={post.frontmatter.keywords}
       />
       <div className="blog-page">
       <Banner />
@@ -151,6 +143,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "DD MMMM YYYY")
         title
+        keywords
         author
         category
         description

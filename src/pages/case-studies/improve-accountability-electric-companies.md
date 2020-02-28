@@ -1,5 +1,7 @@
 ---
 templateKey: case-study
+keywords: ["", ""]
+
 title: Helping improve accountability of electric supply companies
 heading: Helping improve accountability of electric supply companies
 summary: 

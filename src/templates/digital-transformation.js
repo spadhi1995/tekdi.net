@@ -17,16 +17,9 @@ const DigitalEvolution = ({ data }) => {
       <SEO 
         title={post.frontmatter.title}
         description={post.frontmatter.subheading}
+        metakeywords={post.frontmatter.keywords}
       />
-      {/* <Helmet>
-        <title>{post.frontmatter.title}</title>
-        <meta property="og:title" content={`${post.frontmatter.title}`} />
-        <meta property="og:description" content={`${post.frontmatter.subheading}`} />
-        <meta property="og:image" content={`${post.frontmatter.image}`} />
-        <meta property="og:type" content="website" />
-
-        <meta name="description" content={`${post.frontmatter.subheading}`} />
-      </Helmet> */}
+     
       <div className= {`digital-evolution-page ${post.frontmatter.title}`}>
         <Banner 
           bannerTitle= {post.frontmatter.bannerTitle} 
@@ -65,6 +58,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        keywords
         bannerTitle
         bannerSubTitle
         subheading

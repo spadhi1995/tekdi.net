@@ -1,5 +1,6 @@
 ---
 templateKey: digital-transformation
+keywords: ["", ""]
 
 title: Content Management & Digital Publishing
 featured: false

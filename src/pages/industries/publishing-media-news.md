@@ -1,6 +1,6 @@
 ---
 templateKey: industries-page
-metatags:
+keywords: ["", ""]
 
 title: Publishing, Media and News
 heading: Publishing, Media and News

@@ -1,5 +1,7 @@
 ---
 templateKey: case-study
+keywords: ["", ""]
+
 title: Cloud-based Interview Management System
 heading: Cloud-based Interview Management System
 summary: 

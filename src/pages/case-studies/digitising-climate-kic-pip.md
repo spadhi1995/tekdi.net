@@ -1,5 +1,7 @@
 ---
 templateKey: case-study
+keywords: ["", ""]
+
 title: Digitising one of Europe's most prestigious climate innovation programs
 heading: Digitising one of Europe's most prestigious climate innovation programs
 summary: 

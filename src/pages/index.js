@@ -22,6 +22,7 @@ const IndexPage = ({ data }) => {
       <SEO 
         title={frontmatter.title}
         description={frontmatter.description}
+        metakeywords= {frontmatter.keywords}
       />
        {/* <Helmet>
           <meta
@@ -67,6 +68,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        keywords
       }
     }
   }

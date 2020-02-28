@@ -9,6 +9,7 @@ const SEO = props => (
     render={(data) => {
       const title = props.title || data.site.siteMetadata.title;
       const description = props.description;
+      const metakeywords = props.metakeywords;
       
       return (
         <Helmet
@@ -24,6 +25,7 @@ const SEO = props => (
         <html lang="en" />
         {/* <title>{title}</title> */}
         <meta name="description" content={description} />
+        <meta name="keywords" content={metakeywords} />
 
         <link
           rel="apple-touch-icon"

@@ -1,5 +1,7 @@
 ---
 templateKey: digital-transformation
+keywords: ["", ""]
+
 title: Business Process Transformation
 bannerSubTitle: Digital Transformation
 bannerTitle: Business Process Transformation
