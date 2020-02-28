@@ -1,5 +1,7 @@
 ---
 templateKey: industries-page
+metatags:
+
 title: Publishing, Media and News
 heading: Publishing, Media and News
 bannerSubTitle: Industries

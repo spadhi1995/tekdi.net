@@ -1,5 +1,6 @@
 ---
 templateKey: industries-page
+metatags:
 
 title: Not for Profit Organisations
 bannerSubTitle: Industries

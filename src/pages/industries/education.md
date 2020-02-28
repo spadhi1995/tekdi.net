@@ -1,5 +1,6 @@
 ---
 templateKey: industries-page
+metatags:
 
 title: Education
 heading: Education

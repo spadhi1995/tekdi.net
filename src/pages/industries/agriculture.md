@@ -1,5 +1,6 @@
 ---
 templateKey: industries-page
+metatags: 
 
 heading: Agriculture
 title: Agriculture
