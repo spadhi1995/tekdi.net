@@ -1,5 +1,7 @@
 ---
 templateKey: case-study
+keywords: ["", ""]
+
 title: Mobile Website and UI revamp for India's Unique Indentity Program
 heading: Website and UI revamp for India's Unique Indentity Program
 summary: Revamp of the UIDAI website to make it responsive. In addition, UI design for all public web properties and style guides for internal portals.

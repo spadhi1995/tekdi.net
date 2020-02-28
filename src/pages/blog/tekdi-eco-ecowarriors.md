@@ -1,5 +1,7 @@
 ---
 templateKey: blog-post
+keywords: ["", ""]
+
 title: Tekdi Eco Warriors
 date: 2019-10-30T15:04:10.000Z
 featuredpost: true

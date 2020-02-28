@@ -1,5 +1,6 @@
 ---
 templateKey: digital-transformation
+keywords: ["", ""]
 
 title: Technology enablement of Nonprofits
 featured: true

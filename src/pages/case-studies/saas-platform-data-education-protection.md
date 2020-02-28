@@ -1,5 +1,7 @@
 ---
 templateKey: case-study
+keywords: ["", ""]
+
 title: SaaS platform for data protection education and audit
 heading: SaaS platform for data protection education and audit
 summary: 

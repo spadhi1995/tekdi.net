@@ -1,5 +1,7 @@
 ---
 templateKey: digital-transformation
+keywords: ["", ""]
+
 title: E-commerce and Marketplaces
 featured: false
 bannerSubTitle: Digital Transformation

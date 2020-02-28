@@ -1,5 +1,7 @@
 ---
 templateKey: case-study
+keywords: ["", ""]
+
 title: Writer Evaluation and recruitment platform for a TV Broadcast Company
 heading: Writer Evaluation and recruitment platform for a TV Broadcast Company
 summary: 

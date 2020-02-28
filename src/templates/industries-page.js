@@ -16,6 +16,7 @@ const IndustriesPage = ({ data }) => {
       <SEO 
         title={post.frontmatter.title}
         description={post.frontmatter.subheading}
+        metakeywords= {post.frontmatter.keywords}
       />
       {/* <Helmet>
         <title>{post.frontmatter.title}</title>
@@ -67,6 +68,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        keywords
         bannerTitle
         bannerSubTitle
         subheading
