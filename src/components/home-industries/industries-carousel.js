@@ -102,7 +102,6 @@ export default () => (
                 }
                 frontmatter {
                   title
-                  heading
                   subheading
                   icon {
                     childImageSharp {

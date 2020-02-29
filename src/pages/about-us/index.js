@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
+import SEO from '../../components/common/site-metadata'
 import Content, { HTMLContent } from '../../components/common/content';
 import Banner from '../../components/common/banner/banner';
 import Layout from '../../components/layout/baselayout';
@@ -9,22 +9,20 @@ import Layout from '../../components/layout/baselayout';
 export const AboutUsTemplate = ({
   content,
   contentComponent,
-  helmet,
-  heading,
+  title,
   subheading
 }) => {
   const PostContent = contentComponent || Content
 
   return (
     <section className="section">
-      {helmet || ''}
-        <div className="">
-          <h1 className="title text-black">
-            {heading}
-          </h1>
-          <p>{subheading}</p>
-          <PostContent content={content} />
-        </div>
+      <div className="">
+        <h1 className="title text-black">
+          {title}
+        </h1>
+        <p>{subheading}</p>
+        <PostContent content={content} />
+      </div>
     </section>
   )
 }
@@ -35,24 +33,20 @@ const AboutUsPage = ({ data }) => {
 
   return (
     <Layout>
+      <SEO 
+        title={post.frontmatter.title}
+        metakeywords= {post.frontmatter.metakeywords}
+        metadescription={post.frontmatter.metadescription}
+        ogimage={post.frontmatter.ogimage}
+      />
       <Banner 
         bannerTitle= {post.frontmatter.title} 
-        bannerSubTitle = {post.frontmatter.bannerSubTitle}
       />
       <div className="container py-5">
         <div className="row">
           <div className="col-md-12">
           <AboutUsTemplate
-            helmet={
-              <Helmet titleTemplate="%s">
-                <title>{`${post.frontmatter.title}`}</title>
-                <meta
-                  name="description"
-                  content={`${post.frontmatter.description}`}
-                />
-              </Helmet>
-            }
-              heading={post.frontmatter.heading}
+              title={post.frontmatter.title}
               subheading={post.frontmatter.subheading}
               content={post.html}
               contentComponent={HTMLContent}
@@ -67,9 +61,8 @@ const AboutUsPage = ({ data }) => {
 AboutUsTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  heading: PropTypes.string,
+  title: PropTypes.string,
   subheading: PropTypes.string,
-  helmet: PropTypes.object,
 }
 
 export default AboutUsPage;
@@ -81,8 +74,15 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "DD MMMM YYYY")
-        heading
+        metakeywords
+        metadescription
+        ogimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         subheading
       }
     }

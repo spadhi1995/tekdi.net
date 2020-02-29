@@ -24,7 +24,7 @@ class CaseStudiesList extends React.Component {
             <Link to={post.fields.slug}>
           {/* <h4 className="font-weight-bold text-black mb-3">{post.frontmatter.heading}</h4> */}
             </Link>
-            <CaseStudyModal slug={post.fields.slug} caseStudyName={post.frontmatter.heading} />
+            <CaseStudyModal slug={post.fields.slug} caseStudyName={post.frontmatter.title} />
             <p>{post.excerpt}</p> 
           </div>
            ))
@@ -60,7 +60,7 @@ export default props => (
                 slug
               }
               frontmatter {
-               heading
+               title
                tags
               }
             }

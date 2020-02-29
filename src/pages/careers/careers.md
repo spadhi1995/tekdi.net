@@ -1,10 +1,12 @@
 ---
 templateKey: careers-banner
 title: Careers
-keywords: ["", ""]
+metakeywords: ["careers", ""]
+metadescription: 
+ogimage: /img/tekdi-logo.png
 
-description: 
-heading: Open Positions
-bannerTitle: Careers
 bannerSubTitle: Work With Us
+
+heading: Open Positions
+
 ---

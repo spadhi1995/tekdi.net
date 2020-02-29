@@ -16,7 +16,7 @@ class AboutUs extends React.Component {
               <div className="com-cover" key={post.id}>
                 <div className="text-center col-md-6 offset-md-3 mb-5">
                 <h2 className="com-heading text-black">
-                  {post.frontmatter.heading}
+                  {post.frontmatter.title}
                 </h2>
                 <p>
                   {post.frontmatter.subheading}
@@ -57,7 +57,7 @@ export default () => (
                 slug
               }
               frontmatter {
-                heading
+                title
                 subheading
               }
             }

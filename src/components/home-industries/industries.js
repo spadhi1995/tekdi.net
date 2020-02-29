@@ -15,7 +15,7 @@ class Industries extends React.Component {
             {posts &&
                 posts.map(({ node: post }) => (
                 <div className="text-center col-md-6 offset-md-3 mb-5" key={post.id}>
-                  <h2 className="com-heading text-black">{post.frontmatter.heading}</h2>
+                  <h2 className="com-heading text-black">{post.frontmatter.title}</h2>
                   <p>{post.frontmatter.subheading}</p>
                 </div>
             ))}
@@ -45,7 +45,7 @@ export default () => (
               node {
                 id
                 frontmatter {
-                  heading
+                  title
                   subheading
                 }
               }

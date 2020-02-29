@@ -34,7 +34,7 @@ class ProductList extends React.Component {
                     <PreviewCompatibleImage
                       imageInfo={{
                         image: post.frontmatter.bgimage,
-                        alt: `image thumbnail for post ${post.frontmatter.heading}`,
+                        alt: `image thumbnail for post ${post.frontmatter.title}`,
                       }}
                     />
                   </div>
@@ -42,7 +42,7 @@ class ProductList extends React.Component {
                 <div className="text position-absolute">
                   <h4 className="mb-4">
                     <Link to={post.fields.slug} className="text-decoration-none text-white">
-                      {post.frontmatter.heading}
+                      {post.frontmatter.title}
                     </Link>
                   </h4>
                   <Link to={post.fields.slug} className="text-decoration-none">
@@ -83,7 +83,7 @@ export default () => (
                 slug
               }
               frontmatter {
-                heading
+                title
                 bgimage {
                   childImageSharp {
                     fluid(maxWidth: 250, quality: 100) {

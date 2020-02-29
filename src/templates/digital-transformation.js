@@ -22,7 +22,7 @@ const DigitalEvolution = ({ data }) => {
      
       <div className= {`digital-evolution-page ${post.frontmatter.title}`}>
         <Banner 
-          bannerTitle= {post.frontmatter.bannerTitle} 
+          bannerTitle= {post.frontmatter.title} 
           bannerSubTitle = {post.frontmatter.bannerSubTitle}
         />
         <DigitalEvolutionInfo 
@@ -58,9 +58,16 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        keywords
-        bannerTitle
         bannerSubTitle
+        metakeywords
+        metadescription
+        ogimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         subheading
         caseStudyTag
         mainpitch {

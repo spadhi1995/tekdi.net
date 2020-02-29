@@ -54,7 +54,7 @@ class ProductsPlatformsGrid extends React.Component {
                               />
                             </div>
                           <h3 className="section-title text-black mb-4">
-                              {post.frontmatter.heading}
+                              {post.frontmatter.title}
                           </h3>
                           <p className="mb-0 font-weight-normal">
                             {post.excerpt}
@@ -96,7 +96,6 @@ ProductsPlatformsGrid.propTypes = {
                 frontmatter {
                   title
                   templateKey
-                  heading
                   subheading
                   icon {
                     childImageSharp {

@@ -18,17 +18,12 @@ const CompanyTemplate = ({ data }) => {
     <Layout>
       <SEO 
         title={post.frontmatter.title}
-        description="We focus on providing you with cutting edge technology solutions. Our emphasis is on using Open Source technologies in order to deliver the most cost effective, secure & up-to-date solutions & enabling you with the tools to take your business to the next level."
+        metakeywords= {post.frontmatter.metakeywords}
+        metadescription={post.frontmatter.metadescription}
+        ogimage={post.frontmatter.ogimage}
       />
-      <Helmet>
-        {/* <meta
-          name="description"
-          content={`${frontmatter.subheading}`}
-        /> */}
-      </Helmet>
       <Banner 
-          bannerTitle= {post.frontmatter.bannerTitle} 
-          bannerSubTitle = {post.frontmatter.bannerSubTitle}
+          bannerTitle= {post.frontmatter.title} 
       />
       <CompanyInfo 
         companyInfo={post.frontmatter.companyInfo}
@@ -72,8 +67,15 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        bannerTitle
-        bannerSubTitle
+        metakeywords
+        metadescription
+        ogimage {
+          childImageSharp {
+            fluid(quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         companyInfo
         companyImg {
           childImageSharp {

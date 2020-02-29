@@ -52,14 +52,14 @@ class DigitalEvolutionCarousel extends React.Component {
                         <PreviewCompatibleImage
                           imageInfo={{
                             image: post.frontmatter.bgimage,
-                            alt: `image thumbnail for post ${post.frontmatter.heading}`,
+                            alt: `image thumbnail for post ${post.frontmatter.title}`,
                           }}
                         />
                       </div>
                     ) : null}
                   </div>
                   <div className="col-md-7">
-                    <h3 className="text-black font-weight-bold section-title">{post.frontmatter.heading}</h3>
+                    <h3 className="text-black font-weight-bold section-title">{post.frontmatter.title}</h3>
                     <p className="font-weight-normal">
                       {post.excerpt}
                     </p>
@@ -101,7 +101,7 @@ export default () => (
               }
               frontmatter {
                 date(formatString: "DD MMMM YYYY")
-                heading
+                title
                 subheading
                 bgimage {
                   childImageSharp {
