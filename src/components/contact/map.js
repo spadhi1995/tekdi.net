@@ -5,7 +5,7 @@ const coords = {
   lat: 18.500700,
   lng: 73.814450
 };
-const params = {v: '3.exp', key: 'AIzaSyCcSZAq6kgc_gwb50FeUgJCXtbOLLWRYtQ'};
+const params = {v: '3.exp', key: 'AIzaSyDzY289BBxu3loiioXT3GokyCy4uREQhy4'};
  
 class map extends React.Component {
  

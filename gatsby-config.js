@@ -72,7 +72,8 @@ module.exports = {
       options: {
         // The property ID; the tracking code won't be generated without it
         trackingId: "UA-277023-6",
-        anonymize: true
+        anonymize: true,
+      }
     }
   //   {
   //     resolve: `gatsby-plugin-recaptcha`,
