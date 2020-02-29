@@ -7,6 +7,7 @@ heading: Digitising one of Europe's most prestigious climate innovation programs
 summary: 
 tags: 
    - business-process-transformation
+   - education
 bannerTitle: Digitising one of Europe's most prestigious climate innovation programs
 bannerSubTitle: Case Studies
 ---

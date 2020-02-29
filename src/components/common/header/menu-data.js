@@ -6,29 +6,29 @@ export const menuData = [
         className: 'parent',
         submenus: [
             {
-                label:'Content Management & Digital Publishing',
-                link:'/digital-transformation/content-management-digital-publishing',
+                label:'Learning and Education technology',
+                link:'/digital-transformation/learning-edtech',
             },
             {
                 label:'Business Process Transformation',
                 link:'/digital-transformation/business-process-transformation',
             },
             {
-                label:'E-commerce and Marketplaces',
-                link:'/digital-transformation/ecommerce-and-marketplaces',
+                label:'Content Management & Digital Publishing',
+                link:'/digital-transformation/content-management-digital-publishing',
             },
             {
-                label:'Learning and Education technology',
-                link:'/digital-transformation/learning-edtech',
+                label:'E-commerce and Marketplaces',
+                link:'/digital-transformation/ecommerce-and-marketplaces',
             },
             {
                 label:'Technology enablement of Nonprofits',
                 link:'/digital-transformation/technology-for-nonprofits',
             },
-            {
-                label:'Transportation',
-                link:'/digital-transformation/transportation',
-            },            
+            // {
+            //     label:'Transportation',
+            //     link:'/digital-transformation/transportation',
+            // },            
         ]
     },
     {
@@ -66,25 +66,25 @@ export const menuData = [
                 link:'/industries/education',
             },
             {
-                label:'Agriculture',
-                link:'/industries/agriculture',
-            },
-            {
                 label:'Government and Public Sector',
                 link:'/industries/government-public-sector',
             },
             {
-                label:'Not for Profit Organisations',
-                link:'/industries/not-for-profit-organisations',
-            },
-            {
-                label:'Logistics & Transport',
-                link:'/industries/logistics-transport',
+                label:'Agriculture',
+                link:'/industries/agriculture',
             },
             {
                 label:'Publishing, Media and News',
                 link:'/industries/publishing-media-news',
             },            
+            {
+                label:'Not for Profit Organisations',
+                link:'/industries/not-for-profit-organisations',
+            },
+            // {
+            //     label:'Logistics & Transport',
+            //     link:'/industries/logistics-transport',
+            // },
         ]
     },
     {

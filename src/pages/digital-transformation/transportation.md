@@ -1,5 +1,5 @@
 ---
-templateKey: digital-transformation
+templateKey: digital-transformation-unpublished
 keywords: ["", ""]
 
 title: Transportation
@@ -16,19 +16,6 @@ mainpitch:
   description: >
     Technology can do a lot for your transportation services by mobilising vehicle fleets that makes anything from booking taxis to tracking large shipments convenient. 
 caseStudyTag: Transportation
-features:
-    - title: Feature 1
-      description: >
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-    - title: Feature 2
-      description: >
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-    - title: Feature 3
-      description: >
-       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-    - title: Feature 4
-      description: >
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 ---
 
 The way we move around has changed radically over the years. Technology now plays a major role in mobilising vehicle fleets. From letting customers book taxis to tracking large logistics fleet there is a lot that technology can do for your transportation services.

@@ -10,10 +10,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-XXXXXXXXX-X",
-      },
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -71,6 +67,13 @@ module.exports = {
         // Add any options here
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-277023-6",
+        anonymize: true
+    }
   //   {
   //     resolve: `gatsby-plugin-recaptcha`,
   //     options: {

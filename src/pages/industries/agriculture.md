@@ -13,7 +13,7 @@ featuresubheading: Digital can bring about revolutionary benefits to this trilli
 
 icon: /img/industries/agriculture-icon.png
 hovericon: /img/industries/agriculture-icon-white.png
-image: /img/industries/agriculture.jpg
+image: /img/industries/agriculture-bg.jpg
 bgimage: /img/industries/agriculture-bg.jpg
 ---
 
