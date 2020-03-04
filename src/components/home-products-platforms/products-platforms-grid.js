@@ -58,9 +58,6 @@ class ProductsPlatformsGrid extends React.Component {
                           </h3>
                           <p className="mb-0 font-weight-normal">
                             {post.excerpt}
-                            <br/>
-                            <br/>
-                            <Link to={post.fields.slug}>View More</Link>
                           </p>
                         </div>
                     </div>
