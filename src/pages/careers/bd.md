@@ -11,7 +11,7 @@ Qualification - BBA / MBA (IT/Systems/Marketing) / BCA / MCA / BE (IT/Computer s
 
 Experience - 2- 4 years of experience of catering to MNCs to enterprises, managing big accounts while doing upsell and mining.
 
-We are looking for Competitive and Result-oriented Marketing/Business Development Executives who can implement a mix of IT Marketing skills intelligently to get us quality business using strong, convincing and charming communication skills!! We have a right chair for a person who has the vigor to achieve targets consistently, so APPLY NOW...
+We are looking for Competitive and Result-oriented Marketing/Business Development Executives who can implement a mix of IT Marketing skills intelligently to get us quality business using strong, convincing and charming communication skills!! We have a right chair for a person who has the vigor to achieve targets consistently.
 
 #####Job Summary
 
