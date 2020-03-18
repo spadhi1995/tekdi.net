@@ -26,7 +26,8 @@ body {
     padding:0;
     margin:0;
     font-family: 'Conv_overpass-extralight';
-    font-size:15px;
+    font-size:16px;
+    line-height: 26px;
     color: #65737f;
     font-weight: 600;
 }
@@ -80,6 +81,7 @@ ul.unstyled {
 
     p {
         font-size: 15px;
+        line-height: 25px;
     }
 }
 h2.com-heading {
@@ -150,6 +152,7 @@ h3.section-title {
     }
     .joinus-img {
         padding-right:0;
+        padding-left: 0;
     }
     .joinus-img img {
         height: 100%;
@@ -164,15 +167,17 @@ h3.section-title {
 }
 @media (min-width: 992px) {
     .com-cover {
-        padding: 40px 0;
+        padding: 80px 0;
 
         p {
-            font-size: 16px;
+            font-size: 18px;
+            line-height: 28px;
         }
     }   
     h2.com-heading {
         font-size: 34px;
         line-height: 40px;
+        margin-bottom: 35px;
     }
     h3.com-heading {
         font-size: 30px;
@@ -189,5 +194,9 @@ h3.section-title {
     h2.com-heading {
         font-size: 36px;
         line-height: 44px;
+        margin-bottom: 50px;
+    }
+    .com-cover {
+        padding: 130px 0;
     }
 }

@@ -51,7 +51,7 @@ const MainMenu = ({items}) => {
             let isMenuActive = false;
             if (item.link && item.submenus) {
               submenuD = item.submenus.map(submenu => {
-                const isMenuActiveInternal = url === submenu.link;
+                const isMenuActiveInternal = (url === submenu.link + '/') || (url === submenu.link);
                 if (isMenuActiveInternal) {
                   isMenuActive = isMenuActiveInternal;
                 }

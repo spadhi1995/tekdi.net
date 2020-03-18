@@ -20,7 +20,7 @@
 
 .industries-carousel .item {
     border-right: 1px solid #566376;
-    height: 300px;
+    height: 360px;
     position: relative;
 }
 .industries-carousel .item .item-inner {
@@ -32,6 +32,10 @@
     right:0;
     bottom:0;
     padding: 70px 30px 20px 30px;
+
+    .icon {
+        margin-bottom: 35px;
+    }
 
     .hover-icon {
         display: none;
@@ -49,6 +53,7 @@
     }
     .hover-icon {
         display: block;
+        margin-bottom: 35px;
     }
 }
 .industries-carousel .item p {
