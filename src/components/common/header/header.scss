@@ -17,7 +17,7 @@ header {
 }
 /*Logo*/
 .logo {
-    padding: 8px 15px;
+    padding: 5px 15px;
 }
 header {
     .logo-lg {
@@ -130,10 +130,10 @@ header {
         }
     }
     &.menu-active {
-        background-color: #ccc;
+        background-color: #e4e4e4;
         > a {
             color: #000;
-            background-color: #ccc;
+            background-color: #e4e4e4;
         }
     }
     &.mainmenu-parent {
@@ -161,7 +161,7 @@ header {
         }
     }
     &.parentmenu-active {
-        background-color: #ccc;
+        background-color: #e4e4e4;
         > a {
             color: #000;
         }
@@ -195,6 +195,8 @@ header {
             display: inline-block;
             padding: 5px 0;
             display: block;
+            font-size: 15px;
+            line-height: 20px;
             
             &:hover {
                 background-color: #0f65b2;
@@ -273,9 +275,10 @@ header {
             border-bottom: none;
     
             > a {
-                padding: 36px 10px;
+                padding: 34px 10px;
                 color: #fff;
                 font-size: 15px;
+                line-height: 20px;
                 font-weight: 600;
                 text-decoration: none;         
             
@@ -310,7 +313,7 @@ header {
             &.menu-active {
                 > a {
                     color: #000;
-                    background-color: #ccc;
+                    background-color: #e4e4e4;
                 }
             }
             &.parentmenu-open {
@@ -320,7 +323,7 @@ header {
                 }
             } 
             &.parentmenu-active {
-                background-color: #ccc;
+                background-color: #e4e4e4;
                 > a {
                     color: #000;
 
@@ -329,7 +332,7 @@ header {
                     }    &.menu-active {
                         > a {
                             color: #000;
-                            background-color: #ccc;
+                            background-color: #e4e4e4;
                         }
                     } 
                 }
@@ -365,8 +368,8 @@ header {
         overflow: hidden;
         width: 255px;
         position: absolute;
-        background-color: #ccc;
-        top: 94px;
+        background-color: #e4e4e4;
+        top: 89px;
 
         li a {
             padding: 5px 10px;

@@ -4,11 +4,18 @@ footer{
     font-size: 15px;
     font-weight:500;
 }
+.footer-cover {
+	padding: 20px 0;
+}
 a.fa-icon {
     font-size: 20px;
     color:#759ee0;
     margin: 0 30px 0 0;
 }
+a .fa-linkedin-square:hover,
+a .fa-linkedin-square:focus {
+	color: #0077b5;
+}	
 a .fa-twitter:hover,
 a .fa-twitter:focus {
     color:#1da1f2;
@@ -44,6 +51,7 @@ footer h4.section-title {
     margin-right: 35px;
 }
 @media (min-width: 576px) {
+	
     footer h4.section-title {
         margin-bottom: 10px;
     }
@@ -53,10 +61,15 @@ footer h4.section-title {
     }
 }
 @media (min-width: 768px) {
-
+	.footer-cover {
+		padding: 30px 0;
+	}
 }
 
 @media (min-width: 992px) {
+	.footer-cover {
+		padding: 40px 0;
+	}
     footer h4.section-title {
         margin-bottom: 15px;
     }

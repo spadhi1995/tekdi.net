@@ -45,7 +45,7 @@ class ProductsPlatformsGrid extends React.Component {
                 posts.map(({ node: post }) => (
                     <div className="p-1" key={post.id}>
                         <div className="prod-item px-3 py-4">
-                          <div className="icon mb-3">
+                          <div className="icon">
                               <PreviewCompatibleImage
                                 imageInfo={{
                                   image: post.frontmatter.icon,
