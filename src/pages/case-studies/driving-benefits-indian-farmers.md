@@ -1,6 +1,6 @@
 ---
 templateKey: case-study
-title: Digitising one of Europe's most prestigious climate innovation programs
+title: Driving benefits to farmers - Digital backbone for an agricultural warehouse
 metakeywords: ["", ""]
 metadescription: 
 ogimage: /img/tekdi-logo.png
@@ -11,14 +11,11 @@ summary:
 tags: 
    - business-process-transformation
    - agriculture
-
-
 ---
-
-## Background
 
 Kisan is a large food grain warehouse in central India with a storage capacity of 20,000 metric tonnes. Kisan was looking for a solution to manage the warehouse and granaries to improve operational efficiency, offer better rates and services to farmers and boost profits by leveraging a warehouse management system.
 
+## Background
 To keep warehouse management activities running optimally, the company had to improve processes across the supply chain. However, there were several challenges as outlined below, which impacted the efficiency of operations: 
 
 - Accurately forecasting changes in demand based on economy, season, weather, demographics, and other factors and ensure optimized inventory. 

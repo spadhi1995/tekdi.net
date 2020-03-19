@@ -20,7 +20,7 @@ DPE wanted to build a platform containing a suite of audit tools to understand t
 
 ## Solutions Given
 ### Product Management
-Throughout the duration of the project, Tekdi played a product management role. There was a continuous process of understanding business needs and converting them into features that can be built by the team. We used our expertise of building products to ensure that we don't go into feature frenzy, and carefully pick the features that are really needed by end users. Even at a feature level, we chose to build only an MVP, and expand on the feature once we see traction.
+Throughout the duration of the project, Tekdi played a product management role. There was a continuous process of understanding business needs and converting them into features that can be built by the team. We used our expertise of building products to carefully pick the features that are really needed by end users. Even at a feature level, we chose to build only an MVP, and expand on the feature once we see traction.
 
 ### Product Engineering Services
 Since this was a data protection and data education project, we conducted additional training and sensitisation of team members to educate them about GDPR regulations, data security and the risks of breaches. 

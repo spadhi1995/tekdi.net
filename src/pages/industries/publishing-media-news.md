@@ -1,5 +1,5 @@
 ---
-templateKey: industries-page
+templateKey: industries-page-unpublished
 title: Publishing, Media and News
 metakeywords: ["", ""]
 metadescription: Digital publishing has vastly increased the choice and access to content for readers. For businesses, digital publishing has made it simple to connect with their customers.

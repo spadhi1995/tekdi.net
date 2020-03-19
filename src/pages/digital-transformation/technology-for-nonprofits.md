@@ -18,8 +18,8 @@ featuresubheading: Lorem Ipsum is simply dummy text of the printing and typesett
 mainpitch:
   title: 
   description: >
-    Engage donors and micro-investors better and maximise contribution. Be it raising funds for a charity you support or building the next Kickstarter.
+    Non-profits are an essential part of any nation’s economic and cultural fabric. Right from grass root work to governance they impact policy forming and implementations. Non-profits that are backed by technology can do this faster and better by increasing efficiency and increasing reach. 
 ---
 
-Non-profits are an essential part of any nation’s economic and cultural fabric. Right from grass root work to governance they impact policy forming and implementations. Non-profits that are backed by technology can do this faster and better by increasing efficiency and increasing reach. 
+Engage donors and micro-investors better and maximise contribution. Be it raising funds for a charity you support or building the next Kickstarter. The key factors to the success of any fundraising campaigns are  usage of innovative tools to improve intake, smooth online donation process, networked fundraising campaigns supported by strong digital brand and influence. 
 
