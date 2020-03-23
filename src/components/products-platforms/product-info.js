@@ -19,7 +19,7 @@ const Products = props => {
         </div>
         
         <div className="row section2">
-          <div className="col-lg-6 col-md-8 description">
+          <div className="col-lg-7 col-md-8 description">
             <p className="text-white ">
               {props.description}
             </p>
