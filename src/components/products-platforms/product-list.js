@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
+import Swiper from 'react-id-swiper';
+import 'swiper/css/swiper.css';
 import './product-list.scss';
 import PreviewCompatibleImage from '../common/preview-compatible-image';
 
@@ -20,13 +22,42 @@ class ProductList extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-
+    
+    const params = {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        1024: {
+          loop: true,
+          slidesPerView: 4,
+          spaceBetween: 0
+        },
+        992: {
+          loop: true,
+          slidesPerView: 3,
+          spaceBetween: 0
+        },
+        640: {
+          loop: true,
+          slidesPerView: 2,
+          spaceBetween: 0
+        },
+        320: {
+          loop: true,
+          slidesPerView: 1,
+          spaceBetween: 0
+        }
+      }
+    }
     return (
       
       <div className="product-list">
+        <Swiper {...params}>
         {posts &&
-        posts.map(({ node: post }) => (
-          this.boxId !== post.fields.slug.match(/\/([^\/]+)\/?$/)[1] ? (
+        posts.filter(({node}) => this.boxId !== node.fields.slug.match(/\/([^\/]+)\/?$/)[1]).map(({ node: post }) => (
+          //this.boxId !== post.fields.slug.match(/\/([^\/]+)\/?$/)[1] ? (
           <div key={post.id} className="p-0 box-cover">
             <div className="position-relative box">
               {post.frontmatter.bgimage ? (
@@ -39,7 +70,7 @@ class ProductList extends React.Component {
                     />
                   </div>
                 ) : null}
-                <div className="text position-absolute">
+                <div className="text">
                   <h4 className="mb-4">
                     <Link to={post.fields.slug} className="text-decoration-none text-white">
                       {post.frontmatter.title}
@@ -51,8 +82,9 @@ class ProductList extends React.Component {
                 </div>
               </div>
           </div>
-            ) : null
+            // ) : null
         ))}
+        </Swiper>
       </div>
    
     )
@@ -86,7 +118,7 @@ export default () => (
                 title
                 bgimage {
                   childImageSharp {
-                    fluid(maxWidth: 250, quality: 100) {
+                    fluid(maxHeight: 250, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }

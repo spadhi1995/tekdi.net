@@ -17,6 +17,7 @@
     p, li {
         font-weight: 500;
         font-size: 16px;
+        line-height: 26px;
         color: #2d2d2d;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -56,5 +57,11 @@
             }
             
         }
+    }
+}
+@media (min-width: 992px) {
+    .blog-detail p, .blog-detail li {
+        font-size: 18px;
+        line-height: 28px;
     }
 }
