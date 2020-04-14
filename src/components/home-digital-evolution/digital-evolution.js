@@ -17,7 +17,7 @@ class DigitalEvolution extends React.Component {
             <div className="container">
               {posts &&
               posts.map(({ node: post }) => (
-                <div key={post.id} className="row mb-5 digital-evolution">
+                <div key={post.id} className="row mb-5 pt-5 digital-evolution">
                   <div className="col-md-5 offset-md-1">
                     <h2 className="com-heading text-black">
                       {post.frontmatter.title}
