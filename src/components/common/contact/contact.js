@@ -120,7 +120,7 @@ export class ContactUs extends React.Component {
     return (
       <div className="contact-form">
         <div className="container">
-          <div className="row com-cover">
+          <div className="row pt-5 pb-5">
             <div className="col-md-10 offset-md-1">
               <h2 className="com-heading text-center text-white mb-3">
                 Let's transform your business today
