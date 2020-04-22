@@ -19,8 +19,8 @@ const CareersIndexPage =  ({data}) => {
           ogimage={frontmatter.ogimage}
         />
         <Helmet>
-        <script src={`https://www.google.com/recaptcha/api.js? r=${Math.random()}`} async defer>
-       </script>
+        {/* <script src={`https://www.google.com/recaptcha/api.js? r=${Math.random()}`} async defer>
+       </script> */}
         </Helmet>
         <div className="careers-page">
           <Banner 
