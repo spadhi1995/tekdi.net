@@ -4,8 +4,10 @@ import SEO from '../components/common/site-metadata'
 import Layout from '../components/layout/baselayout';
 import Slideshow from '../components/slideshow/slideshow';
 import AboutUs from '../components/home-about-us/about-us';
-import Industries from '../components/home-industries/industries';
-import DigitalEvolution from '../components/home-digital-evolution/digital-evolution';
+import IndustriesCarousel from '../components/home-industries/industries-carousel';
+import SuccessStoriesCarousel from '../components/home-industries/success-stories-carousel';
+import DigitalTransformation from '../components/home-digital-evolution/digital-transformation';
+import Blogs from '../components/home-digital-evolution/blog';
 import ProductsPlatforms from '../components/home-products-platforms/products-platforms';
 import JoinUs from '../components/home-join-us/join-us';
 import TeamCulture from '../components/home-team-culture/team-culture';
@@ -26,9 +28,9 @@ const IndexPage = ({ data }) => {
       />
       <Slideshow />
       <AboutUs />
-      <DigitalEvolution />
+      <DigitalTransformation />
       <div className="bg">
-        <Industries />
+        <IndustriesCarousel />
         <ProductsPlatforms />
         <div className="com-cover">
           <JoinUs />
@@ -40,6 +42,8 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </div>
+      <SuccessStoriesCarousel/>
+      <Blogs/>
       <TestimonialCarousel />
       <Clients />
       <ContactUs />

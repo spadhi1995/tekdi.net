@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link, graphql, StaticQuery } from 'gatsby';
-import PreviewCompatibleImage from '../common/preview-compatible-image';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 import './industries-carousel.scss';
 
-class IndustriesCarousel extends React.Component {
+class SuccessStoriesCarousel extends React.Component {
     render(){
         const { data } = this.props
         const carousel = this.props.data.carouselList.edges;
@@ -49,25 +48,9 @@ class IndustriesCarousel extends React.Component {
                               carousel.map(({ node: post }) => (
                               <div className="item blue-bg" key={post.id}>
                                   <div className="item-inner text-white">
-                                    <div className="icon">
-                                      <PreviewCompatibleImage
-                                        imageInfo={{
-                                          image: post.frontmatter.icon,
-                                          alt: `icon for ${post.frontmatter.title}`,
-                                        }}
-                                      />
-                                    </div>
-                                    <div className="hover-icon">
-                                      <PreviewCompatibleImage
-                                        imageInfo={{
-                                          image: post.frontmatter.hovericon,
-                                          alt: `icon for ${post.frontmatter.title}`,
-                                        }}
-                                      />
-                                    </div>
                                     <h3 className="section-title mt-4 mb-2">{post.frontmatter.title}</h3>
                                     <p className="font-weight-normal">
-                                    {post.frontmatter.description.substring(0,130)+"..."}
+                                    {post.excerpt}
                                       <br/>
                                       <br/>
                                       <Link to={post.fields.slug} className="font-weight-bold">View More </Link>
@@ -87,9 +70,9 @@ class IndustriesCarousel extends React.Component {
 export default () => (
     <StaticQuery
       query={graphql`
-        query IndustriesCarouselQuery {
+        query SuccessStoriesQuery {
           carouselList:allMarkdownRemark(
-            filter: { frontmatter: { templateKey: { eq: "industries" } } }
+            filter: { frontmatter: { templateKey: { eq: "case-study" } } }
           ) {
             edges {
               node {
@@ -120,7 +103,7 @@ export default () => (
               }
             }
           }
-          carouselHeader:markdownRemark(frontmatter: { templateKey: { eq: "index-industries" }}) {
+          carouselHeader:markdownRemark(frontmatter: { templateKey: { eq: "index-case-study" }}) {
             frontmatter {
               title
               homePageDescription
@@ -128,6 +111,6 @@ export default () => (
           }
         }
       `}
-      render={(data, count) => <IndustriesCarousel data={data} count={count} />}
+      render={(data) => <SuccessStoriesCarousel data={data} />}
     />
   )
