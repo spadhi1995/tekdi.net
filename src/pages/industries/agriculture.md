@@ -2,7 +2,7 @@
 templateKey: industries
 title: Agriculture
 subTitle: Agriculture
-image: /img/industries/agriculture-bg.jpg
+image: /img/industries/industry-agriculture.png
 
 description: Digital can bring about revolutionary benefits to this trillion dollar industry worldwide. From IoT and digital platforms to the humble Whatsapp, the agriculture sector can benefit significantly from digital transformation.
 # This Images is for the home page
