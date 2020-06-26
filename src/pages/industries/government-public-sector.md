@@ -1,7 +1,7 @@
 ---
 templateKey: industries
 title: Government and Public Sector
-subTitle: Government- & Public sector
+subTitle: 
 
 image: /img/industries/industry-government.png
 

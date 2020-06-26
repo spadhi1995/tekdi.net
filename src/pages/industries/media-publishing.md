@@ -1,7 +1,7 @@
 ---
 templateKey: industries
 title:  Media and Publishing
-subTitle:  Media and Publishing Subtitle
+subTitle:  
 
 image: /img/industries/industry-media-publishing.png
 

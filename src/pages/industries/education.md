@@ -1,7 +1,7 @@
 ---
 templateKey: industries
 title: Education
-subTitle: Education
+subTitle: 
 
 image: /img/your-nxt/e-learning.png
 

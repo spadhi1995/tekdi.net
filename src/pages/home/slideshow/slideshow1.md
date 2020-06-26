@@ -1,6 +1,6 @@
 ---
 templateKey: slideshow
 heading: Catalyse outcomes with Digital Transformation solutions
-img: /img/your-next/digital-transformation.jpg
+img: /img/digital-transformation1.png
 alt: slideshow
 ---
