@@ -13,6 +13,8 @@ tags:
    - education
    - learning-edtech
 image: ""
+
+index: 1
 ---
 
 India is home to the largest youth population in the world. There is increasing demand of good quality education from parents and students themselves. However the geographical and socio-economic factors hinder inclusive access to good quality education for masses. However, internet penetration has improved and this can be leveraged to distribute content effectively. The Ekstep foundation was formed in 2014 with a goal of providing access to learning opportunities for every child.

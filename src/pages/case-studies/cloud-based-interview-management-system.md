@@ -11,6 +11,8 @@ summary:
 tags: 
    - business-process-transformation
 image: ""
+
+index: 7
 ---
 
 As technology advances at lightning-fast speed, the recruitment industry is under immense pressure to attract (and retain) the best talent – quickly and cost-effectively. HR departments are always on the lookout to streamline their interview process.

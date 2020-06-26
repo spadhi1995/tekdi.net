@@ -14,6 +14,8 @@ tags:
    - publishing-media-news
 
 image: /img/case-studies/aadhaar-dashboard.png
+
+index: 2
 ---
 
 The Aadhaar project by Indian Government operates on a massive scale. Unique Identification Authority of India (UIDAI), which handles this project, under the Ministry of Electronics and Information Technology (MeitY) has issued more than 120 crores (1.2 billion) Aadhaar numbers to the residents of India till date. For context, the Aadhaar number in India is somewhat similar to the Social Security Number in the US.
