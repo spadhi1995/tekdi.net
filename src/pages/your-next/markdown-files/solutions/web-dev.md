@@ -1,7 +1,7 @@
 ---
 templateKey: solutions
 title: Web-Development
-subTitle: Web-Development Sub title
+subTitle: 
 
 image: /img/your-next/web-dev.png
 

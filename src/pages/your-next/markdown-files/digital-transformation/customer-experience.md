@@ -1,7 +1,7 @@
 ---
 templateKey: digital-transformation
 title: Customer Experience
-subTitle: Customer Experience Sub title
+subTitle: 
 
 image: /img/your-next/customer-experience.png
 

@@ -1,7 +1,7 @@
 ---
 templateKey: platforms
 title: e-Learning
-subTitle: e-Learning Sub title
+subTitle:
 
 image: /img/your-next/e-learning.png
 

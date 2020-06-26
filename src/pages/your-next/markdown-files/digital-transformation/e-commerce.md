@@ -1,7 +1,7 @@
 ---
 templateKey: digital-transformation
 title: e-Commerce & Marketplaces
-subTitle:  e-Commerce & Marketplaces
+subTitle:
 
 image: /img/your-next/ecommerce.png
 

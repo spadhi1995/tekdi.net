@@ -1,7 +1,7 @@
 ---
 templateKey: platforms
 title: Leaderboards
-subTitle: Leaderboards Sub title
+subTitle: 
 
 image: /img/your-next/leaderboards.png
 

@@ -1,7 +1,7 @@
 ---
 templateKey: platforms
 title: Enterprise
-subTitle: Enterprise Sub title
+subTitle: 
 
 image: /img/your-next/enterprise-platform.png
 

@@ -1,7 +1,7 @@
 ---
 templateKey: solutions
 title: Mobility
-subTitle: Mobility Sub title
+subTitle: 
 
 image: /img/your-next/mobility.png
 
