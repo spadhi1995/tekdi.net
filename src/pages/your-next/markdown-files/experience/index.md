@@ -2,7 +2,7 @@
 templateKey: index-experience
 metakeywords: ["Experience", ""]
 metadescription:
-ogimage: /img/tekdi-logo.png
+ogimage: /img/your-next/bg-experience.jpg
 title: Experience
 subTitle: 
 

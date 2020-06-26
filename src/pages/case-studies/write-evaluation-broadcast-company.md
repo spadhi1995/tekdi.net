@@ -11,6 +11,8 @@ summary:
 tags: 
    - publishing-media-news
 image: ""
+
+index: 6
 ---
 
 One of India's largest media companies required a platform to host a competition to recruit talent for their Writer training program, Internships and eventual recruitment. 
