@@ -10,7 +10,11 @@ const comapanyMenuData = [
     {
         label:'Blog',
         url:'/blog'
-    }
+    },
+    {
+        label:'About Us',
+        link:'/company',
+    },
 ];
 
 const yourNextMenuData = [
