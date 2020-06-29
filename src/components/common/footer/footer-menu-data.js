@@ -1,19 +1,19 @@
 const comapanyMenuData = [
     {
-        label:'Careers',
-        url:'/careers'
+        label:'About Us',
+        link:'/company',
     },
     {
-        label:'Contact',
-        url:'/contact'
+        label:'Careers',
+        url:'/careers'
     },
     {
         label:'Blog',
         url:'/blog'
     },
     {
-        label:'About Us',
-        link:'/company',
+        label:'Contact',
+        url:'/contact'
     },
 ];
 
