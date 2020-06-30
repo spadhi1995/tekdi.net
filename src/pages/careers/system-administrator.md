@@ -3,7 +3,7 @@ templateKey: positions
 title: System Administrator
 heading: System Administrator
 type: Full Time
-location: Bangalore/ Pune
+location: Pune
 vacancy: '1'
 ---
 
