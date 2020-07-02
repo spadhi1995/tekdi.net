@@ -1,6 +1,6 @@
 ---
 templateKey: capabilities
-index: 1
+index: 6
 title: Oferrings & Packages
 subTitle: Oferrings & Packages Sub title
 image: /img/your-next/demo-image.png

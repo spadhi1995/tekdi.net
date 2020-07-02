@@ -1,5 +1,5 @@
 ---
-templateKey: capabilities
+templateKey: capabilities-unpublished
 index: 4
 title: MVP
 subTitle: MVP Sub title

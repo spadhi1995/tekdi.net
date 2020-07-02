@@ -16,7 +16,7 @@ const Footer = () => {
                             <a className="fa-icon" href="https://www.linkedin.com/company/tekdi-technologies/" target="_blank" rel="noopener noreferrer">
                             <i className="fa fa-linkedin-square"></i>
                             </a>
-                            <a className="fa-icon" href="https://www.facebook.com/tekditechnologies" target="_blank">
+                            <a className="fa-icon" href="https://www.facebook.com/tekditechnologies" target="_blank" rel="noopener noreferrer">
                                 <i className="fa fa-facebook" aria-hidden="true"></i>
                             </a>
                             {/* <Link className="fa-icon" to="https://facebook.com" target="_blank" rel="noopener noreferrer">

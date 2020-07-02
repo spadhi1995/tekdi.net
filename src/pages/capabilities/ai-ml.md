@@ -1,6 +1,6 @@
 ---
 templateKey: capabilities
-index: 2
+index: 3
 title: AI & ML
 subTitle: AI & ML Sub title
 image: /img/your-next/mobile-development.png
