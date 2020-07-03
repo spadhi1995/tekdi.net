@@ -14,9 +14,6 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: '@pauliescanlon/gatsby-remark-grid-system',
-          },
-          {
             resolve: 'gatsby-remark-relative-images',
             options: {
               name: 'uploads',

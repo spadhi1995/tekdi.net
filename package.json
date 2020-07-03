@@ -4,7 +4,6 @@
   "version": "0.0.9",
   "author": "The Tekdi Team",
   "dependencies": {
-    "@pauliescanlon/gatsby-remark-grid-system": "0.0.4",
     "@types/react-transition-group": "^4.2.4",
     "axios": "^0.19.1",
     "babel-plugin-styled-components": "^1.10.7",
