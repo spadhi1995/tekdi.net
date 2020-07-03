@@ -3,8 +3,17 @@ import { Link } from 'gatsby';
 import PreviewCompatibleImage from '../common/preview-compatible-image'
 import './list-view.scss';
 const renderList = ({ node }) => {
+  let divId = node.frontmatter.title;
+  divId = divId.replace(/^\s+|\s+$/g, ""); // trim
+  divId = divId.toLowerCase();
+  divId = divId
+    .replace(/[^a-z0-9 -]/g, "") // remove invalid chars
+    .replace(/\s+/g, "-") // collapse whitespace and replace by -
+    .replace(/-+/g, "-") // collapse dashes
+    .replace(/^-+/, "") // trim - from start of text
+    .replace(/-+$/, ""); // trim - from end of text
   return (
-     <div className="blog-list mb-5 pb-5" key={node.id}>
+     <div className="blog-list mb-5 pb-5" key={node.id} id={divId}>
        <div className="row">
         <div className="col-md-3 col-sm-4 col-xs-12">
           {node.frontmatter.image ? (
