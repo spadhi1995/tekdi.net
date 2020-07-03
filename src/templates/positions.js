@@ -66,7 +66,6 @@ export const pageQuery = graphql`
                 heading
                 type
                 location
-                vacancy
           }
         }
         bannerData:markdownRemark(frontmatter: { templateKey: { eq: "index-careers" }}) {
