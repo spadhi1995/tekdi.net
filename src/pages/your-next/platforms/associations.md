@@ -1,8 +1,8 @@
 ---
 templateKey: platforms
-index: 5
+index: 2
 title: Associations and Federations
-image: /img/your-next/associations.png
+image: /img/your-next/platforms/associations.png
 description: Associations and federations are commonly facing challenges with creating value to their members and improving member stickiness along with limited revenue sources. In this era, Digital enablement by associations and federations is playing a key role in the transformation of business processes. Our digital platform solution has certainly helped the associations in better organisation, management and administration of day to day and specific workflows and functions that are part of their ecosystem.
 ---
 <!-- <style>
