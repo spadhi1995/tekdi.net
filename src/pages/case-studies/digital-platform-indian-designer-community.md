@@ -65,5 +65,8 @@ Our solution included the following technological aspects -
 * Bootstrap
 * Google Analytics
 
-
+![ADI Home page](/img/case-studies/adi-homepage.png "Home Page")
+![ADI Membership Management](/img/case-studies/adi-membership-management.png "Membership management")
+![ADI Publication Management](/img/case-studies/adi-publication-management.png "New publication on the portal")
+![ADI Events Management](img/case-studies/adi-event-management.png "Events publication")
 
